@@ -3,21 +3,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>go /Travel/home</title>
+		<title>go ./home</title>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-			<link rel="icon" type="image/png" href="/Travel/resources/img/logo3.png">
-			<link rel="stylesheet" href="/Travel/resources/css/swiper.min.css">
+			<link rel="icon" type="image/png" href="./resources/img/logo3.png">
+			<link rel="stylesheet" href="./resources/css/swiper.min.css">
 		
-			<link rel="stylesheet" type="text/css" href="/Travel/resources/css/bootstrap.min.css" />
-			<link rel="stylesheet" type="text/css" href="/Travel/resources/css/style.css">
+			<link rel="stylesheet" type="text/css" href="./resources/css/bootstrap.min.css" />
+			<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
 			<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		
-			<script type="text/javascript" src="/Travel/resources/js/jquery-3.3.1.min.js"></script>
-			<script type="text/javascript" src="/Travel/resources/js/bootstrap.bundle.min.js"></script>
+			<script type="text/javascript" src="./resources/js/jquery-3.3.1.min.js"></script>
+			<script type="text/javascript" src="./resources/js/bootstrap.bundle.min.js"></script>
 
 	</head>
 
@@ -26,7 +26,7 @@
 				<!--navbar-->
 	<div id="navbar">
 		<nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
-					  <a class="navbar-brand" href="#" target="blank"><img src="/Travel/resources/img/logo3.png" width="85px" height="50px"><span class="logoo"></span></a>
+					  <a class="navbar-brand" href="#" target="blank"><img src="./resources/img/logo3.png" width="85px" height="50px"><span class="logoo"></span></a>
 					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					    <span class="navbar-toggler-icon"></span>
 					  </button>
@@ -157,7 +157,7 @@
         <div class="video-container">
             <div class="color-overlay"></div>
             <video autoplay loop muted>
-                <source src="/Travel/resources/video/180607_A_101.mp4" type="video/mp4">
+                <source src="./resources/video/180607_A_101.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -171,7 +171,7 @@
 		<div class="row">
 			<div class="col-md-4 col-sm-12 mb-5">
     			<div class="hovereffect">
-        				<img class="img-fluid" src="/Travel/resources/img/thailand.jpg" alt="">
+        				<img class="img-fluid" src="./resources/img/thailand.jpg" alt="">
         			<div class="overlay">
            				<h2>fly to Europs From $300</h2>
            				<a class="info" href="view.html">View detalis</a>
@@ -183,7 +183,7 @@
 
 			<div class="col-md-4 col-sm-12 mb-5" id="fly">
     			<div class="hovereffect">
-        				<img class="img-fluid" src="/Travel/resources/img/eiffel-tower-951517_1920.jpg" alt="">
+        				<img class="img-fluid" src="./resources/img/eiffel-tower-951517_1920.jpg" alt="">
         			<div class="overlay">
            				<h2>fly to London From $600</h2>
            				<a class="info" href="view.html">View detalis</a>
@@ -194,7 +194,7 @@
 
 			<div class="col-md-4 col-sm-12 mb-5">
     			<div class="hovereffect">
-        				<img class="img-fluid" src="/Travel/resources/img/glacier-1082163_1920.jpg" alt="">
+        				<img class="img-fluid" src="./resources/img/glacier-1082163_1920.jpg" alt="">
         			<div class="overlay">
            				<h2>fly to Nepal From $100</h2>
            				<a class="info" href="view.html">View detalis</a>
@@ -237,7 +237,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="card-img-top" id="style" src="/Travel/resources/img/london.jpg" alt="Project 1">
+															  		<img class="card-img-top" id="style" src="./resources/img/london.jpg" alt="Project 1">
 															  	
 															    
 															    <div class="card-body">
@@ -250,7 +250,7 @@
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    <img class="card-img-top" src="/Travel/resources/img/fdgsfgfg.jpg" alt="Project 2">
+															    <img class="card-img-top" src="./resources/img/fdgsfgfg.jpg" alt="Project 2">
 															    <div class="card-body">
 																	    <h5 class="card-title"><span class="float-left">FRANCE</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
@@ -259,7 +259,7 @@
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="/Travel/resources/img/ghgfhfgh.jpg" alt="Project 3">
+															    	<img class="card-img-top" src="./resources/img/ghgfhfgh.jpg" alt="Project 3">
 															    <div class="card-body">
 																	    <h5 class="card-title"><span class="float-left">JAPAN</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
@@ -272,7 +272,7 @@
 
 													<div class="card-deck mt-3">
 															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="/Travel/resources/img/fghgfhgh.jpg" alt="Project 4">
+															    	<img class="card-img-top" src="./resources/img/fghgfhgh.jpg" alt="Project 4">
 															    <div class="card-body">
 																	    <h5 class="card-title"><span class="float-left">THAILAND</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
@@ -281,7 +281,7 @@
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    <img class="card-img-top" src="/Travel/resources/img/thggthtgh.jpg" alt="Project 5">
+															    <img class="card-img-top" src="./resources/img/thggthtgh.jpg" alt="Project 5">
 															    <div class="card-body">
 																	    <h5 class="card-title"><span class="float-left">GANMANY</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
@@ -290,7 +290,7 @@
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    	<img class="card-img-top img-fluid" src="/Travel/resources/img/hggfhfgjhf.jpg" alt="Project 6">
+															    	<img class="card-img-top img-fluid" src="./resources/img/hggfhfgjhf.jpg" alt="Project 6">
 															    <div class="card-body">
 																	    <h5 class="card-title"><span class="float-left">UAE</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
@@ -333,7 +333,7 @@
 
 								      <div class="swiper-slide">
 								          <div class="imgbox">
-								              <img src="/Travel/resources/img/book.jpg" class="img-fluid">
+								              <img src="./resources/img/book.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
 								              <h3 class="p-1 text-white">Booking</h3>
@@ -346,7 +346,7 @@
 
 								      <div class="swiper-slide">
 								          <div class="imgbox">
-								              <img src="/Travel/resources/img/main.jpg" class="img-fluid">
+								              <img src="./resources/img/main.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
 								              <h3 class="p-1 text-white">Handpicked hotel</h3>
@@ -359,7 +359,7 @@
 
 								      <div class="swiper-slide">
 								          <div class="imgbox">
-								              <img src="/Travel/resources/img/order.jpg" class="img-fluid">
+								              <img src="./resources/img/order.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
 								              <h3 class="p-1 text-white">Ticked Ordering</h3>
@@ -372,7 +372,7 @@
 
 								      <div class="swiper-slide">
 								          <div class="imgbox">
-								              <img src="/Travel/resources/img/dance.jpg" class="img-fluid">
+								              <img src="./resources/img/dance.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
 								              <h3 class="p-1 text-white">Dancing</h3>
@@ -385,7 +385,7 @@
 
 								      <div class="swiper-slide">
 								          <div class="imgbox">
-								              <img src="/Travel/resources/img/car.jpg" class="img-fluid">
+								              <img src="./resources/img/car.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
 								              <h3 class="p-1 text-white">Rent a car</h3>
@@ -429,7 +429,7 @@
 														<div class="row">
 															<div class="col-md-4 col-sm-12 mt-2">
 																 <div class="hovereffect">
-																        <img class="img-fluid" src="/Travel/resources/img/hotel1.jpg" alt="">
+																        <img class="img-fluid" src="./resources/img/hotel1.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>HOTEL</h2>
 																	           <a class="info" href="#">link here</a>
@@ -438,7 +438,7 @@
 															</div>
 															<div class="col-md-4 col-sm-12 mt-2">
 																<div class="hovereffect">
-																        <img class="img-fluid" src="/Travel/resources/img/land.jpg" alt="">
+																        <img class="img-fluid" src="./resources/img/land.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>ISLAND</h2>
 																	           <a class="info" href="#">link here</a>
@@ -447,7 +447,7 @@
 															</div>
 															<div class="col-md-4 col-sm-12 mt-2">
 																<div class="hovereffect">
-																        <img class="img-fluid" src="/Travel/resources/img/resotr.jpg" alt="">
+																        <img class="img-fluid" src="./resources/img/resotr.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>ALL-INCLUSIVE RESORTS</h2>
 																	           <a class="info" href="#">link here</a>
@@ -462,7 +462,7 @@
 														<div class="row">
 															<div class="col-md-4 col-sm-12 mt-2">
 																 <div class="hovereffect">
-																        <img class="img-fluid" src="/Travel/resources/img/attack.jpg" alt="">
+																        <img class="img-fluid" src="./resources/img/attack.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>ATTRACTIONS</h2>
 																	           <a class="info" href="#">link here</a>
@@ -471,13 +471,13 @@
 															</div>
 															<div class="col-md-4 col-sm-12 mt-2">
 																<div class="">
-																        <img class="img-fluid mt-5" src="/Travel/resources/img/logo3.png" width="200px" height="200px" alt="">
+																        <img class="img-fluid mt-5" src="./resources/img/logo3.png" width="200px" height="200px" alt="">
 																            
 																 </div>
 															</div>
 															<div class="col-md-4 col-sm-12 mt-2">
 																<div class="hovereffect">
-																           <img class="img-fluid" src="/Travel/resources/img/landmarks.jpg" alt="">
+																           <img class="img-fluid" src="./resources/img/landmarks.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>LANDMARKS</h2>
 																	           <a class="info" href="#">link here</a>
@@ -491,7 +491,7 @@
 														<div class="row">
 															<div class="col-md-4 col-sm-12 mt-2">
 																 <div class="hovereffect">
-																        <img class="img-fluid" src="/Travel/resources/img/resturent.jpg" alt="">
+																        <img class="img-fluid" src="./resources/img/resturent.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>RESTURANTS</h2>
 																	           <a class="info" href="#">link here</a>
@@ -500,7 +500,7 @@
 															</div>
 															<div class="col-md-4 col-sm-12 mt-2">
 																<div class="hovereffect">
-																        <img class="img-fluid" src="/Travel/resources/img/beach.jpg" alt="">
+																        <img class="img-fluid" src="./resources/img/beach.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>BEACH</h2>
 																	           <a class="info" href="#">link here</a>
@@ -509,7 +509,7 @@
 															</div>
 															<div class="col-md-4 col-sm-12 mt-2">
 																<div class="hovereffect">
-																        <img class="img-fluid" src="/Travel/resources/img/destination.jpg" alt="">
+																        <img class="img-fluid" src="./resources/img/destination.jpg" alt="">
 																            <div class="overlay">
 																	           <h2>DESTINAIONS</h2>
 																	           <a class="info" href="#">link here</a>
@@ -555,7 +555,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="/Travel/resources/img/215810.png" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/215810.png" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -569,7 +569,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="/Travel/resources/img/97.jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/97.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -583,7 +583,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="/Travel/resources/img/order.jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/order.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -601,7 +601,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="/Travel/resources/img/images (1).jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/images (1).jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -615,7 +615,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="/Travel/resources/img/images (2).jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/images (2).jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -629,7 +629,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="/Travel/resources/img/images.jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/images.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -692,19 +692,19 @@
 
 		<div class="row">
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/boy-1822614_1920.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/boy-1822614_1920.jpg">
 			</div>
 
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/thailand.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/thailand.jpg">
 			</div>
 
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/back.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/back.jpg">
 			</div>
 
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/forest-868715_1920.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/forest-868715_1920.jpg">
 			</div>
 			
 
@@ -713,19 +713,19 @@
 
 		<div class="row">
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/book.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/book.jpg">
 			</div>
 
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/96.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/96.jpg">
 			</div>
 
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/birthday-1114056_1920.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/birthday-1114056_1920.jpg">
 			</div>
 
 			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="/Travel/resources/img/cupcakes-690040_1920.jpg">
+				<img class="img-fluid grayscale" src="./resources/img/cupcakes-690040_1920.jpg">
 			</div>
 			
 
@@ -749,7 +749,7 @@
 															  			<div class="card-header">
    																			 ITS A BRILLAINT CITY TO VISIT
   																		</div>
-															  		<img class="card-img-top" id="style" src="/Travel/resources/img/beach-816578_1920.jpg" alt="Project 1">
+															  		<img class="card-img-top" id="style" src="./resources/img/beach-816578_1920.jpg" alt="Project 1">
 															  	
 															    
 															    <div class="card-body">
@@ -767,7 +767,7 @@
 															  			<div class="card-header">
    																			 ITS A BRILLAINT CITY TO VISIT
   																		</div>
-															  		<img class="card-img-top" id="style" src="/Travel/resources/img/vw-camper-336606_1920.jpg" alt="Project 1">
+															  		<img class="card-img-top" id="style" src="./resources/img/vw-camper-336606_1920.jpg" alt="Project 1">
 															  	
 															    
 															    <div class="card-body">
@@ -785,7 +785,7 @@
 															  			<div class="card-header">
    																			 ITS A BRILLAINT CITY TO VISIT
   																		</div>
-															  		<img class="card-img-top" id="style" src="/Travel/resources/img/dog-190056_1280.jpg" alt="Project 1">
+															  		<img class="card-img-top" id="style" src="./resources/img/dog-190056_1280.jpg" alt="Project 1">
 															  	
 															    
 															    <div class="card-body">
@@ -831,7 +831,7 @@
 							<div class="row">
 								<div class="col-md-4 col-sm-12">
 									<div class="text-left pt-3">
-									<img src="/Travel/resources/img/logo.png" width="85px" height="50px">
+									<img src="./resources/img/logo.png" width="85px" height="50px">
 									</div>
                 					<h6 class="text-left text-muted">We Are active 24 hours.</h6>
                 					<h6 class="text-left text-muted">Phone:+08801866936562</h6>
@@ -839,11 +839,11 @@
                 					
 									<menu class="text-left">
 										<ul id="social">
-											<li><a href="#"><img src="/Travel/resources/img/facebook.png" alt="facebook share"></a></li>
-											<li><a href="#"><img src="/Travel/resources/img/gplus.png" alt="facebook share"></a></li>
-											<li><a href="#"><img src="/Travel/resources/img/linkedin.png" alt="facebook share"></a></li>
-											<li><a href="#"><img src="/Travel/resources/img/twitter.png" alt="facebook share"></a></li>
-											<li><a href="#"><img src="/Travel/resources/img/youtube.png" alt="facebook share"></a></li>
+											<li><a href="#"><img src="./resources/img/facebook.png" alt="facebook share"></a></li>
+											<li><a href="#"><img src="./resources/img/gplus.png" alt="facebook share"></a></li>
+											<li><a href="#"><img src="./resources/img/linkedin.png" alt="facebook share"></a></li>
+											<li><a href="#"><img src="./resources/img/twitter.png" alt="facebook share"></a></li>
+											<li><a href="#"><img src="./resources/img/youtube.png" alt="facebook share"></a></li>
 
 										</ul>
 									</menu>
@@ -955,7 +955,7 @@ window.onscroll = function() {
 
 </script>
 
- <script src="/Travel/resources/js/swiper.min.js"></script>
+ <script src="./resources/js/swiper.min.js"></script>
 
   <script>
     var swiper = new Swiper('.swiper-container', {
@@ -976,10 +976,10 @@ window.onscroll = function() {
     });
   </script>
 				  
-	<script src="/Travel/resources/js/smoothscroll.js" type="text/javascript"></script>
+	<script src="./resources/js/smoothscroll.js" type="text/javascript"></script>
 	<script>$('a').smoothScroll({speed: 1500});</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="/Travel/resources/js/parallax.min.js"></script>
+	<script src="./resources/js/parallax.min.js"></script>
 
 	<script>$('.parallax-window').parallax();</script>
 </body>
