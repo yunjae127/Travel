@@ -37,25 +37,25 @@
 							        <a class="nav-link font" id="home" href="home.html">Home<span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item active">
-					        <a class="nav-link font" href="#fly">Fly<span class="sr-only">(current)</span></a>
+					        <a class="nav-link font" href="#fly">소개<span class="sr-only">(current)</span></a>
 				      </li>
 
 				      <li class="nav-item active">
-					        <a class="nav-link font" href="#top">Destinations<span class="sr-only">(current)</span></a>
+					        <a class="nav-link font" href="#top">패키지<span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item active">
-					        <a class="nav-link font" href="#chose">Trvelar's Choich<span class="sr-only">(current)</span></a>
+					        <a class="nav-link font" href="#chose">관광지 Choich<span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item active">
-					        <a class="nav-link font" href="#work">Works<span class="sr-only">(current)</span></a>
-				      </li>
-
-				      <li class="nav-item active">
-					        <a class="nav-link font" href="#gallery">Gallery<span class="sr-only">(current)</span></a>
+					        <a class="nav-link font" href="#work">숙소<span class="sr-only">(current)</span></a>
 				      </li>
 
 				      <li class="nav-item active">
-					        <a class="nav-link font" href="#blog">Blog<span class="sr-only">(current)</span></a>
+					        <a class="nav-link font" href="#gallery">할인<span class="sr-only">(current)</span></a>
+				      </li>
+
+				      <li class="nav-item active">
+					        <a class="nav-link font" href="#blog">리뷰<span class="sr-only">(current)</span></a>
 				      </li>
 
 				      <li class="nav-item active">
