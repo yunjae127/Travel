@@ -44,7 +44,7 @@
 					        <a class="nav-link font" href="#top">패키지<span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item active">
-					        <a class="nav-link font" href="#chose">관광지 Choich<span class="sr-only">(current)</span></a>
+					        <a class="nav-link font" href="#chose">관광지 <span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item active">
 					        <a class="nav-link font" href="#work">숙소<span class="sr-only">(current)</span></a>
@@ -152,7 +152,7 @@
 
 	<div class="section">
 
-        <h1>Welcome To go travel</h1>
+        <h1>"여행가자"에서   여행가자!</h1>
 
         <div class="video-container">
             <div class="color-overlay"></div>
@@ -173,8 +173,8 @@
     			<div class="hovereffect">
         				<img class="img-fluid" src="./resources/img/thailand.jpg" alt="">
         			<div class="overlay">
-           				<h2>fly to Europs From $300</h2>
-           				<a class="info" href="view.html">View detalis</a>
+           				<h2>스위스</h2>
+           				<a class="info" href="view.html">상품정보 더보기</a>
         			</div>
     			</div>
 			</div>
@@ -185,8 +185,8 @@
     			<div class="hovereffect">
         				<img class="img-fluid" src="./resources/img/eiffel-tower-951517_1920.jpg" alt="">
         			<div class="overlay">
-           				<h2>fly to London From $600</h2>
-           				<a class="info" href="view.html">View detalis</a>
+           				<h2>하와이</h2>
+           				<a class="info" href="view.html">상품정보 더보기</a>
         			</div>
     			</div>
 			</div>
@@ -196,8 +196,8 @@
     			<div class="hovereffect">
         				<img class="img-fluid" src="./resources/img/glacier-1082163_1920.jpg" alt="">
         			<div class="overlay">
-           				<h2>fly to Nepal From $100</h2>
-           				<a class="info" href="view.html">View detalis</a>
+           				<h2>시드니</h2>
+           				<a class="info" href="view.html">상품정보 더보기</a>
         			</div>
     			</div>
 			</div>
@@ -214,8 +214,8 @@
 
 					<div class="row" id="top">
 						<div class="col-md-12 col-sm-12 headi font1">
-							<p>What Are You In The Mood For.?</p>
-							<p>BOOK HOTELS IN TOP DESTINATIONS</p>
+							<p>어떤 나라로 떠나고 싶으신가요?</p>
+							<p>이곳에서 패키지 상품을 보시고 예약하세요</p>
 							
 						</div>
 						
@@ -241,30 +241,30 @@
 															  	
 															    
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">LONDON</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">하와이</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 
 																</div>
 
 																<div class="card-footer text-muted">
-											    						<a href="view.html" target="blank" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
 															    <img class="card-img-top" src="./resources/img/fdgsfgfg.jpg" alt="Project 2">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">FRANCE</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">시드니</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary" target="blank">View Details</a>
+											    						<a href="view.html" class="btn btn-primary" target="blank">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
 															    	<img class="card-img-top" src="./resources/img/ghgfhfgh.jpg" alt="Project 3">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">JAPAN</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">이탈리아</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" target="blank" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 													</div>
@@ -274,28 +274,28 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top" src="./resources/img/fghgfhgh.jpg" alt="Project 4">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">THAILAND</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">타이페이</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
 															    <img class="card-img-top" src="./resources/img/thggthtgh.jpg" alt="Project 5">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">GANMANY</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">방콕</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
 															    	<img class="card-img-top img-fluid" src="./resources/img/hggfhfgjhf.jpg" alt="Project 6">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">UAE</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">뉴욕</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 													</div>
@@ -316,8 +316,8 @@
 			<dir class="container-fluid">
 					<div class="row p-5">
 						<div class="col-sm-12">
-							<h5 class="text-center hfont">Chosen By Millions Of Travelers</h5>
-							<h2 class="text-center hfont">WHY CHOOSE GO TRAVEL?</h2>
+							<h5 class="text-center hfont">수많은 고객들이 선택한 사이트</h5>
+							<h2 class="text-center hfont">왜 "여행가자"인가?</h2>
 						</div>
 																			
 					</div>
@@ -336,8 +336,8 @@
 								              <img src="./resources/img/book.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
-								              <h3 class="p-1 text-white">Booking</h3>
-								              <p class="p-2 text-white">making it look like readable English. Many desktop publishing packages. 
+								              <h3 class="p-1 text-white">1. 간단한 카테고리</h3>
+								              <p class="p-2 text-white">한눈에 들어오는 여행 카테고리 
 								              </p>
 
 								          </div>
@@ -349,8 +349,9 @@
 								              <img src="./resources/img/main.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
-								              <h3 class="p-1 text-white">Handpicked hotel</h3>
-								              <p class="p-2 text-white">making it look like readable English. Many desktop publishing packages. 
+								              <h3 class="p-1 text-white">2. 다양한 패키지 상품</h3>
+								              <p class="p-2 text-white">동남아부터 유럽, 미주 등 다양한 나라들을 모아둔 상품들
+ 
 								              </p>
 
 								          </div>
@@ -362,8 +363,8 @@
 								              <img src="./resources/img/order.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
-								              <h3 class="p-1 text-white">Ticked Ordering</h3>
-								              <p class="p-2 text-white">making it look like readable English. Many desktop publishing packages. 
+								              <h3 class="p-1 text-white">3. 몸만 가면 되는 여행</h3>
+								              <p class="p-2 text-white">항공권부터 숙박까지 제공해 주는 패키지여행
 								              </p>
 
 								          </div>
@@ -375,22 +376,9 @@
 								              <img src="./resources/img/dance.jpg" class="img-fluid">
 								          </div>
 								          <div class="bg-dark">
-								              <h3 class="p-1 text-white">Dancing</h3>
-								              <p class="p-2 text-white">making it look like readable English. Many desktop publishing packages. 
+								              <h3 class="p-1 text-white">4. 실제 리뷰로 신뢰도 상승</h3>
+								              <p class="p-2 text-white">리뷰 게시판을 통해 볼 수 있는 실제 여행객들의 생생한 후기
 								              </p>
-
-								          </div>
-								      </div>
-
-
-								      <div class="swiper-slide">
-								          <div class="imgbox">
-								              <img src="./resources/img/car.jpg" class="img-fluid">
-								          </div>
-								          <div class="bg-dark">
-								              <h3 class="p-1 text-white">Rent a car</h3>
-								              <p class="p-2 text-white">making it look like readable English. Many desktop publishing packages. 
-              									</p>
 
 								          </div>
 								      </div>
