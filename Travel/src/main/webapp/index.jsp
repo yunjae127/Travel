@@ -152,7 +152,7 @@
 
 	<div class="section">
 
-        <h1>"여행가자"에서   여행가자!</h1>
+        <h1>"여행가자"에서        여행가자!</h1>
 
         <div class="video-container">
             <div class="color-overlay"></div>
@@ -403,9 +403,9 @@
 													<div class="container pt-5 pb-3">
 														<div class="row">
 															<div class="col-sm-12">
-																<h3 class="color">The Very Best Of Travel, Chosen By Millions Of Travelers</h3>
+																<h3 class="color">수많은 여행자들의 선택, 최고의 여행지로 선택된 곳을 확인해 보세요!</h3>
 																<h2 class="color">
-																TRAVELERS' CHOICE AWARD WINNERS
+																여행자들이 선택한 최고의 장소
 																</h2>
 															</div>
 														</div>
@@ -419,7 +419,7 @@
 																 <div class="hovereffect">
 																        <img class="img-fluid" src="./resources/img/hotel1.jpg" alt="">
 																            <div class="overlay">
-																	           <h2>HOTEL</h2>
+																	           <h2>하와이</h2>
 																	           <a class="info" href="#">link here</a>
 																	        </div>
 																    </div>
@@ -428,7 +428,7 @@
 																<div class="hovereffect">
 																        <img class="img-fluid" src="./resources/img/land.jpg" alt="">
 																            <div class="overlay">
-																	           <h2>ISLAND</h2>
+																	           <h2>방콕</h2>
 																	           <a class="info" href="#">link here</a>
 																	        </div>
 																    </div>
@@ -437,37 +437,7 @@
 																<div class="hovereffect">
 																        <img class="img-fluid" src="./resources/img/resotr.jpg" alt="">
 																            <div class="overlay">
-																	           <h2>ALL-INCLUSIVE RESORTS</h2>
-																	           <a class="info" href="#">link here</a>
-																	        </div>
-																    </div>
-															</div>
-															
-														</div>
-
-
-
-														<div class="row">
-															<div class="col-md-4 col-sm-12 mt-2">
-																 <div class="hovereffect">
-																        <img class="img-fluid" src="./resources/img/attack.jpg" alt="">
-																            <div class="overlay">
-																	           <h2>ATTRACTIONS</h2>
-																	           <a class="info" href="#">link here</a>
-																	        </div>
-																    </div>
-															</div>
-															<div class="col-md-4 col-sm-12 mt-2">
-																<div class="">
-																        <img class="img-fluid mt-5" src="./resources/img/logo3.png" width="200px" height="200px" alt="">
-																            
-																 </div>
-															</div>
-															<div class="col-md-4 col-sm-12 mt-2">
-																<div class="hovereffect">
-																           <img class="img-fluid" src="./resources/img/landmarks.jpg" alt="">
-																            <div class="overlay">
-																	           <h2>LANDMARKS</h2>
+																	           <h2>홍콩</h2>
 																	           <a class="info" href="#">link here</a>
 																	        </div>
 																    </div>
@@ -481,7 +451,7 @@
 																 <div class="hovereffect">
 																        <img class="img-fluid" src="./resources/img/resturent.jpg" alt="">
 																            <div class="overlay">
-																	           <h2>RESTURANTS</h2>
+																	           <h2>스위스</h2>
 																	           <a class="info" href="#">link here</a>
 																	        </div>
 																   </div>
@@ -490,7 +460,7 @@
 																<div class="hovereffect">
 																        <img class="img-fluid" src="./resources/img/beach.jpg" alt="">
 																            <div class="overlay">
-																	           <h2>BEACH</h2>
+																	           <h2>골드코스트</h2>
 																	           <a class="info" href="#">link here</a>
 																	        </div>
 																    </div>
@@ -499,7 +469,7 @@
 																<div class="hovereffect">
 																        <img class="img-fluid" src="./resources/img/destination.jpg" alt="">
 																            <div class="overlay">
-																	           <h2>DESTINAIONS</h2>
+																	           <h2>캘리포니아</h2>
 																	           <a class="info" href="#">link here</a>
 																	        </div>
 																    </div>
@@ -530,9 +500,9 @@
 										<div class="container mt-3 mb-3">
 														<div class="row">
 															<div class="col-sm-12">
-																<h4 class="color">Know More About Hotel</h4>
+																<h4 class="color">잠자리 걱정없는 여행!</h4>
 																<h2 class="color">
-																SEE HOW IT WORKS?
+																당신이 원하는 분위기는?
 																</h2>
 															</div>
 														</div>
@@ -543,45 +513,32 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/215810.png" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/메인사진.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
-																	    <h5 class="card-title">RENT A CAR</h5>
-																	    <p class="card-text size">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+																	    <h5 class="card-title">팔라초 베르사체</h5>
+																	    <p class="card-text size">호주 골드코스트</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/97.jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/gold1.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
-																	    <h5 class="card-title">ACCOMODATION</h5>
-																	    <p class="card-text size">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+																	    <h5 class="card-title">더 페닌슈라 베벌리힐스</h5>
+																	    <p class="card-text size">미국 캘리포니아</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
-															  <div class="card cardstyle">
-															    
-															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/order.jpg" alt="photo" width="140px" height="140px">
-															  	
-															    
-															    <div class="card-body">
-																	    <h5 class="card-title">RESTAURANT</h5>
-																	    <p class="card-text size">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-																	  </div>
-																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
-											  							</div>
-															  </div>
+															  
 															</div>
 
 
@@ -593,11 +550,11 @@
 															  	
 															    
 															    <div class="card-body">
-																	    <h5 class="card-title">SHOPPING CENTERS</h5>
-																	    <p class="card-text size">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+																	    <h5 class="card-title">소네바 자니</h5>
+																	    <p class="card-text size">몰디브</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
 															  <div class="card cardstyle">
@@ -607,27 +564,14 @@
 															  	
 															    
 															    <div class="card-body">
-																	    <h5 class="card-title">ATTRACTIONS</h5>
-																	    <p class="card-text size">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+																	    <h5 class="card-title">카오룽 샹그릴라 홍콩</h5>
+																	    <p class="card-text size">홍콩</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
+											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
-															  <div class="card cardstyle">
-															    
-															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/images.jpg" alt="photo" width="140px" height="140px">
-															  	
-															    
-															    <div class="card-body">
-																	    <h5 class="card-title">TRANSPOTATION</h5>
-																	    <p class="card-text size">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-																	  </div>
-																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">View Details</a>
-											  							</div>
-															  </div>
+															  
 															</div>
 
 
@@ -641,16 +585,16 @@
 										<div class="container con">
 											<div class="row pt-5">
 												<div class="col-sm-12">
-													<h5 class="text-center color2">Create A Custom Plan Based On Your Taste</h5>
-													<h2 class="text-center color2">START MAKING YOUR TRAVEL PLANS</h2>
+													<h5 class="text-center color2">내가 만드는 자유로운 여행일정</h5>
+													<h2 class="text-center color2">당신의 여행 계획을 채워보세요!</h2>
 
-														<h5 class="text-center color2">Ducate, Aid, Criteria Catalyst John Lennon. Life-Saving Diversity Necessities Elevate Worldwide Carbon Rights Empowerment. Pursue These Aspirations Leverage, Accessibility UNICEF, Reduce Child Mortality Collaborative Cities Safeguards. Informal Economies Non-Partisan; Evolution Transformative Climate Change Local Benefit</h5>
+														<h5 class="text-center color2">싱가포르 여행: 1일차 오전 비행 후 오후에 오차르 로드에서 쇼핑. 라우파삿 사태거리에서 야식. 2일차 오전 보타닉 가든 관광 후 오후에 차이나타운 불아사 방문.마리나베이 쇼핑 후 스펙트라 쇼 관람. 3일차 오전 센토사 섬에서 피크닉 후 오후에 디즈니랜드 관광. 4일차 아랍스트리트 하지레인에서 식사 후 가든스바이더베이 관광. 슈퍼트리 쇼 관람 후 창이공항에서 쥬얼창이폭포 관람 후 밤 비행 </h5>
 													
 												</div>
 												<div class="row mt-3 m-auto">
 												<div class="col-sm-12">
 													
-											    						<a href="" class="btn btn-success">View Details</a>
+											    						<a href="https://www.myro.co.kr/" class="btn btn-success">여행플래너 사이트 마이로</a>
 											  							
 
 				
@@ -670,8 +614,8 @@
 	<div class="container" id="gallery">
 		<div class="row">
 			<div class="col-sm-12 m-auto">
-				<h4 class="m-auto">Right Now</h4>
-				<h2 class="m-auto">Photo Gallery</h2>
+				<h4 class="m-auto">이번달 카드사별 할인</h4>
+				<h2 class="m-auto">카드사 할인 이벤트</h2>
 
 			</div>
 			
@@ -697,27 +641,6 @@
 			
 
 		</div>
-
-
-		<div class="row">
-			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="./resources/img/book.jpg">
-			</div>
-
-			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="./resources/img/96.jpg">
-			</div>
-
-			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="./resources/img/birthday-1114056_1920.jpg">
-			</div>
-
-			<div class="col-md-3 col-sm-12 p-2">
-				<img class="img-fluid grayscale" src="./resources/img/cupcakes-690040_1920.jpg">
-			</div>
-			
-
-		</div>
 		
 	</div>
 
@@ -727,8 +650,8 @@
 
 					<div class="container mt-5" id="blog">
 						<div class="col-sm-12">
-							<h4 class="m-auto">Right Now</h4>
-							<h2 class="m-auto">Our Latest Blog</h2>
+							<h4 class="m-auto">실제 고객들의 생생한 후기</h4>
+							<h2 class="m-auto">솔직한 리뷰</h2>
 						</div>
 
 						<div class="card-deck mt-3">
