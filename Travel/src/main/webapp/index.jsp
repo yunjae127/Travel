@@ -157,7 +157,7 @@
         <div class="video-container">
             <div class="color-overlay"></div>
             <video autoplay loop muted>
-                <source src="./resources/video/180607_A_101.mp4" type="video/mp4">
+                <source src="./resources/video/main1_.mp4" type="video/mp4">
             </video>
         </div>
 
