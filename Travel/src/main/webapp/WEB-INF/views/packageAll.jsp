@@ -33,7 +33,7 @@
 	<div id="navbar">
 		<nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
 			<a class="navbar-brand" href="#" target="blank"><img
-				src="./resources/img/logo3.png" width="85px" height="50px"><span
+				src="./resources/img/gotravel_logo.jpg" width="85px" height="50px"><span
 				class="logoo"></span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
@@ -176,7 +176,7 @@
 															  	
 															    
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">뉴욕</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">뉴욕</span><span class="float-right">4,699,000원</span></h5>
 
 																</div>
 
@@ -187,7 +187,7 @@
 															  <div class="card cardstyle">
 															    <img class="card-img-top" src="./resources/img/pack_cali_03.jpg" alt="Project 2">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">캘리포니아</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">캘리포니아</span><span class="float-right">6,899,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary" target="blank">패키지 상세정보</a>
@@ -196,7 +196,7 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top" src="./resources/img/pack_hawa_03.jpg" alt="Project 3">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">하와이</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">하와이</span><span class="float-right">3,799,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
@@ -209,7 +209,7 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top" src="./resources/img/pack_mol_03.jpg" alt="Project 4">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">몰디브</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">몰디브</span><span class="float-right">3,660,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -218,7 +218,7 @@
 															  <div class="card cardstyle">
 															    <img class="card-img-top" src="./resources/img/pack_swi_03.jpg" alt="Project 5">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">스위스</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">스위스</span><span class="float-right">4,399,900원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -227,7 +227,7 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top img-fluid" src="./resources/img/pack_ita_03.jpg" alt="Project 6">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">이탈리아</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">이탈리아</span><span class="float-right">3,399,900원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -240,7 +240,7 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top" src="./resources/img/pack_bang_03.jpg" alt="Project 4">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">방콕</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">방콕</span><span class="float-right">1,069,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -249,7 +249,7 @@
 															  <div class="card cardstyle">
 															    <img class="card-img-top" src="./resources/img/pack_da_03.jpg" alt="Project 5">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">다낭</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">다낭</span><span class="float-right">569,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -258,7 +258,7 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top img-fluid" src="./resources/img/pack_hong_03.jpg" alt="Project 6">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">홍콩</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">홍콩</span><span class="float-right">1,199,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -271,7 +271,7 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top" src="./resources/img/pack_tai_03.jpg" alt="Project 4">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">타이페이</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">타이페이</span><span class="float-right">629,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -280,7 +280,7 @@
 															  <div class="card cardstyle">
 															    <img class="card-img-top" src="./resources/img/pack_sw_03.jpg" alt="Project 5">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">시드니</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">시드니</span><span class="float-right">1,199,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -289,7 +289,7 @@
 															  <div class="card cardstyle">
 															    	<img class="card-img-top img-fluid" src="./resources/img/pack_gol_03.jpg" alt="Project 6">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">골드코스트</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">골드코스트</span><span class="float-right">1,999,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -333,6 +333,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12 col-sm-12">
+								<img src="./resources/img/gotravel_logo.jpg" width="85px" height="50px">
 									<h4 class="text-center text-white">&copy;Copyrights 2018. All rights reserved by: go travel</h4>
 								</div>
 								

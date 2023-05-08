@@ -35,7 +35,7 @@
 					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					    <ul class="navbar-nav ml-auto id="float">
 					      <li class="nav-item active">
-							        <a class="nav-link font" id="home" href="home.html">Home<span class="sr-only">(current)</span></a>
+							        <a class="nav-link font" id="home" href="#">Home<span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item active">
 					        <a class="nav-link font" href="#fly">소개<span class="sr-only">(current)</span></a>
@@ -60,10 +60,9 @@
 				      </li>
 
 				      <li class="nav-item active">
-					        <a class="nav-link font" href="test1.jsp">QnA<span class="sr-only">(current)</span></a>
+					        <a class="nav-link font" href="question.do">QnA<span class="sr-only">(current)</span></a>
 				      </li>
-				       <li class="nav-item active"><a class="nav-link font"
-                       href="mypage.jsp">마이페이지<span class="sr-only">(current)</span></a>
+				       <li class="nav-item active"><a class="nav-link font" href="mypage.do">마이페이지<span class="sr-only">(current)</span></a>
                        </li>
 				      <div class="btn-group">
 						<button type="button" class="btn btn-outline-primary dropdown-toggle mr-1" data-toggle="modal" aria-haspopup="true" aria-expanded="false" data-target="#search">Search
@@ -241,11 +240,11 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="card-img-top" id="style" src="./resources/img/london.jpg" alt="Project 1">
+															  		<img class="card-img-top" id="style" src="./resources/img/pack_hawa_03.jpg" alt="Project 1">
 															  	
 															    
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">하와이</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">하와이</span><span class="float-right">3,799,000원</span></h5>
 
 																</div>
 
@@ -254,18 +253,18 @@
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    <img class="card-img-top" src="./resources/img/fdgsfgfg.jpg" alt="Project 2">
+															    <img class="card-img-top" src="./resources/img/pack_sw_03.jpg" alt="Project 2">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">시드니</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">시드니</span><span class="float-right">1,199,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary" target="blank">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="./resources/img/ghgfhfgh.jpg" alt="Project 3">
+															    	<img class="card-img-top" src="./resources/img/pack_ita_03.jpg" alt="Project 3">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">이탈리아</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">이탈리아</span><span class="float-right">3,399,900원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
@@ -276,27 +275,27 @@
 
 													<div class="card-deck mt-3">
 															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="./resources/img/fghgfhgh.jpg" alt="Project 4">
+															    	<img class="card-img-top" src="./resources/img/pack_tai_03.jpg" alt="Project 4">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">타이페이</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">타이페이</span><span class="float-right">629,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    <img class="card-img-top" src="./resources/img/thggthtgh.jpg" alt="Project 5">
+															    <img class="card-img-top" src="./resources/img/pack_bang_03.jpg" alt="Project 5">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">방콕</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">방콕</span><span class="float-right">1,069,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
-															    	<img class="card-img-top img-fluid" src="./resources/img/hggfhfgjhf.jpg" alt="Project 6">
+															    	<img class="card-img-top img-fluid" src="./resources/img/pack_new_03.jpg" alt="Project 6">
 															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">뉴욕</span><a href=""><span class="float-right">1500 hotel</span></a></h5>
+																	    <h5 class="card-title"><span class="float-left">뉴욕</span><span class="float-right">4,699,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
 											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
@@ -304,7 +303,7 @@
 															  </div>
 											  			      
 													</div>
-                                                    <a href="NewFile.jsp" class="btn btn-primary pkall">패키지 전체보기</a>
+                                                    <a href="packageAll.do" class="btn btn-primary pkall">패키지 전체보기</a>
 
 													   
 							</div>
@@ -509,7 +508,7 @@
 																<h2 class="color">
 																당신이 원하는 분위기는?
 																</h2>
-																<a href="hotellist.jsp" class="btn btn-primary1">호텔 전체보기</a>
+																<a href="hotellist.do" class="btn btn-primary1">호텔 전체보기</a>
 															</div>
 														</div>
 														
@@ -519,7 +518,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/메인사진.jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/Australia_main.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -533,7 +532,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/gold1.jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/California_main.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -552,7 +551,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/images (1).jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/Maldive_main.jpg" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">
@@ -566,7 +565,7 @@
 															  <div class="card cardstyle">
 															    
 															  	
-															  		<img class="rounded-circle ddd m-auto" src="./resources/img/images (2).jpg" alt="photo" width="140px" height="140px">
+															  		<img class="rounded-circle ddd m-auto" src="./resources/img/Hongkong_main.png" alt="photo" width="140px" height="140px">
 															  	
 															    
 															    <div class="card-body">

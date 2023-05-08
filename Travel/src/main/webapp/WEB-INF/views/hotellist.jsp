@@ -186,7 +186,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/메인사진.jpg" alt="photo" width="140px"
+					src="./resources/img/Australia_main.jpg" alt="photo" width="140px"
 					height="140px">
 
 
@@ -204,7 +204,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/cali_hotel_01.JPG" alt="photo" width="140px"
+					src="./resources/img/California_main.jpg" alt="photo" width="140px"
 					height="140px">
 
 
@@ -225,7 +225,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/mol_hotle_01.jpg" alt="photo" width="140px"
+					src="./resources/img/Maldive_main.jpg" alt="photo" width="140px"
 					height="140px">
 
 
@@ -241,7 +241,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hong_hotel_01.png" alt="photo" width="140px"
+					src="./resources/img/Hongkong_main.png" alt="photo" width="140px"
 					height="140px">
 
 
@@ -261,7 +261,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_new.png" alt="photo" width="140px"
+					src="./resources/img/NewYork_main.png" alt="photo" width="140px"
 					height="140px">
 
 
@@ -277,7 +277,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_sy.png" alt="photo" width="140px"
+					src="./resources/img/Sydney_main.png" alt="photo" width="140px"
 					height="140px">
 
 
@@ -297,7 +297,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_ha.JPG" alt="photo" width="140px"
+					src="./resources/img/Hawaii_main.jpg" alt="photo" width="140px"
 					height="140px">
 
 
@@ -313,7 +313,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_flo.png" alt="photo" width="140px"
+					src="./resources/img/Florence_main.png" alt="photo" width="140px"
 					height="140px">
 
 
@@ -333,7 +333,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_ta.JPG" alt="photo" width="140px"
+					src="./resources/img/Taipei_main.jpg" alt="photo" width="140px"
 					height="140px">
 
 
@@ -349,7 +349,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_zur.JPG" alt="photo" width="140px"
+					src="./resources/img/Zurich_main.jpg" alt="photo" width="140px"
 					height="140px">
 
 
@@ -369,7 +369,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_bang.JPG" alt="photo" width="140px"
+					src="./resources/img/Bangkok_main.jpg" alt="photo" width="140px"
 					height="140px">
 
 
@@ -385,7 +385,7 @@
 
 
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/hotel_danag.png" alt="photo" width="140px"
+					src="./resources/img/Danang_main.png" alt="photo" width="140px"
 					height="140px">
 
 
@@ -402,14 +402,6 @@
 
 	</div>
 
-
-
-
-
-
-
-
-
-
+  
 </body>
 </html>

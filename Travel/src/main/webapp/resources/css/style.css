@@ -3,6 +3,10 @@
 	top : 70px;
 }
 
+.form-input{
+	width : 100%;
+}
+
 #bottom1, #bottom2, #bottom3{
 	position: relative;
 	top : 50px;
