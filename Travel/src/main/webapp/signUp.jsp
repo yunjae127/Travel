@@ -51,8 +51,12 @@
    src="./resources/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./resources/js/event.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> 
+ <!-- <script src="./resource/js/jquery-2.0.1.min.js" type="text/javascript" charset="utf-8"></script> -->
+  <script src="./resource/js/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 window.onload = function() {
+	 
+	  
 	frm.postcodeSearch.onclick = function() {
 	    new daum.Postcode({
 	        oncomplete: function(data) {
@@ -63,8 +67,7 @@ window.onload = function() {
 	        }
 	    }).open();
 	}
-	
-	
+	 
 	// 체크박스 전체 선택
 	$(".join_box").on("click", "#chkAll", function () {
 	    $(this).parents(".join_box").find('input').prop("checked", $(this).is(":checked"));
@@ -80,23 +83,6 @@ window.onload = function() {
 
 	    $("#chkAll").prop("checked", is_checked);
 	});
-	
-	
-	function pwCheck(){
-		
-		var password1 = document.getElementById('password_1').value;
-	    var password2 = document.getElementById('password_2').value;
-	    
-	    if(password1 != password2){
-	    	alert("비밀번호가 일치하지 않습니다.");
-	    	return false; 
-	    }esle{
-	    	
-	    	alert("비밀번호가 일치합니다.");
-	    	return true;
-	    } 
-	    
-	}
 	 
 	frm.onsubmit = function(e) {
         e.preventDefault();
@@ -112,13 +98,28 @@ window.onload = function() {
            }else{
               frm.submit();
            }
-     }// frm 
-  
-}
-
-
+	}
+           
+	frm.onsubmit = function(e) {
+        e.preventDefault();
+           
+        // 비밀번호 일치 
+        var password1 = document.querySelector('#password_1').value; 
+        var password2 = document.querySelector('#password_2').value; 
+        
+        	if(password1 != password2){ 
+        		alert("비밀번호가 일치하지 않습니다.");
+        		return; 
+        	}else{ 
+        		frm.submit();
+        	} 
+        
+     }// frm  
+	
+}   
 </script>
-
+   
+  
 </head>
 
 <body>
@@ -255,7 +256,7 @@ window.onload = function() {
                 <div class="card-heading">
                     <h2 class="title">회 원 가 입</h2>
                 </div> 
-                    <form name="frm" method="POST" action="index.jsp">
+                    <form name="frm" method="POST" action="index.jsp" class="frm">
                         <div class="form-row">
                             <div class="name">이 름</div>
                             <div class="value"> 
@@ -269,7 +270,7 @@ window.onload = function() {
                             <div class="name">아이디</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text"  pattern="[a-z0-9]{5,12}" placeholder ="(a-z)+(1-9)" id="id" name="id" required><br/>
+                                    <input class="input--style-5" type="text"  pattern="[a-z0-9]{5,12}" id="id" name="id" required><br/>
                                     <label class="label--desc">영문 소문자, 숫자 최소 5글자 이상</label>
                                     <span class="idcheck"><input class="idSearch" type="button" id="idSearch" name="idSearch" value="중복확인"></span><br/>
                                 </div>
@@ -297,8 +298,7 @@ window.onload = function() {
                             <div class="name">비밀번호 확인</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="password" id="password_2" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\d~!@#$%^&*()+|=]{8,12}$" name="password" required><br/>
-                               		<label class="label--desc">'숫자', '문자', '특수문자' 1개 이상 최소 8자 이상</label>
+                                    <input class="input--style-5" type="password" id="password_2" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\d~!@#$%^&*()+|=]{8,12}$" name="password" required><br/>  
                                </div>
                             </div>
                         </div>
@@ -306,8 +306,8 @@ window.onload = function() {
                             <div class="name">전화번호</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5"  pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" type="tel" id="tel" name="tel" required>
-                                	<label class="label--desc">-를 포함한 전화번호</label>
+                                    <input class="input--style-5" type="tel" id="tel" name="tel" required>
+                                	<label class="label--desc">전화번호</label>
                                 </div>
                             </div>
                         </div>
@@ -371,7 +371,7 @@ window.onload = function() {
 						</li>
 
 					</ul>
-             <input id="signUp" type="submit" value="회원가입">
+          			   <input id="signUp" type="submit" value="회원가입">
                    
                     </form>
                  

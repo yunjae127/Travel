@@ -30,32 +30,37 @@ public class ProductViewDetailsController {
    }
    @RequestMapping("/ProductViewDetails6.do")
    public void ViewPage6() {
-
    }
    @RequestMapping("/question.do")
    public void ViewPage7() {
-
    }
    @RequestMapping("/mypage.do")
    public void ViewPage8() {
-
    }
    @RequestMapping("/packageAll.do")
    public void ViewPage9() {
-
    }
-   
    @RequestMapping("/hotellist.do")
    public void ViewPage10() {
-
    }
    @RequestMapping("/newYorkHotel.do")
    public void hotelPage1() {
-
    } 
    @RequestMapping("/Reservation.do")
    public void Reservation() {
-	   
-   }
+   } 
+   @RequestMapping("/goldCostHotel.do")
+   public void hotelView1() {
+
+   } @RequestMapping("/californiaHotel.do")
+   public void hotelView2() {
+
+   } @RequestMapping("/maldiveHotel.do")
+   public void hotelView3() {
+
+   } @RequestMapping("/hongkongHotel.do")
+   public void hotelView4() {
+
+   } 
    
 }

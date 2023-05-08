@@ -526,7 +526,7 @@
 																	    <p class="card-text size">호주 골드코스트</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+											    						<a href="goldCostHotel.do" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
 															  <div class="card cardstyle">
@@ -540,7 +540,7 @@
 																	    <p class="card-text size">미국 캘리포니아</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+											    						<a href="californiaHotel.do" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
 															  
@@ -559,7 +559,7 @@
 																	    <p class="card-text size">몰디브</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+											    						<a href="maldiveHotel.do" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
 															  <div class="card cardstyle">
@@ -573,7 +573,7 @@
 																	    <p class="card-text size">홍콩</p>
 																	  </div>
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+											    						<a href="hongkongHotel.do" class="btn btn-primary">호텔 상세보기</a>
 											  							</div>
 															  </div>
 															  
