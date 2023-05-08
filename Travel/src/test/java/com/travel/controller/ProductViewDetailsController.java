@@ -49,6 +49,13 @@ public class ProductViewDetailsController {
    public void ViewPage10() {
 
    }
-  
+   @RequestMapping("/newYorkHotel.do")
+   public void hotelPage1() {
+
+   } 
+   @RequestMapping("/Reservation.do")
+   public void Reservation() {
+	   
+   }
    
 }

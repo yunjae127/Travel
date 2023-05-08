@@ -249,7 +249,7 @@
 																</div>
 
 																<div class="card-footer text-muted">
-											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
+											    						<a href="ProductViewDetails1.do" target="blank" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
@@ -258,7 +258,7 @@
 																	    <h5 class="card-title"><span class="float-left">시드니</span><span class="float-right">1,199,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary" target="blank">패키지 상세정보</a>
+											    						<a href="ProductViewDetails2.do" class="btn btn-primary" target="blank">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
@@ -267,12 +267,12 @@
 																	    <h5 class="card-title"><span class="float-left">이탈리아</span><span class="float-right">3,399,900원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
+											    						<a href="ProductViewDetails3.do" target="blank" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 													</div>
 
-
+									
 													<div class="card-deck mt-3">
 															  <div class="card cardstyle">
 															    	<img class="card-img-top" src="./resources/img/pack_tai_03.jpg" alt="Project 4">
@@ -280,7 +280,7 @@
 																	    <h5 class="card-title"><span class="float-left">타이페이</span><span class="float-right">629,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
+											    						<a href="ProductViewDetails4.do" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
@@ -289,7 +289,7 @@
 																	    <h5 class="card-title"><span class="float-left">방콕</span><span class="float-right">1,069,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
+											    						<a href="ProductViewDetails5.do" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 															  <div class="card cardstyle">
@@ -298,7 +298,7 @@
 																	    <h5 class="card-title"><span class="float-left">뉴욕</span><span class="float-right">4,699,000원</span></h5>
 																</div>
 																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
+											    						<a href="ProductViewDetails6.do" class="btn btn-primary">패키지 상세정보</a>
 											  					</div>
 															  </div>
 											  			      
