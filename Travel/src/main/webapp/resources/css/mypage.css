@@ -1,0 +1,16 @@
+
+
+ #mypageone{
+	
+	margin-right : 100px;
+	
+
+}
+/*
+.right-btn {
+  float: right;
+} */
+
+     input[type='submit'] {
+  float: right;
+}
