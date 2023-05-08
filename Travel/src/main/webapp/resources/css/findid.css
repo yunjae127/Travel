@@ -1,0 +1,184 @@
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+	
+html {
+		height: 100%;
+}
+	
+body {
+	    width:100%;
+	    height:100%;
+	    margin: 0;
+  		padding-top: 200px;
+  		padding-bottom: 40px;
+  		font-family: "Nanum Gothic", arial, helvetica, sans-serif;
+  		background-repeat: no-repeat;
+}
+	
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+
+ #btn-Yes{
+ 		
+ 		background-color: skyblue;
+ 		border: 4px solid skyblue;
+ 		position: relative;
+ 		left: 25%;
+ 		color: white;
+ 		padding: 5px;
+ 		cursor: pointer;
+ }
+	
+.form-signin .form-control {
+  		position: relative;
+  		left: 0%;
+  		height: auto;
+  		-webkit-box-sizing: border-box;
+     	-moz-box-sizing: border-box;
+        	 box-sizing: border-box;
+  		padding: 10px;
+  		font-size: 16px;
+	}
+.card-title{
+ 	
+ 	position: relative;
+ 	left: 1%;
+ 
+ 
+    }
+.links{
+     text-align: center;
+     margin-bottom: 10px;
+}
+.checkbox{
+	 
+	position: relative;
+	left: -23%;
+}
+.checkboxAll{ 
+	position: relative;
+	left: 88%; 	
+} 
+.agree_1{
+	
+	position: relative;
+	left: -23%
+	
+}
+
+
+.agree{
+	width: 96%;
+	height: 90px; 
+	margin: 0 2%;
+	background-color: #f7f7f7;
+	color: #888; 
+	border: none;
+	}
+ 
+a{ 
+   color: #f58b34; text-decoration: none; 
+}
+.text2{
+   	color : blue;
+}
+   
+
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+body{
+	padding: 0;
+	line-height:1.4;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.all{
+	width:1000px;
+}
+ 
+ 
+.tabSet{ 
+	
+	margin:0 0 0px;
+	padding:0px;
+	border-radius:0px;
+	text-align: center;
+}
+ul{
+	overflow:hidden;
+	padding:12px 12px 0;
+	background:#000 url(bg1.png) repeat-x 0 0;
+	border-radius:4px;
+	*zoom:1; /* ie clear float */
+	text-align:center;
+}
+ul li{
+	text-align:center;
+	padding:0 4px 0 0;
+	
+}
+ul li a{
+	
+		float:left;
+		color:#333;
+		position: relative;
+		left: 35%;
+		background:#aaa;
+		padding:.45em 1.25em;
+		display:none;
+		border-radius:4px 4px 0 0;
+		text-shadow:0 0 3px #fff;
+		font-weight:bold;
+		text-decoration:none;
+		box-shadow:0 0 5px #444;
+}
+ul li a:hover{
+	text-decoration:underline;
+}
+ul li a.on{
+	background:#fff;
+	color:#333;
+	cursor:default;
+}
+ul li a.on:hover{
+	text-decoration:none;
+}
+.panel{
+	background:#fff;
+	position: relative;
+	left: 30%;
+	padding:.75em 15px .4em;
+	margin:0 0 .5em;
+	width:570px;
+	 
+}
+
+  
+.agree {
+             position: relative; 
+             width: 570px; height: 118px; min-height: 118px; 
+             padding: 3px 3px 3px 6px; 
+             border: 1px solid #ececec; 
+             border-top-color: #e1e1e1; 
+             border-left-color: #e1e1e1; 
+             background: #ececec; 
+             border-radius: 3px; 
+            -moz-border-radius: 3px; 
+            -webkit-border-radius: 3px;
+}        
+.scheme-g { 
+            margin: 26px 0 8px; 
+            padding: 0px; 
+            font-size: 1.2em; 
+            font-weight: 100;
+}        
+
+
+
+
