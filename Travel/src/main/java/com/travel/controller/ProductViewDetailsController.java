@@ -8,6 +8,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class ProductViewDetailsController {
       
    
+	@RequestMapping("/home.do")
+	public String Home() {
+		
+		return "home";
+	} 
+	
    @RequestMapping("/ProductViewDetails1.do")
    public void ViewPage1() {
 

@@ -743,6 +743,10 @@ input {
  #id{
  width: 200px;
  }
+  #nickname{
+ width: 200px;
+ }
+ 
  #password_1{
  width: 200px;
  }

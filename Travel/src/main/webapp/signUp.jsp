@@ -262,10 +262,21 @@ window.onload = function() {
                             <div class="value"> 
                                         <div class="input-group">
                                             <input class="input--style-5" type="text" pattern="[ㄱ-힣]{2,5}" id="name" name="first_name" required><br/> 
-                                        	<label class="label--desc">한글 최소 2글자 이상</label>	
+                                        	<label class="label--desc">한글 최소 2글자 이상</label>	 
                                         </div> 
                                 </div>
                             </div>  
+                            
+                            <div class="form-row">
+                        <div class="name">닉네임</div>
+                        <div class="value"> 
+                         <div class="input-group">
+                            	<input class="input--style-5" type="text" pattern="[ㄱ-ㅎ가-힣a-zA-Z0-9]{2,7}" id="nickname" name="nickname" required><br/> 
+                               <label class="label--desc">한글,영어 숫자 조합 최소 2글자 이상</label>		
+                        </div>
+                        </div>
+                        </div>
+                        
                         <div class="form-row">
                             <div class="name">아이디</div>
                             <div class="value">
