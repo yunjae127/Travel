@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<title>mypage</title>
+<title>마이페이지</title>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

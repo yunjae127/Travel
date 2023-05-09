@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>jQuery test</title>
+<title>아이디/비밀번호 찾기</title>
 <link rel="stylesheet" type="text/css" href="./resources/css/findid.css" />
 <script type="text/javascript" src="./resources/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="./resources/js/findid.js"></script>

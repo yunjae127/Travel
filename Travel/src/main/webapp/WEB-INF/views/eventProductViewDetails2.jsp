@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>상품 상세 설명</title>
+        <title>이벤트 상품 상세 설명(시드니)</title>
         <!-- Favicon-->
         <link rel="icon" type="./resources/img/kakao_login.png" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->

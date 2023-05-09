@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>리뷰 페이지</title>
+    <title>리뷰</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -151,7 +151,7 @@
     <div id="board-list">  
     	 
         <div class="container">
-        <a href="#"><button class="reviewbtn">리뷰작성</button></a>
+        <a href="reviewWrite.do"><button class="reviewbtn">리뷰작성</button></a>
             <table class="board-table">
                 <thead>
                 <tr>

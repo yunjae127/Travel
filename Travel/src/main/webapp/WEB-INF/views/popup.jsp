@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<title>mypage</title>
+<title>회원가입 완료</title>
 
 
 <meta charset="utf-8" />

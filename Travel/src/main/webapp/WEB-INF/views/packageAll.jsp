@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NewFile.jsp</title>
+<title>모든패키지 보기</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

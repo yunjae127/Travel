@@ -12,18 +12,18 @@ public class ProductViewDetailsController {
 	public String Home() { 
 		return "home";
 	}  
-	  @RequestMapping("/eventProductViewDetails1.do")
-	   public void eventViewPage1() {
+	@RequestMapping("/eventProductViewDetails1.do")
+	public void eventViewPage1() {
 
-	   }
-	  @RequestMapping("/eventProductViewDetails2.do")
-	   public void eventViewPage2() {
+	}
+	@RequestMapping("/eventProductViewDetails2.do")
+	public void eventViewPage2() {
 
-	   }	 
-	  @RequestMapping("/eventProductViewDetails3.do")
-	   public void eventViewPage3() {
+	}	 
+	@RequestMapping("/eventProductViewDetails3.do")
+	public void eventViewPage3() {
 
-	   }
+	}
 	
    @RequestMapping("/ProductViewDetails1.do")
    public void ViewPage1() {
@@ -61,29 +61,64 @@ public class ProductViewDetailsController {
    @RequestMapping("/hotellist.do")
    public void hotellist() {
    }
-   @RequestMapping("/newYorkHotel.do")
+   
+   @RequestMapping("/bangkokHotel.do")
    public void hotelView1() {
    } 
   
-   @RequestMapping("/goldCostHotel.do")
+   @RequestMapping("/californiaHotel.do")
    public void hotelView2() {
 
-   } @RequestMapping("/californiaHotel.do")
+   } 
+   @RequestMapping("/danangHotel.do")
    public void hotelView3() {
 
-   } @RequestMapping("/maldiveHotel.do")
+   } 
+   @RequestMapping("/florenceHotel.do")
    public void hotelView4() {
 
-   } @RequestMapping("/hongkongHotel.do")
+   } 
+   @RequestMapping("/goldCostHotel.do")
    public void hotelView5() {
+
+   } 
+   @RequestMapping("/hawaiiHotel.do")
+   public void hotelView6() {
+
+   }  
+   @RequestMapping("/hongkongHotel.do")
+   public void hotelView7() {
+
+   }  
+   @RequestMapping("/maldiveHotel.do")
+   public void hotelView8() {
+
+   }  
+   @RequestMapping("/newYorkHotel.do")
+   public void hotelView9() {
+
+   }  
+   @RequestMapping("/sydneyHotel.do")
+   public void hotelView10() {
+
+   }  
+   @RequestMapping("/taipeiHotel.do")
+   public void hotelView11() {
+
+   }  
+   @RequestMapping("/zurichHotel.do")
+   public void hotelView12() {
 
    }  
    @RequestMapping("/Reservation.do")
    public void Reservation() {
    } 
-   @RequestMapping("reviewPage.do")
+   @RequestMapping("/reviewPage.do")
    public void reviewPage() {
 	   
    }
-   
+   @RequestMapping("/reviewWrite.do")
+   public void reviewWrite() {
+	   
+   }
 }

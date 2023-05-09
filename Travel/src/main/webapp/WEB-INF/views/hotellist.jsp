@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hotellist</title>
+<title>호텔리스트</title>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -195,7 +195,7 @@
 					<p class="card-text size">골드코스트</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="goldCostHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 
@@ -213,7 +213,7 @@
 					<p class="card-text size">캘리포니아</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="californiaHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 
@@ -234,7 +234,7 @@
 					<p class="card-text size">몰디브</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="maldiveHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 			<div class="card cardstyle">
@@ -250,7 +250,7 @@
 					<p class="card-text size">홍콩</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="hongkongHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 
@@ -270,7 +270,7 @@
 					<p class="card-text size">뉴욕</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="newYorkHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 			<div class="card cardstyle">
@@ -286,7 +286,7 @@
 					<p class="card-text size">시드니</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="sydneyHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 
@@ -306,7 +306,7 @@
 					<p class="card-text size">하와이</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="hawaiiHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 			<div class="card cardstyle">
@@ -322,7 +322,7 @@
 					<p class="card-text size">피렌체</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="florenceHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 
@@ -342,7 +342,7 @@
 					<p class="card-text size">타이페이</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="taipeiHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 			<div class="card cardstyle">
@@ -358,7 +358,7 @@
 					<p class="card-text size">취리히</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="zurichHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 
@@ -378,7 +378,7 @@
 					<p class="card-text size">방콕</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="bangkokHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 			<div class="card cardstyle">
@@ -394,7 +394,7 @@
 					<p class="card-text size">다낭</p>
 				</div>
 				<div class="card-footer text-muted">
-					<a href="view.html" class="btn btn-primary">호텔 상세보기</a>
+					<a href="danangHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
 			</div>
 
