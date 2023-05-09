@@ -759,7 +759,7 @@
 
 																																	
 																	   <div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">Read More</a>
+											    						<a href="reviewPage.do" class="btn btn-primary">Read More</a>
 											  							</div>
 															  </div>
 															</div>

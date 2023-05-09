@@ -81,5 +81,9 @@ public class ProductViewDetailsController {
    @RequestMapping("/Reservation.do")
    public void Reservation() {
    } 
+   @RequestMapping("reviewPage.do")
+   public void reviewPage() {
+	   
+   }
    
 }
