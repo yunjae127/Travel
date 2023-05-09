@@ -9,10 +9,21 @@ public class ProductViewDetailsController {
       
    
 	@RequestMapping("/home.do")
-	public String Home() {
-		
+	public String Home() { 
 		return "home";
-	} 
+	}  
+	  @RequestMapping("/eventProductViewDetails1.do")
+	   public void eventViewPage1() {
+
+	   }
+	  @RequestMapping("/eventProductViewDetails2.do")
+	   public void eventViewPage2() {
+
+	   }	 
+	  @RequestMapping("/eventProductViewDetails3.do")
+	   public void eventViewPage3() {
+
+	   }
 	
    @RequestMapping("/ProductViewDetails1.do")
    public void ViewPage1() {
@@ -37,36 +48,38 @@ public class ProductViewDetailsController {
    @RequestMapping("/ProductViewDetails6.do")
    public void ViewPage6() {
    }
+   
    @RequestMapping("/question.do")
-   public void ViewPage7() {
+   public void question() {
    }
    @RequestMapping("/mypage.do")
-   public void ViewPage8() {
+   public void mypage() {
    }
    @RequestMapping("/packageAll.do")
-   public void ViewPage9() {
+   public void packageAll() {
    }
    @RequestMapping("/hotellist.do")
-   public void ViewPage10() {
+   public void hotellist() {
    }
    @RequestMapping("/newYorkHotel.do")
-   public void hotelPage1() {
-   } 
-   @RequestMapping("/Reservation.do")
-   public void Reservation() {
-   } 
-   @RequestMapping("/goldCostHotel.do")
    public void hotelView1() {
-
-   } @RequestMapping("/californiaHotel.do")
+   } 
+  
+   @RequestMapping("/goldCostHotel.do")
    public void hotelView2() {
 
-   } @RequestMapping("/maldiveHotel.do")
+   } @RequestMapping("/californiaHotel.do")
    public void hotelView3() {
 
-   } @RequestMapping("/hongkongHotel.do")
+   } @RequestMapping("/maldiveHotel.do")
    public void hotelView4() {
 
+   } @RequestMapping("/hongkongHotel.do")
+   public void hotelView5() {
+
+   }  
+   @RequestMapping("/Reservation.do")
+   public void Reservation() {
    } 
    
 }
