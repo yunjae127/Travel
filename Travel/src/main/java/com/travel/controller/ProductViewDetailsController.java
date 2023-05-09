@@ -12,6 +12,19 @@ public class ProductViewDetailsController {
 	public String Home() { 
 		return "home";
 	}  
+	@RequestMapping("/manager.do")
+	public void manager() {
+
+	}
+	
+	@RequestMapping("/signUp.do")
+	public void signUp() {
+
+	}
+	@RequestMapping("/findId.do")
+	public void findId() {
+
+	}
 	@RequestMapping("/eventProductViewDetails1.do")
 	public void eventViewPage1() {
 
@@ -49,7 +62,7 @@ public class ProductViewDetailsController {
    public void ViewPage6() {
    }
    
-   @RequestMapping("/question.do")
+   @RequestMapping("/questionWrite.do")
    public void question() {
    }
    @RequestMapping("/mypage.do")
@@ -121,4 +134,6 @@ public class ProductViewDetailsController {
    public void reviewWrite() {
 	   
    }
+   
+   
 }

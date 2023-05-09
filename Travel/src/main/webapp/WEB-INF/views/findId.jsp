@@ -8,7 +8,25 @@
 <link rel="stylesheet" type="text/css" href="./resources/css/findid.css" />
 <script type="text/javascript" src="./resources/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="./resources/js/findid.js"></script>
-
+<script type="text/javascript">
+window.onload = function() {
+	frm3.onsubmit = function(e) {
+        e.preventDefault();
+           
+        // 비밀번호 일치 
+        var password1 = document.querySelector('#pw_check').value; 
+        var password2 = document.querySelector('#pw2_3').value; 
+        
+        	if(password1 != password2){ 
+        		alert("비밀번호가 일치하지 않습니다.");
+        		return; 
+        	}else{ 
+        		frm3.submit();
+        	} 
+        
+     }// frm  
+} 
+</script>
 </head>
 <body>
 
@@ -25,21 +43,25 @@
 					<div class="card align-middle" style="width:25rem;">
 		<div class="card-title" style="margin-top:30px;">
             
-			<h2 class="card-title" style="color:#f58b34;"><img src="./resources/img/100.jpg"/></h2>
+			<h2 class="card-title" style="color:#f58b34;"><img src="./resources/img/gotravel_logo.jpg"/></h2>
 		</div> 
         
 		<div class="card-body">
       <form name='frm1' id="frm1" action="index.jsp" class="form-signin" method="POST">
   		 <p class="text2"> ${findid2}</p>
-  		<input type="text" size="3" class="form-control" value="이름" readonly>
-        <input type="text" size="30" name="name" id="name_1" class="form-control" pattern="[ㄱ-힣]{2,5}" placeholder="이름" required autofocus><br>
-        
-        <input type="text" size="3" class="form-control" value="이메일" readonly>
-        <input type="email" size="30" name="email" id="email_1" class="form-control" placeholder="이메일" required><br>
-       
-        <input type="text" 	size="3" class="form-control" value="힌트" readonly>
-        <input type="text" size="30" name="hint" id="hint_1" class="form-control" placeholder="힌트" required><br>
-       
+  		 <div class="twoWord">
+  		 	<label>이 름 :</label> 
+         	<input type="text" size="30" name="name" id="name_1" class="form-control" pattern="[ㄱ-힣]{2,5}" placeholder="이름" required autofocus><br>
+         </div>
+         <div class="twoWord">
+         <label>힌 트 :</label>  
+         <input type="text" size="30" name="hint" id="hint_1" class="form-control" placeholder="힌트" required><br>
+         </div>
+         <div class="email_1">
+         <label>이메일 :</label> 
+         <input type="email" size="30" name="email" id="email_1" class="form-control" placeholder="이메일" required><br>
+         </div>
+         
 		<p class="check" id="check">${check}</p><br/>
       
         <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">아이디 찾기</button>
@@ -54,20 +76,22 @@
 					<div class="card align-middle" style="width:25rem;">
 		<div class="card-title" style="margin-top:30px;">
             
-			<h2 class="card-title" style="color:#f58b34;"><img src="./resources/img/100.jpg"/></h2>
+			<h2 class="card-title" style="color:#f58b34;"><img src="./resources/img/gotravel_logo.jpg"/></h2>
 		</div> 
         
 		<div class="card-body">
       <form name="frm2" id="frm2" action="index.jsp" class="form-signin" method="POST">
   		 <p class="text2"> ${findid2}</p>
   		 
-  		<input type="text" size="3" class="form-control" value="아이디" readonly>
-        <input type="text" size="30" name="id" id="id_2" class="form-control" pattern="[a-z0-9]{5,12}" placeholder="아이디" required autofocus><br>
-        <input type="text" size="3" class="form-control" value="이메일" readonly>
-        <input type="email" size="30" name="email" id="email_2" class="form-control" placeholder="이메일" required><br>
-       <input type="text" 	size="3" class="form-control" value="힌트" readonly>
-        <input type="text" size="30" name="hint" id="hint_2" class="form-control" placeholder="힌트" required><br>
-       
+  		 <div class="threeWord">
+  		 <label>아이디 :</label> 
+         <input type="text" size="30" name="id" id="id_2" class="form-control" pattern="[a-z0-9]{5,12}" placeholder="아이디" required autofocus><br>
+         </div>
+         <div>
+		 <label class="twoWord">힌 트:   </label> 
+         <input type="text" size="30" name="hint" id="hint_2" class="form-control" placeholder="힌트" required><br>
+       	 </div>
+           
 		<p class="check" id="check">${check}</p><br/>
         
         <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">비밀번호 찾기</button>
@@ -77,7 +101,7 @@
 	</div>
 	
 	<!-- 비밀번호 변경  -->
-	<div class="panel" id="panel1-3">비밀번호 변경
+	<div class="panel" id="panel1-3"> 
 		 <%
 		 Object data = session.getAttribute("findid");
 		 String finduid = (String)data;
@@ -86,7 +110,7 @@
 	<div class="card align-middle" style="width:25rem;">
 		<div class="card-title" style="margin-top:30px;">
             
-			<h2 class="card-title" style="color:#f58b34;"><img src="./resources/img/100.jpg"/></h2>
+			<h2 class="card-title" style="color:#f58b34;"><img src="./resources/img/gotravel_logo.jpg"/></h2>
 		</div>
         
 		<div class="card-body">

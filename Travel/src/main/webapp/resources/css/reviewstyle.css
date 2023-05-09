@@ -33,15 +33,17 @@
 }
 
 .card-text{
-	height: 400px;
+	height: 300px;
 }
 
-.reviewcontent{
-	
-	height: 380px;
-	
+.reviewcontent{ 
+	height: 300px;
+    position: relative;
+    bottom: 25px; 
 }
-
+.reviewtitle{
+	height: 50px; 
+}
 .btn.btn-primary1{
 	background-color : gray;
 	color : white;

@@ -12,6 +12,27 @@
 	top : 50px;
 }
 
+.deleteButton{
+	 
+	width: 45px;
+    position: relative;
+    bottom: 26px;
+    left: 270px;
+    background-color: skyblue;
+	border: skyblue;
+	color: white;
+	
+}
+.modifyButton{
+	
+	width: 45px;
+	position: relative; 
+    left: -40px;
+	background-color: skyblue;
+	border: skyblue;
+	color: white;
+}
+
 .btn.btn-primary1{
 	background-color : gray;
 	color : white;

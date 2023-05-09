@@ -208,12 +208,13 @@ fileDOM2.addEventListener('change', () => {
 
 								</h5>
 							</div>
-							<input type="text" name="reviewcontent" id="reviewcontent"
-								class="reviewcontent" />
+							<input type="text" name="reviewtitle" id="reviewtitle" class="reviewtitle" placeholder="  제목을 입력하여 주세요 "  /><br/>
+							
+							<input type="text" name="reviewcontent" id="reviewcontent" class="reviewcontent" placeholder = " 내용을 작성하여 주세요"  />
 
 
 							<div class="card-footer text-muted">
-								<a href="view.html" class="btn btn-primary">리뷰 작성</a>
+								<a href="reviewPage.do" class="btn btn-primary">리뷰 작성</a>
 							</div>
 						</div>
 					</div>

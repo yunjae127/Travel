@@ -346,7 +346,7 @@
 							<div class="row">
 								<div class="col-md-12 col-sm-12">
 								 <img src="./resources/img/gotravel_logo.jpg" width="85px" height="50px">
-							     <h4 class="text-center text-white">&copy;Copyrights 2018. All rights reserved by: go travel</h4>
+							     <h4 class="text-center text-white">&copy;Copyrights 2023. All rights reserved by: go travel</h4>
 								</div>
 								
 								

@@ -11,7 +11,7 @@
           <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
          <link rel="icon" type="image/png" href="./resources/img/logo3.png">
          <link rel="stylesheet" href="./resources/css/swiper.min.css">
-      
+      <link rel="stylesheet" href="./resources/css/view.css">
          <link rel="stylesheet" type="text/css" href="./resources/css/bootstrap.min.css" />
          <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
          <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -34,7 +34,7 @@
                    <ul class="navbar-nav ml-auto id="float">
                    
                    <li class="nav-item active">
-                             <a class="nav-link font" id="home" href="manager.jsp">관리자페이지<span class="sr-only">(current)</span></a>
+                             <a class="nav-link font" id="home" href="manager.do">관리자페이지<span class="sr-only">(current)</span></a>
                   </li>
                    
                      <li class="nav-item active">
@@ -68,75 +68,123 @@
                    <li class="nav-item active"><a class="nav-link font" href="mypage.do">마이페이지<span class="sr-only">(current)</span></a>
                        </li>
                   <div class="btn-group">
-                  <button type="button" class="btn btn-outline-primary dropdown-toggle mr-1" data-toggle="modal" aria-haspopup="true" aria-expanded="false" data-target="#search">Search
- 
-                  </button>
+                  <button type="button"
+                     class="btn btn-outline-primary dropdown-toggle mr-1"
+                     data-toggle="modal" aria-haspopup="true" aria-expanded="false"
+                     data-target="#search">검색</button>
                </div>
 
-               <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
+               <div class="modal fade" id="search" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
                         <div class="modal-header">
-                          
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+
+                           <button type="button" class="close" data-dismiss="modal"
+                              aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                           </button>
                         </div>
                         <div class="modal-body">
-                          <form>
-                                    <input type="Search" name="" class="form-control" placeholder="Search">
-                                    <button type="submit" data-dismiss="modal" class="btn btn-outline-primary mt-2 mb-2">Search</button>
-                            </form>
+                           <form>
+                              <input type="Search" name="main=search" class="form-control"
+                                 placeholder="검색어를 입력해주세요">
+                              <button type="submit" data-dismiss="modal"
+                                 class="btn btn-outline-primary mt-2 mb-2">검색</button>
+
+                           </form>
+                           <ul name="search_list" class="search_list" hidden="hidden">
+                              <li><a href=''>국내</a></li>
+                              <li><a href=''>일본</a></li>
+                              <li><a href=''>중국</a></li>
+                              <li><a href=''>호주</a></li>
+                              <li><a href=''>미국</a></li>
+                              <li><a href=''>유럽</a></li>
+                           </ul>
+
                         </div>
-                        
-                      </div>
-                    </div>
+
+                     </div>
+                  </div>
                </div>
 
 
-            
 
-             <div class="btn-group">
-                 <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="modal" aria-haspopup="true" aria-expanded="false" data-target="#login">
-                login
-                 </button>
-              
-            </div>
 
-            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
+               <div class="btn-group">
+                  <button type="button"
+                     class="btn btn-outline-primary dropdown-toggle"
+                     data-toggle="modal" aria-haspopup="true" aria-expanded="false"
+                     data-target="#login">로그인</button>
+
+               </div>
+
+               <div class="modal fade" id="login" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title text-dark" id="exampleModalLabel">login</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+                           <h5 class="modal-title text-dark" id="exampleModalLabel">로그인</h5>
+                           <button type="button" class="close" data-dismiss="modal"
+                              aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                           </button>
                         </div>
                         <div class="modal-body">
-                          <form>
-                             <div class="form-group">
-                               <label for="exampleInputEmail1" class="text-dark">Email address</label>
-                               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                               <small id="emailHelp" class="form-text text-muted">We'll never share your email wif anyone else.</small>
-                             </div>
-                             <div class="form-group">
-                               <label for="exampleInputPassword1" class="text-dark">Password</label>
-                               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                             </div>
-                             <div class="form-group form-check">
-                               <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                               <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                             </div>
-                             <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                           <form>
+                              <div class="form-group">
+                                 <label for="exampleInputEmail1" class="text-dark">ID</label>
+                                 <input type="text" class="form-control"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    placeholder="아이디 입력">
+
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="exampleInputPassword1" class="text-dark">PASSWORD</label>
+                                 <input type="password" class="form-control"
+                                    id="exampleInputPassword1" placeholder="비밀번호 입력">
+                              </div>
+                              <a href="findId.do" class="href-find">아이디/비밀번호 찾기</a> 
+                              <button type="submit" class="btn btn-primary">로그인</button>
+                              <a
+                                 href="javascript:kakaoLogin();"><img
+                                 src="./resources/img/KakaoTalk_login.png" class="kakao_login_jpg"
+                                 alt="카카오계정 로그인" style= "margin: 0px auto; display:inline;"/></a>
+
+                              <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                              <script>
+                                   window.Kakao.init('fc3c5b38f841f6d55bdfb9248b3b7c9f');
+
+                                      function kakaoLogin() {
+                                       window.Kakao.Auth.login({
+                                              scope: 'profile, account_email', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+                                                 success: function(response) {
+                                                  console.log(response) // 로그인 성공하면 받아오는 데이터
+                                                  window.Kakao.API.request({ // 사용자 정보 가져오기 
+                                                      url: '/v2/user/me',
+                                                      success: (res) => {
+                                                       const kakao_account = res.kakao_account;
+                                                       console.log(kakao_account)
+                                                            }
+                                                           });
+                                                     window.location.href='/ex/kakao_login.html' //리다이렉트 되는 코드
+                                                          },
+                                                          fail: function(error) {
+                                                                 console.log(error);
+                                                 }
+                                                });
+                                               }
+                                  </script>
+                               <a href="signUp.do">   
+                              <button type="button" class="btn btn-regist">회원가입</button></a>
+                           </form>
 
                         </div>
-                        
-                      </div>
-                    </div>
+
+                     </div>
+                  </div>
                </div>
-
-
                      
 
                   

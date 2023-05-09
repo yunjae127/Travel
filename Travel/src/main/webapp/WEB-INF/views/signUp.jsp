@@ -265,24 +265,26 @@ window.onload = function() {
                                         	<label class="label--desc">한글 최소 2글자 이상</label>	 
                                         </div> 
                                 </div>
-                            </div>  
-                            
-                            <div class="form-row">
-                        <div class="name">닉네임</div>
-                        <div class="value"> 
-                         <div class="input-group">
-                            	<input class="input--style-5" type="text" pattern="[ㄱ-ㅎ가-힣a-zA-Z0-9]{2,7}" id="nickname" name="nickname" required><br/> 
-                               <label class="label--desc">한글,영어 숫자 조합 최소 2글자 이상</label>		
-                        </div>
-                        </div>
-                        </div>
-                        
+                            </div>   
                         <div class="form-row">
                             <div class="name">아이디</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-5" type="text"  pattern="[a-z0-9]{5,12}" id="id" name="id" required><br/>
                                     <label class="label--desc">영문 소문자, 숫자 최소 5글자 이상</label>
+                                    <span class="idcheck"><input class="idSearch" type="button" id="idSearch" name="idSearch" value="중복확인"></span><br/>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="name">주민등록번호</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text"  pattern="[0-9]{6,6}" id="socialnumber_1" name="socialnumber_1" required><br/>
+                                    -
+                                    <input class="input--style-5" type="password"  pattern="[0-9]{1,1}" id="socialnumber_2" name="socialnumber_2" required><br/>
+                                    <input class="input--style-5" type="password"  id="socialnumber_3" name="socialnumber_3" value="●●●●●●" readonly><br/>
+                                    <label class="label--desc">주민등록번호 입력</label>
                                     <span class="idcheck"><input class="idSearch" type="button" id="idSearch" name="idSearch" value="중복확인"></span><br/>
                                 </div>
                             </div>

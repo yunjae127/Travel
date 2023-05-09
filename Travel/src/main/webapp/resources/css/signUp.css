@@ -28,6 +28,18 @@
   flex-wrap: wrap;
 }
 
+#socialnumber_1{
+	
+ 	width:200px;
+}
+#socialnumber_2{
+	width:50px;
+}
+#socialnumber_3{
+	width:200px;
+}
+
+
 .row .col-2:last-child .input-group-desc {
   margin-bottom: 0;
 }
