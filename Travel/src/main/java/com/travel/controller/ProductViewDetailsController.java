@@ -130,10 +130,26 @@ public class ProductViewDetailsController {
    public void reviewPage() {
 	   
    }
-   @RequestMapping("/reviewWrite.do")
+   @RequestMapping("/salesStatus.do")
+   public void salesStatus() {
+	   
+   }
+   @RequestMapping("/customerManager.do")
+   public void customerManager() {
+	   
+   }
+   
+   @RequestMapping("/packmana.do")
    public void reviewWrite() {
 	   
    }
+   
+   @RequestMapping("/customerCenter.do")
+   public void customerCenter() {
+	   
+   } 
+   
+   
    
    
 }

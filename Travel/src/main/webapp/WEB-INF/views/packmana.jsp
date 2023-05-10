@@ -20,7 +20,7 @@
 <body class="sb-nav-fixed">
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 		<!-- Navbar Brand-->
-		<a class="navbar-brand ps-3" href="index.html">관리자 페이지</a>
+		<a class="navbar-brand ps-3" href="manager.do">관리자 페이지</a>
 	</nav>
 	<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
@@ -66,15 +66,15 @@
 								</div>
 							</nav>
 						</div>
-						<a class="nav-link" href="charts.html">
+						<a class="nav-link" href="salesStatus.do">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-chart-area"></i>
 							</div> 판매현황
-						</a> <a class="nav-link" href="tables.html">
+						</a> <a class="nav-link" href="customerManager.do">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-table"></i>
 							</div> 회원관리
-						</a> <a class="nav-link" href="packmana.jsp">
+						</a> <a class="nav-link" href="packmana.do">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-table"></i>
 							</div> 상품관리
