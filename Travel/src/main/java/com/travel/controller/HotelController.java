@@ -37,7 +37,7 @@ public class HotelController {
 		int result1 = hotelService.insertHotel(vo);    
 		int result2 = hotelService.insertImage(ivo);
 		
-		
+		 
 		
 		return "ok";
 		 

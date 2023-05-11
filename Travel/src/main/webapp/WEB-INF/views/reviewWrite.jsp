@@ -13,7 +13,7 @@
    href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link href="https://fonts.googleapis.com/css?family=Cookie"
    rel="stylesheet">
-<link rel="icon" type="image/png" href="./resources/img/logo3.png">
+<link rel="icon" type="image/png" href="./resources/img/gotravel_logo.jpg">
 <link rel="stylesheet" href="./resources/css/swiper.min.css">
 
 <link rel="stylesheet" type="text/css"
@@ -60,7 +60,7 @@ fileDOM2.addEventListener('change', () => {
 	<div id="navbar">
 		<nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
 			<a class="navbar-brand" href="#" target="blank"><img
-				src="./resources/img/logo3.png" width="85px" height="50px"><span
+				src="./resources/img/gotravel_logo.jpg" width="85px" height="50px"><span
 				class="logoo"></span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
@@ -189,26 +189,28 @@ fileDOM2.addEventListener('change', () => {
 			<div class="card cardstyle">
 
 				<div class="card-header">리뷰를 작성해 주세요!</div>
-				
+			
+			<form action="reviewSave.do" method="post">
 				<div class="card-body">
-				 <div class="flex-container">
-  <div class="wrapper">
-    <h2>FileReader</h2>
-    <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box" />
-    <label for="file" class="upload-btn">
-      <input id="file" type="file" accept="image/*" />
-      <span>Upload Image</span>
-    </label>
-  </div>
-   
-</div>
+					<div class="flex-container">
+						<div class="wrapper">
+							<h2>FileReader</h2>
+							<img
+								src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg"
+								class="image-box" /> <label for="file" class="upload-btn">
+								<input id="file" type="file" accept="image/*" /> <span>Upload
+									Image</span>
+							</label>
+						</div>
+
+					</div>
 
 					<h5 class="card-title">
-									<span class="float-left">admin</span> <span class="float-left">&nbsp;&nbsp;2023-05-09</span>
+						<span class="float-left">admin</span> <span class="float-left">&nbsp;&nbsp;2023-05-09</span>
 
-								</h5>
-							</div>
-							<input type="text" name="reviewtitle" id="reviewtitle" class="reviewtitle" placeholder="  제목을 입력하여 주세요 "  /><br/>
+					</h5>
+				</div>
+				<input type="text" name="reviewtitle" id="reviewtitle" class="reviewtitle" placeholder="  제목을 입력하여 주세요 "  /><br/>
 							
 							<input type="text" name="reviewcontent" id="reviewcontent" class="reviewcontent" placeholder = " 내용을 작성하여 주세요"  />
 
@@ -216,11 +218,12 @@ fileDOM2.addEventListener('change', () => {
 							<div class="card-footer text-muted">
 								<a href="reviewPage.do" class="btn btn-primary">리뷰 작성</a>
 							</div>
+							</form>
 						</div>
 					</div>
 
 				</div>
-
+			
 				<div class="container-fluid pt-5 pb-5 backgroud" id='bottom3'>
 		<div class="container">
 			<div class="row">

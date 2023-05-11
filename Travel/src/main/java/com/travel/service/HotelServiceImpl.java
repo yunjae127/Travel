@@ -19,9 +19,7 @@ public class HotelServiceImpl implements HotelService {
 	
 	@Override
 	public Integer insertHotel(HotelVO vo) { 
-		
-		
-		
+		 
 		return hotelDAO.insertHotel(vo);
 		
 	}
@@ -57,6 +55,12 @@ public class HotelServiceImpl implements HotelService {
 		
 		hotelDAO.hotelDelete(image_Name);
 		
+	}
+  
+	@Override
+	public List<HotelVO> hotelMainList() {
+		
+		return hotelDAO.hotelMainList();
 	}
 
 

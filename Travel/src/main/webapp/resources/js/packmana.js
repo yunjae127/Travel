@@ -24,6 +24,8 @@ $(function(){
    })//end of saveProductLis ajax
    
    
+   
+   
    function ProductList(){
       
       
@@ -38,6 +40,7 @@ $(function(){
       console.log(err);
       }
       })//end of makeList ajax
+      
       
       function makeList(result){
       alert(result)

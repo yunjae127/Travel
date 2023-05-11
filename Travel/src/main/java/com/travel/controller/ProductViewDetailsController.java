@@ -1,18 +1,31 @@
 package com.travel.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.travel.domain.HotelVO;
+import com.travel.service.HotelService;
 
 @Controller
 public class ProductViewDetailsController {
        
+	@Autowired
+	private HotelService hotelService;
+ 
 
 	@RequestMapping("/home.do")
-	public String Home() {  
+	public void Home(Model model) {  
 		
-		return "home";
+	List<HotelVO> list = hotelService.hotelMainList(); 
+	model.addAttribute("hotelMainList", list); 
+ 
 	}   
+	
 	@RequestMapping("/manager.do")
 	public void manager() {
 
@@ -76,10 +89,7 @@ public class ProductViewDetailsController {
    @RequestMapping("/Reservation.do")
    public void Reservation() {
    } 
-   @RequestMapping("/reviewPage.do")
-   public void reviewPage() {
-	   
-   }
+  
    @RequestMapping("/salesStatus.do")
    public void salesStatus() {
 	   
@@ -98,7 +108,7 @@ public class ProductViewDetailsController {
    public void customerCenter() {
 	   
    } 
-   
+     
    
    
    

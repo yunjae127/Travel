@@ -48,6 +48,11 @@ public class HotelDAOImpl implements HotelDAO {
 		
 	}
 
+	public List<HotelVO> hotelMainList() {
+		 
+		return sqlSession.selectList("hotelDAO.hotelMainList");
+	}
+
 
 
 }

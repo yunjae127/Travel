@@ -185,39 +185,40 @@
 
 
 
-	 <div class="container bac">
+	<div class="container bac">
 		<div class="card-deck">
-		
-		<c:set var="i" value="0" />
-		<c:set var="j" value="2" />
-		<table border="1">
-		<c:forEach items="${hotellist}" var="hotel">
-				<c:if test="{i%j == 0}">
-					<tr>
-				</c:if>
-				<td class="hotelList">
-				<img class="rounded-circle ddd m-auto"
-					src="./resources/upload/${hotel.image_New_Name}" alt="photo" width="140px"
-					height="140px"> 
+			<div class="card cardstyle">
+				<c:set var="i" value="0" />
+				<c:set var="j" value="2" />
+				<table border="1">
+					<c:forEach items="${hotellist}" var="hotel">
+						<c:if test="{i%j == 0}">
+							<tr>
+						</c:if>
+						<td class="hotelList"><img class="rounded-circle ddd m-auto"
+							src="./resources/upload/${hotel.image_New_Name}" alt="photo"
+							width="140px" height="140px">
 
-			
-				<div class="card-body">
-					<h5 class="card-title">${hotel.hotel_Name}</h5>
-					<p class="card-text size">${hotel.hotel_Address}</p>
-				</div>
-				
-				<div class="card-body">
-					<a href="getHotel.do?hotel_Name=${hotel.hotel_Name}" class="btn btn-primary">호텔 상세보기</a>
-				</div>
-				</td>
-				<c:if test="${i%j == j-1}">
-				</tr>
-				</c:if>  
- 	      <c:set var="i" value="${i+1}" /> 
- 	   </c:forEach>  
- 	</table>
- 	   
-<!-- 
+
+							<div class="card-body">
+								<h5 class="card-title">${hotel.hotel_Name}</h5>
+								<p class="card-text size">${hotel.hotel_Address}</p>
+							</div>
+
+							<div class="card-footer text-muted">
+								<a href="getHotel.do?hotel_Name=${hotel.hotel_Name}"
+									class="btn btn-primary">호텔 상세보기</a>
+							</div></td>
+						<c:if test="${i%j == j-1}">
+							</tr>
+						</c:if>
+						<c:set var="i" value="${i+1}" />
+					</c:forEach>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- 
 			<div class="card cardstyle">
 
 
@@ -422,6 +423,16 @@
 
 		</div> -->
 
+				<div class="container-fluid pt-5 pb-5 backgroud" id='bottom3'>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<h4 class="text-center text-white">&copy;Copyrights 2018. All
+						rights reserved by: go travel</h4>
+				</div>
+			</div>
+		</div>
+	</div>
 
   
 </body>

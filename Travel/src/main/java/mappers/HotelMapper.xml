@@ -39,6 +39,17 @@
 		) 
 	</insert>
 	
+	<!-- 메인에서 호텔 목록 불러오기  -->
+	<select id="hotelMainList"  resultType="com.travel.domain.HotelVO">
+	
+		SELECT *
+		FROM HOTEL_LIST A  
+		INNER JOIN IMAGE_LIST B ON(A.IMAGE_NAME = B.IMAGE_NAME)
+		<![CDATA[WHERE rownum <= 4]]>
+		ORDER BY HOTEL_NAME DESC 	 
+	</select>
+	
+	
 	<!-- 호텔 목록 삭제하기  -->
 	<delete id='hotelDelete' parameterType='com.travel.domain.HotelVO'>
 		DELETE FROM HOTEL_LIST WHERE hotel_Name=#{hotel_Name}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="reviewDAO"> 
+   <insert id='insertReview' parameterType="com.travel.domain.ReviewVO">
+      INSERT INTO Review_Board(
+      Review_Num
+      , Review_Title
+      , Review_Writer
+      , Review_Content
+      , Review_Count
+      , Review_Date 
+      <if test="image_Name != null">
+      , Image_Name
+      </if>
+      )VALUES(
+        #{review_Num}
+      , #{review_Title}
+      , #{review_Writer}
+      , #{review_Content}
+      , #{review_Count}
+      , sysdate 
+      <if test="image_Name != null">
+      , #{image_Name}
+      </if>
+      )
+   </insert>
+
+</mapper>

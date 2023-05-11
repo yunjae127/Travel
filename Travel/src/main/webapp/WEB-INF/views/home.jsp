@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>   
+    
 <!DOCTYPE html>
 <html>
    <head>
@@ -568,70 +571,34 @@
                                          <div class="card-deck">
                                                <div class="card cardstyle">
                                                  
-                                                  
-                                                     <img class="rounded-circle ddd m-auto" src="./resources/img/Australia_main.jpg" alt="photo" width="140px" height="140px">
-                                                  
+                                                 <c:set var="i" value="0" />
+												 <c:set var="j" value="2" />
+												 	<table border = "1">
+                                                  <c:forEach items="${hotelMainList}" var ="hotelMain"> 
+                                                  		<c:if test="{i%j == 0}">
+                                                  			<tr>
+                                                  		</c:if>
+                                                  		<td>
+                                                     <img class="rounded-circle ddd m-auto" src="./resources/upload/${hotelMain.image_New_Name }" alt="photo" width="140px" height="140px">
+                                                  	
                                                  
                                                  <div class="card-body">
-                                                       <h5 class="card-title">팔라초 베르사체</h5>
-                                                       <p class="card-text size">호주 골드코스트</p>
+                                                       <h5 class="card-title">${hotelMain.hotel_Name}</h5>
+                                                       <p class="card-text size">${hotelMain.hotel_Address}</p>
                                                      </div>
                                                       <div class="card-footer text-muted">
-                                                       <a href="goldCostHotel.do" class="btn btn-primary">호텔 상세보기</a>
+                                                       <a href="getHotel.do?hotel_Name=${hotelMain.hotel_Name}" class="btn btn-primary">호텔 상세보기</a>
+                                                       
                                                         </div>
-                                               </div>
-                                               <div class="card cardstyle">
-                                                 
-                                                  
-                                                     <img class="rounded-circle ddd m-auto" src="./resources/img/California_main.jpg" alt="photo" width="140px" height="140px">
-                                                  
-                                                 
-                                                 <div class="card-body">
-                                                       <h5 class="card-title">더 페닌슈라 베벌리힐스</h5>
-                                                       <p class="card-text size">미국 캘리포니아</p>
-                                                     </div>
-                                                      <div class="card-footer text-muted">
-                                                       <a href="californiaHotel.do" class="btn btn-primary">호텔 상세보기</a>
-                                                        </div>
-                                               </div>
-                                               
-                                             </div>
-
-
-                                             <div class="card-deck mt-3">
-                                               <div class="card cardstyle">
-                                                 
-                                                  
-                                                     <img class="rounded-circle ddd m-auto" src="./resources/img/Maldive_main.jpg" alt="photo" width="140px" height="140px">
-                                                  
-                                                 
-                                                 <div class="card-body">
-                                                       <h5 class="card-title">소네바 자니</h5>
-                                                       <p class="card-text size">몰디브</p>
-                                                     </div>
-                                                      <div class="card-footer text-muted">
-                                                       <a href="maldiveHotel.do" class="btn btn-primary">호텔 상세보기</a>
-                                                        </div>
-                                               </div>
-                                               <div class="card cardstyle">
-                                                 
-                                                  
-                                                     <img class="rounded-circle ddd m-auto" src="./resources/img/Hongkong_main.png" alt="photo" width="140px" height="140px">
-                                                  
-                                                 
-                                                 <div class="card-body">
-                                                       <h5 class="card-title">카오룽 샹그릴라 홍콩</h5>
-                                                       <p class="card-text size">홍콩</p>
-                                                     </div>
-                                                      <div class="card-footer text-muted">
-                                                       <a href="hongkongHotel.do" class="btn btn-primary">호텔 상세보기</a>
-                                                        </div>
-                                               </div>
-                                               
-                                             </div>
-
-
-                                          
+                                                        </td>
+                                                       <c:if test="${i%j == j-1}"> 
+                                                       </tr>
+                                                       </c:if> 
+                                                       <c:set var="i" value="${i+1}" /> 
+                                                   </c:forEach> 
+                                             </table>
+                                               </div> 
+                                             </div>  
                                     </div>
                                  
                               </div>

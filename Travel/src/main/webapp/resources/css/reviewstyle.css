@@ -39,10 +39,11 @@
 .reviewcontent{ 
 	height: 300px;
     position: relative;
-    bottom: 25px; 
+    width: 670px;
 }
 .reviewtitle{
 	height: 50px; 
+	width: 670px;
 }
 .btn.btn-primary1{
 	background-color : gray;

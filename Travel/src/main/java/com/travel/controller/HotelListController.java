@@ -46,5 +46,6 @@ public class HotelListController {
 		model.addAttribute("hotel", result); 
 		  
 	}
+	 
 
 }

@@ -7,20 +7,20 @@ import com.travel.domain.ImageListVO;
 
 public interface HotelService {
 
-	Integer insertHotel(HotelVO vo);
-
+	Integer insertHotel(HotelVO vo); 
 
 	Integer insertImage(ImageListVO ivo);
 	
 	List<HotelVO> hotellist(HotelVO vo);
 
-	HotelVO getHotel(HotelVO vo);
+	HotelVO getHotel(HotelVO vo); 
 
+	List<HotelVO> selectALLHotel(HotelVO vo); 
 
-	List<HotelVO> selectALLHotel(HotelVO vo);
-
-
-	void hotelDelete(String hotel_Name);
+	void hotelDelete(String hotel_Name); 
+ 
+	List<HotelVO> hotelMainList();
+ 
 
 
 
