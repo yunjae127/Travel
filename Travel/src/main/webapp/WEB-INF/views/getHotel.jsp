@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html >
     <head>
@@ -7,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>호텔 상세 설명(골드코스트)</title>
+        <title>호텔 상세 설명</title>
         <!-- Favicon-->
         <link rel="icon" type="./resources/img/kakao_login.png" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -18,6 +19,7 @@
     </head>
     <body>
         <!-- Navigation-->
+       
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand">상품 상세 설명</a>
@@ -42,7 +44,7 @@
                         </button>
                     </form>
                 </div>
-            </div>
+            </div>  
         </nav>
         <!-- Product section-->
         <section class="py-5">
@@ -52,16 +54,17 @@
                     	<!-- <img class="card-img-top mb-5 mb-md-0" src="./resources/img/NewYork_main.png" alt="미국에 있는 파크 하야트 호텔 사진" /> -->
                       <div class="card-img-top mb-5 mb-md-0"> 
                      <div class="carousel slide" id="carousel-example-generic" >
+           
             <!-- Indicators -->
-            <ol class='carousel-indicators'>
+           <!--  <ol class='carousel-indicators'>
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
               <li data-target="#carousel-example-generic" data-slide-to="3"></li>
             </ol>
-             
+            -->  
              <!-- Carousel items -->
-             <div class="carousel-inner">
+          <!--    <div class="carousel-inner">
                 <div class="item active">
                    <img src="./resources/img/Australia_main.jpg" alt="First slide">
                 </div>
@@ -74,10 +77,10 @@
                 <div class="item">
                    <img src="./resources/img/Australia_serve3.jpg" alt="forth slide">                 
                 </div>
-             </div>
+             </div> -->
              
             <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <!--     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                 <span class="icon-prev"></span>
               </a>
               <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
@@ -85,36 +88,107 @@
               </a>
          	 </div>	 
            </div>            
-           </div>
+           </div> -->
                        
-                    <div class="col-md-6">
+                  <div>
+                   <img src="./resources/upload/${hotel.image_New_Name}" alt="First slide">
+                </div>      
+                       
+                    <div class="explain">
                         <div class="small mb-1">호주로 갑시다~</div>
-                        <h1 class="display-5 fw-bolder">팔라초 베르사체</h1><br/>
+                        <form action="home.do" method="get">
+                        <input name="image_Name" type="hidden" value="${hotel.hotel_Name}"/>
+                        <h1 class="display-5 fw-bolder">${hotel.hotel_Name}</h1><br/>
                         <p class="lead">
 						<ul>
-						<li>1. 일반 일부 흡연 구역 에어컨 모닝콜 서비스 목재 또는 격자무늬 바닥 난방 시설 렌터카 서비스</li>
-						<br />
-						<li>2.리셉션 서비스 청구서(인보이스) 제공 숙소 컨시어지 서비스 수하물 보관소 투어 데스크 환전</li>
-						<br />
-						<li>3. 식음료 커피숍 (숙소 부지 내) 와인/샴페인 유료 키즈밀 유료 특별 식단 메뉴(요청 시)</li>
-						<br />
-						<li>4. 청소 서비스 하우스키핑 (매일) 바지 다림질 유료 다림질 서비스 유료 드라이클리닝 유료 세탁 유료
-						</li>
-						<br />
-						<li>위치 : Sea World Drive, 메인 비치, 4217 골드코스트, 오스트레일리아</li>  
+						<li>${hotel.hotel_Content}</li>
+						<li>${hotel.hotel_Address}</li>
+			
 						</ul> 
 					</p> 
+					</form>
                     </div>
                     
                 </div>
             </div>
         </section>
+        <form action="home.do" method="get">
+        <div class="information">
+       <input name="image_Name" type="hidden" id="Lat" value="${hotel.hotel_Lat}"/>
+       <input name="image_Name" type="hidden" id="Lng" value="${hotel.hotel_Lng}"/> 
        	<h3 class = 'hotellocation'>호텔 위치 정보</h3>
        	<div id="map" style="height: 400px;"></div>
        	 
        	<h3 class = 'hotelreview'>호텔 리뷰</h3>
-       	<iframe id='review' src="https://www.tripadvisor.co.kr/Hotel_Review-g658994-d256324-Reviews-or460-Palazzo_Versace-Main_Beach_Gold_Coast_Queensland.html" width="300" height="200"></iframe>
        	
+       	<c:choose>
+				<c:when test="${hotel.hotel_Name eq '팔라초 베르사체'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g658994-d256324-Reviews-or460-Palazzo_Versace-Main_Beach_Gold_Coast_Queensland.html"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '파크하얏트 뉴욕'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g60763-d93450-Reviews-Hyatt_Grand_Central_New_York-New_York_City_New_York.html"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '노보텔 다낭 프리미어 한 리버'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g298085-d3511123-Reviews-Novotel_Danang_Premier_Han_River-Da_Nang.html"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '소네바 자니'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g12219089-d10517660-Reviews-Soneva_Jani-Medhufaru.html"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '만다린 오리엔탈'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g293916-d301411-Reviews-Mandarin_Oriental_Bangkok-Bangkok.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '시드니 인터컨티넨탈 호텔'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g255060-d256570-Reviews-InterContinental_Sydney_an_IHG_Hotel-Sydney_New_South_Wales.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '더 돌더 그랜드'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g188113-d196061-Reviews-The_Dolder_Grand-Zurich.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '더 페닌슐라 베벌리힐스'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g32070-d76020-Reviews-The_Peninsula_Beverly_Hills-Beverly_Hills_California.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '르 메르디앙 타이페이'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g13808515-d1877829-Reviews-Le_Meridien_Taipei-Xinyi_District_Taipei.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '그랜드 호텔 미네르바'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g187895-d230720-Reviews-Grand_Hotel_Minerva-Florence_Tuscany.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '포시즌스 리조트 마우이 앳 와일레아'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g609129-d87397-Reviews-Four_Seasons_Resort_Maui_at_Wailea-Wailea_Maui_Hawaii.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:when test="${hotel.hotel_Name eq '카오룽 샹글릴라 홍콩'}">
+					<iframe class='review'
+						src="https://www.tripadvisor.co.kr/Hotel_Review-g294217-d302133-Reviews-Kowloon_Shangri_La_Hong_Kong-Hong_Kong.html#REVIEWS"
+						width="300" height="200"></iframe>
+				</c:when>
+				<c:otherwise>
+       	       	<iframe class='review' src="https://www.tripadvisor.co.kr/Hotel_Review-g658994-d256324-Reviews-or460-Palazzo_Versace-Main_Beach_Gold_Coast_Queensland.html" width="300" height="200"></iframe> 
+       		</c:otherwise>
+       	</c:choose>
+       	</div>
+       	 
+       	</form>
  
         
         <!-- Footer-->
@@ -132,19 +206,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./resources/js/bootstrap.min.js"></script>
-    <script>
-      $('.carousel').carousel({
-    	  interval : 2500
-      })
-    </script>
+     
     <script type="text/javascript">
+     
+    	
     var map;
     function initMap() {
-        var cityHall = {lat: 27.9672633459331, lng: 153.4263871773784};
-
+    	
+    	var hotel_lat = document.getElementById('Lat').value;
+    	var hotel_lng = document.getElementById('Lng').value; 
+    	
+    	//console.log(hotel_lat);
+    	//console.log(hotel_lng);
+    	
+        var cityHall = {lat: parseFloat(hotel_lat), lng: parseFloat(hotel_lng)};
+		console.log(cityHall);
+		
         var defaultOptions = {
             zoom: 18,
-            center: cityHall,
+            center: cityHall, 
             disableDefaultUI:true,
             zoomControl: true
             };

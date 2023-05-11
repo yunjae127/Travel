@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -180,26 +185,39 @@
 
 
 
-	<div class="container bac">
+	 <div class="container bac">
 		<div class="card-deck">
-			<div class="card cardstyle">
-
-
+		
+		<c:set var="i" value="0" />
+		<c:set var="j" value="2" />
+		<table border="1">
+		<c:forEach items="${hotellist}" var="hotel">
+				<c:if test="{i%j == 0}">
+					<tr>
+				</c:if>
+				<td class="hotelList">
 				<img class="rounded-circle ddd m-auto"
-					src="./resources/img/Australia_main.jpg" alt="photo" width="140px"
-					height="140px">
+					src="./resources/upload/${hotel.image_New_Name}" alt="photo" width="140px"
+					height="140px"> 
 
-
+			
 				<div class="card-body">
-					<h5 class="card-title">팔라초 베르사체</h5>
-					<p class="card-text size">골드코스트</p>
+					<h5 class="card-title">${hotel.hotel_Name}</h5>
+					<p class="card-text size">${hotel.hotel_Address}</p>
 				</div>
-				<div class="card-footer text-muted">
-					<a href="goldCostHotel.do" class="btn btn-primary">호텔 상세보기</a>
+				
+				<div class="card-body">
+					<a href="getHotel.do?hotel_Name=${hotel.hotel_Name}" class="btn btn-primary">호텔 상세보기</a>
 				</div>
-			</div>
-
-
+				</td>
+				<c:if test="${i%j == j-1}">
+				</tr>
+				</c:if>  
+ 	      <c:set var="i" value="${i+1}" /> 
+ 	   </c:forEach>  
+ 	</table>
+ 	   
+<!-- 
 			<div class="card cardstyle">
 
 
@@ -215,12 +233,12 @@
 				<div class="card-footer text-muted">
 					<a href="californiaHotel.do" class="btn btn-primary">호텔 상세보기</a>
 				</div>
-			</div>
+			</div> -->
 
-		</div>
+	
 
 
-		<div class="card-deck mt-3">
+		<!-- <div class="card-deck mt-3">
 			<div class="card cardstyle">
 
 
@@ -254,9 +272,9 @@
 				</div>
 			</div>
 
-		</div>
+		</div> -->
 
-		<div class="card-deck mt-3">
+		<!-- <div class="card-deck mt-3">
 			<div class="card cardstyle">
 
 
@@ -290,8 +308,10 @@
 				</div>
 			</div>
 
-		</div>
-
+		</div> -->
+		
+		
+<!-- 
 		<div class="card-deck mt-3">
 			<div class="card cardstyle">
 
@@ -326,9 +346,9 @@
 				</div>
 			</div>
 
-		</div>
+		</div> -->
 
-		<div class="card-deck mt-3">
+		<!-- <div class="card-deck mt-3">
 			<div class="card cardstyle">
 
 
@@ -362,9 +382,11 @@
 				</div>
 			</div>
 
-		</div>
+		</div> -->
+		
+		
 
-		<div class="card-deck mt-3">
+		<!-- <div class="card-deck mt-3">
 			<div class="card cardstyle">
 
 
@@ -398,9 +420,8 @@
 				</div>
 			</div>
 
-		</div>
+		</div> -->
 
-	</div>
 
   
 </body>

@@ -207,120 +207,7 @@
 							<br />
 						</div>
 					</div>
-					<br /> <br />
-					
-					
-					
-						<div class="card mb-4">
-						<div class="card-header">
-
-							<i class="fas fa-table me-1"></i> 잔여 이벤트 패키지 목록
-						</div>
-						<div class="card-body">
-							<br />
-							<table border="1">
-								<tr>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="title3" placeholder="상품명"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="550"
-												style="border: 1px solid gray;" id="info3" type="text" placeholder="상품정보"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="cost3" type="text" placeholder="상품가격"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="450"
-												style="border: 1px solid gray;" id="dis3" type="text" placeholder="할인정보"/>
-										</center></td>
-										<td><center>
-											<input type="file" value="입력" id="file3" bgcolor="white"
-												width="50" style="border: 1px solid white;">
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="450"
-												style="border: 1px solid gray;" id="count3" type="text" placeholder="수량"/>
-										</center></td>
-										<td><center>
-											<input type="submit" value="입력" id="btn6053" bgcolor="white"
-												width="50" style="border: 1px solid white;">
-										</center></td>
-								</tr>
-							</table>
-							<br />
-							<table border="1" id="listTable3" name="listTable3">
-								<tr>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품명</center></td>
-									<td bgcolor="white" width="550" style="border: 1px solid gray;"><center>상품정보</center></td>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품가격</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>할인정보</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>이미지</center></td>
-									<td bgcolor="white" width="50" style="border: 1px solid gray;"><center>수량</center></td>
-									<td bgcolor="white" width="50" style="border: 1px solid gray;"><center>삭제</center></td>
-								</tr>
-							</table>
-							<br />
-						</div>
-					</div>
-					<br /> <br />
-					
-						<div class="card mb-4">
-						<div class="card-header">
-
-							<i class="fas fa-table me-1"></i> 잔여 이벤트 패키지 목록
-						</div>
-						<div class="card-body">
-							<br />
-							<table border="1">
-								<tr>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="title4" placeholder="상품명"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="550"
-												style="border: 1px solid gray;" id="info4" type="text" placeholder="상품정보"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="cost4" type="text" placeholder="상품가격"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="450"
-												style="border: 1px solid gray;" id="dis4" type="text" placeholder="할인정보"/>
-										</center></td>
-										<td><center>
-											<input type="file" value="입력" id="file4" bgcolor="white"
-												width="50" style="border: 1px solid white;">
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="450"
-												style="border: 1px solid gray;" id="count4" type="text" placeholder="수량"/>
-										</center></td>
-										<td><center>
-											<input type="submit" value="입력" id="btn6054" bgcolor="white"
-												width="50" style="border: 1px solid white;">
-										</center></td>
-								</tr>
-							</table>
-							<br />
-							<table border="1" id="listTable4" name="listTable4">
-								<tr>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품명</center></td>
-									<td bgcolor="white" width="550" style="border: 1px solid gray;"><center>상품정보</center></td>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품가격</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>할인정보</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>이미지</center></td>
-									<td bgcolor="white" width="50" style="border: 1px solid gray;"><center>수량</center></td>
-									<td bgcolor="white" width="50" style="border: 1px solid gray;"><center>삭제</center></td>
-								</tr>
-							</table>
-							<br />
-						</div>
-					</div>
+				 
 					<br /> <br />
 					
 					<div class="card mb-4">
@@ -330,40 +217,71 @@
 						</div>
 						<div class="card-body">
 							<br />
+							<!--   enctype="multipart/form-data"  -->
+							<form name="frm" id="frm"> 
 							<table border="1">
+							<tbody>
 								<tr>
 									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="title5" placeholder="이름"/>
+											<input type="text" bgcolor="white" 
+												style="border: 1px solid gray; width:250px;"  name="hotel_Name" id="title5" placeholder="이름"/>
 										</center></td>
+									
 									<td><center>
-											<input type="text" bgcolor="white" width="550"
-												style="border: 1px solid gray;" id="info5" type="text" placeholder="설명"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="450"
-												style="border: 1px solid gray;" id="loca5" type="text" placeholder="장소"/>
-										</center></td>
-									<td><center>
-											<input type="file" value="입력" id="file5" bgcolor="white"
-												width="50" style="border: 1px solid white;">
+											<input type="text" bgcolor="white" 
+												style="border: 1px solid gray; width:250px;" name="hotel_Address" id="loca5"  placeholder="장소"/>
 										</center></td>
 										<td><center>
-											<input type="submit" value="입력" id="btn6055" bgcolor="white"
-												width="50" style="border: 1px solid white;">
+											<input type="text" bgcolor="white" "
+												style="border: 1px solid gray; " name="hotel_Content" id="info5"  placeholder="설명"/>
 										</center></td>
+									 <td><center>
+											<input type="text" bgcolor="white"  
+												style="border: 1px solid gray; width: 200px;" name="hotel_Lat" id="Lat"  placeholder="위도"/>
+										</center></td>
+								<td><center>
+											<input type="text" bgcolor="white"  
+												style="border: 1px solid gray; width: 200px;" name="hotel_Lng" id="Lng"  placeholder="경도"/>
+										</center></td>
+    
+									<td>  
+										<center>
+											<input type="file" value="사진" name="file" id="file5" bgcolor="white" multiple="multiple"
+												 style="border: 1px solid white; width:300px;">
+										</center>
+										
+										
+										
+										</td>
+										<td><center>
+											<input type="button" value="입력" id="btn6055" bgcolor="white"
+												style="border: 1px solid white; width:70px;">
+										</center></td>
+								
 								</tr>
-							</table>
-							<br />
+								</tbody>
+							</table> 
+							</form>
 							<table border="1" id="listTable5" name="listTable5">
-								<tr>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>이름</center></td>
-									<td bgcolor="white" width="550" style="border: 1px solid gray;"><center>설명</center></td>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>장소</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>이미지</center></td>
-									<td bgcolor="white" width="50" style="border: 1px solid gray;"><center>삭제</center></td>
-								</tr>
+						 
+                        <tr>
+                           <td bgcolor="white"  style="border: 1px solid gray; width:250px;"><center>이름</center></td> 
+                           <td bgcolor="white"  style="border: 1px solid gray; width:250px;"><center>장소</center></td>
+                           <td bgcolor="white"  style="border: 1px solid gray; width:550px;"><center>설명</center></td>
+                           <td bgcolor="white"   style="border: 1px solid gray; width:200px;"><center>위도</center></td>
+                           <td bgcolor="white"   style="border: 1px solid gray; width:200px;"><center>경도</center></td>
+                           <td bgcolor="white"   style="border: 1px solid gray; width:55px;"><center>삭제</center></td>
+                          
+                        
+                        </tr>
+                     </table>
+							<table id='hotelList' border='1'>
 							</table>
+							
+						
+							<br />
+								 
+							
 							<br />
 						</div>
 					</div>

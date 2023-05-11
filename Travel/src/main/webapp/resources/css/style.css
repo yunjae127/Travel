@@ -491,12 +491,19 @@ body{
 .container{
     padding: 10%;
     text-align: center;
+	position: relative; 
 }
 #custom-search-input {
     margin:0;
     margin-top: 10px;
     padding: 0;
 }
+ 
+.hotelList{
+	
+	width: 600px;
+	
+} 
  
 #custom-search-input .search-query {
     width:100%;

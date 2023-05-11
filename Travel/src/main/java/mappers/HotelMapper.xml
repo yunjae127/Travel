@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="hotelDAO">
+
+	<!-- 호텔정보 입력 -->
+	<insert id='insertHotel' parameterType="com.travel.domain.HotelVO">
+		INSERT INTO Hotel_List(
+		Hotel_Name
+		, Hotel_Address
+		, Hotel_Content
+		, Hotel_Lat
+		, Hotel_Lng
+		<if test="image_Name != null">
+		,image_Name
+		</if>
+		)VALUES(
+		  #{hotel_Name}
+		, #{hotel_Address}
+		, #{hotel_Content}
+		, #{hotel_Lat}
+		, #{hotel_Lng}
+		<if test="image_Name != null">
+		, #{image_Name}
+		</if>
+		)
+	</insert>
+	<!-- 이미지 보내기  -->
+		<insert id='insertImage' parameterType="com.travel.domain.ImageListVO">
+		INSERT INTO Image_List(  
+		image_Name
+		,image_New_Name
+		,image_Size
+		)VALUES( 
+		  #{image_Name}
+		, #{image_New_Name} 
+		, #{image_Size} 
+		) 
+	</insert>
+	
+	<!-- 호텔 목록 삭제하기  -->
+	<delete id='hotelDelete' parameterType='com.travel.domain.HotelVO'>
+		DELETE FROM HOTEL_LIST WHERE hotel_Name=#{hotel_Name}
+	</delete>
+	
+	
+	<!-- 호텔 목록 생성하기 -->
+		<select id='selectAllHotel' resultType='com.travel.domain.HotelVO'>
+		SELECT * FROM HOTEL_LIST
+	</select>
+
+	<!-- 호텔 리스트 가져오기  -->
+	<select id="hotellist" resultType="com.travel.domain.HotelVO">
+		<![CDATA[
+	SELECT 
+	A.HOTEL_NAME
+		, A.HOTEL_CONTENT
+		, A.HOTEL_ADDRESS
+		, A.HOTEL_LAT
+		, A.HOTEL_LNG
+		, B.IMAGE_NEW_NAME  
+	FROM 
+		HOTEL_LIST A  
+	INNER JOIN IMAGE_LIST B ON(A.IMAGE_NAME = B.IMAGE_NAME) 
+		]]>
+	</select>
+	<!-- 호텔 상세 페이지  -->
+	<select id="getHotel"  parameterType="com.travel.domain.HotelVO" resultType="com.travel.domain.HotelVO">
+		
+	SELECT 
+	A.HOTEL_NAME
+		, A.HOTEL_CONTENT
+		, A.HOTEL_ADDRESS
+		, A.HOTEL_LAT
+		, A.HOTEL_LNG
+		, B.IMAGE_NEW_NAME  
+	FROM 
+		HOTEL_LIST A  
+	INNER JOIN IMAGE_LIST B ON(A.IMAGE_NAME = B.IMAGE_NAME)
+	WHERE HOTEL_NAME = #{hotel_Name}
+		
+	</select>
+
+
+</mapper>

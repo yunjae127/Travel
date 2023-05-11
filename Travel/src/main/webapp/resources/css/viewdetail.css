@@ -306,6 +306,19 @@ figure {
 img,
 svg {
   vertical-align: middle;
+  width: 600px;
+}
+.explain{
+	
+	 width: 400px; 
+    position: relative;
+    left: 700px;
+    bottom: 360px;
+}
+.information{
+	
+	margin-top:-190px;
+	height: 700px;
 }
 
 table {
@@ -469,8 +482,13 @@ output {
   display: inline-block;
 }
 
-iframe {
-  border: 0;
+iframe {    
+	border: 0;
+    left: 1000px;
+    position: relative;
+    top: -330px;
+    width: 700px;
+    height: 400px;
 }
 
 summary {
@@ -7799,8 +7817,8 @@ textarea.form-control-lg {
 }
 
 .py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
 }
 
 .pt-0 {
@@ -11250,7 +11268,7 @@ body {
   
 }
 
-#review{
+.review{
 
   position: relative;
   left: 1000px;
