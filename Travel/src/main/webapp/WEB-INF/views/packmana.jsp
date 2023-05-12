@@ -79,19 +79,19 @@
 								</div>
 							</nav>
 						</div>
-						<a class="nav-link" href="charts.html">
+						<a class="nav-link" href="salesStatus.do">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-chart-area"></i>
 							</div> 판매현황
-						</a> <a class="nav-link" href="tables.html">
+						</a> <a class="nav-link" href="customerManager.do">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-table"></i>
 							</div> 회원관리
-						</a> <a class="nav-link" href="packmana.jsp">
+						</a> <a class="nav-link" href="packmana.do">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-table"></i>
 							</div> 상품관리
-						</a> <a class="nav-link" href="customeransw.jsp">
+						</a> <a class="nav-link" href="customeransw.do">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-table"></i>
 							</div> 고객문의
