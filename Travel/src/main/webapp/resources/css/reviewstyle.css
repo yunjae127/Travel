@@ -17,10 +17,17 @@
 	height: 350px;
 }
 
+#review_Writer{
+	
+	border: 0;
+	width: 100px;
+	
+}
+
 .float-left{
 	
 	text-align: center;
-    margin-left: 80px;
+      margin-left: 50px;
 }
 }
 
@@ -408,12 +415,17 @@ end
   flex-grow: 1;
   
   .image-box {
-    width: 200px;
-    height: 200px;
+    width: 591px;
+    height: 312px;
     object-fit: cover;
     display: block;
     margin: 20px auto;
   }
+.reviewMessage{
+	
+	left:300px;
+	
+}
 
   .upload-btn {
     border: 1px solid #ddd;

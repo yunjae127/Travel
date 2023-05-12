@@ -12,8 +12,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.travel.domain.HotelVO;
 import com.travel.domain.MemberRegistVO;
+import com.travel.domain.ReviewVO;
 import com.travel.service.HotelService;
 import com.travel.service.MemberService;
+import com.travel.service.ReviewService;
 
 @Controller
 public class ProductViewDetailsController {
@@ -24,13 +26,18 @@ public class ProductViewDetailsController {
 	@Autowired
 	private MemberService memberService;
 	
+	@Autowired
+	private ReviewService reviewService;
 
 	@RequestMapping("/home.do")
 	public void Home(Model model, HttpSession session) {  
 		System.out.println("----------" + session.getAttribute("id"));
 		
-	List<HotelVO> list = hotelService.hotelMainList(); 
+	List<HotelVO> list = hotelService.hotelMainList();
+	List<ReviewVO> listReview = reviewService.reviewMainList();
+	
 	model.addAttribute("hotelMainList", list); 
+	model.addAttribute("reviewMainList", listReview);
  
 	}   
 	

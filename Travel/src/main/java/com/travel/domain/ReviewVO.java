@@ -8,13 +8,15 @@ import java.util.UUID;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ReviewVO {
-
+ 
+	
+	
 	private String review_Num; // 리뷰 번호
-	private String review_title; // 리뷰 제목
+	private String review_Title; // 리뷰 제목
 	private String review_Writer; // 리뷰 작성자
 	private String review_Content; // 리뷰 내용
 	private Integer review_Count; // 리뷰 조회수 
-	private Date review_Date; // 리뷰 날짜 
+	private String review_Date; // 리뷰 날짜 
 	private String image_Name;  // 리뷰 이미지
 	private String image_New_Name;
 	private long image_Size;
@@ -87,11 +89,11 @@ public class ReviewVO {
 	public void setReview_Num(String review_Num) {
 		this.review_Num = review_Num;
 	}
-	public String getReview_title() {
-		return review_title;
+	public String getReview_Title() { // review_Title
+		return review_Title;
 	}
-	public void setReview_title(String review_title) {
-		this.review_title = review_title;
+	public void setReview_Title(String review_Title) {
+		this.review_Title = review_Title;
 	}
 	public String getReview_Writer() {
 		return review_Writer;
@@ -111,10 +113,10 @@ public class ReviewVO {
 	public void setReview_Count(Integer review_Count) {
 		this.review_Count = review_Count;
 	}
-	public Date getReview_Date() {
+	public String getReview_Date() {
 		return review_Date;
 	}
-	public void setReview_Date(Date review_Date) {
+	public void setReview_Date(String review_Date) {
 		this.review_Date = review_Date;
 	}
 	public String getImage_Name() {
@@ -126,13 +128,13 @@ public class ReviewVO {
 	
 	@Override
 	public String toString() {
-		return "ReviewVO [review_Num=" + review_Num + ", review_title=" + review_title + ", review_Writer="
+		return "ReviewVO [review_Num=" + review_Num + ", review_title=" + review_Title + ", review_Writer="
 				+ review_Writer + ", review_Content=" + review_Content + ", review_Count=" + review_Count
 				+ ", review_Date=" + review_Date + ", image_Name=" + image_Name + ", image_New_Name=" + image_New_Name
 				+ ", image_Size=" + image_Size + ", file=" + file + "]";
 	}
 	
 	
-	
+	  
 	
 }

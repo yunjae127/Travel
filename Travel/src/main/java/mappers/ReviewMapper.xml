@@ -6,6 +6,7 @@
       INSERT INTO Review_Board(
       Review_Num
       , Review_Title
+      , Review_Count
       , Review_Writer
       , Review_Content 
       , Review_Date 
@@ -15,6 +16,7 @@
       )VALUES(
        Review_Num_seq.nextval
       , #{review_Title}
+      , 0
       , #{review_Writer}
       , #{review_Content} 
       , sysdate 
@@ -23,5 +25,112 @@
       </if>
       )
    </insert>
+  <!-- 조회수 가져오기  -->
+  <update id="readCount" parameterType="com.travel.domain.ReviewVO">
+  
+	UPDATE REVIEW_BOARD 
+	SET Review_Count = Review_Count+1 
+	WHERE REVIEW_NUM = #{review_Num}
+  
+  </update>
+  
+  <!-- 조회수 순 TOP3  -->
+  <select id="selectTopReview"  resultType="com.travel.domain.ReviewVO" >
+ 		SELECT REVIEW_NUM review_Num 
+ 		,A.REVIEW_TITLE review_Title
+ 		,A.REVIEW_CONTENT review_Content
+ 		,A.REVIEW_COUNT review_Count
+ 		,TO_CHAR(A.REVIEW_DATE, 'yyyy-mm-dd') review_Date 
+ 		,A.REVIEW_WRITER review_Writer
+ 		,B.IMAGE_NEW_NAME image_New_Name
+		FROM REVIEW_BOARD A  
+		INNER JOIN  IMAGE_LIST B ON(A.IMAGE_NAME  = B.IMAGE_NAME)
+		<![CDATA[WHERE rownum <= 3]]>
+		ORDER BY A.REVIEW_COUNT DESC 
+  </select> 
+  
+  
+  <!-- 리뷰 목록 생성하기 -->
+	<select id='selectReview' resultType='com.travel.domain.ReviewVO'>
+		SELECT REVIEW_NUM  review_Num
+		,REVIEW_TITLE review_Title 
+		,REVIEW_COUNT review_Count  
+		, TO_CHAR(REVIEW_DATE, 'yyyy-mm-dd') review_Date  
+		 FROM 
+		 REVIEW_BOARD
+	</select>
+  
+  <!-- 이미지 보내기  -->
+		<insert id='insertImage' parameterType="com.travel.domain.ReviewVO">
+		INSERT INTO Image_List(  
+		image_Name
+		,image_New_Name
+		,image_Size
+		)VALUES( 
+		  #{image_Name}
+		, #{image_New_Name} 
+		, #{image_Size} 
+		) 
+	</insert>
+  
+  <!-- 리뷰 페이지 가져오기  -->
+  
+   <select id="reviewGetPage"  parameterType="com.travel.domain.ReviewVO" resultType="com.travel.domain.ReviewVO">
+		
+	SELECT 
+		r.REVIEW_NUM 
+		,r.REVIEW_TITLE 
+		,r.REVIEW_WRITER 
+		,r.REVIEW_CONTENT 
+		,r.REVIEW_COUNT 
+		,r.REVIEW_DATE 
+		,I.IMAGE_NEW_NAME
+	FROM REVIEW_BOARD r 
+	INNER JOIN IMAGE_LIST I ON(R.IMAGE_NAME = I.IMAGE_NAME)
+	WHERE R.REVIEW_NUM = #{review_Num}
+
+		
+	</select> 
+  
+  <!-- 메인 페이지 리뷰 목록 가져오기  -->
+  
+   
+  <!-- 조회수 순 TOP3  -->
+  <select id="selectMainList"  resultType="com.travel.domain.ReviewVO" >
+ 		SELECT REVIEW_NUM review_Num 
+ 		,A.REVIEW_TITLE review_Title
+ 		,A.REVIEW_CONTENT review_Content
+ 		,A.REVIEW_COUNT review_Count
+ 		,TO_CHAR(A.REVIEW_DATE, 'yyyy-mm-dd') review_Date 
+ 		,A.REVIEW_WRITER review_Writer
+ 		,B.IMAGE_NEW_NAME image_New_Name
+		FROM REVIEW_BOARD A  
+		INNER JOIN  IMAGE_LIST B ON(A.IMAGE_NAME  = B.IMAGE_NAME)
+		<![CDATA[WHERE rownum <= 3]]>
+		ORDER BY A.REVIEW_COUNT DESC 
+  </select> 
+  
+  <!-- 수정하기 -->
+  <update id="reviewModify" parameterType="com.travel.domain.ReviewVO">
+  
+     UPDATE REVIEW_BOARD  
+     SET  
+      REVIEW_TITLE = #{review_Title}
+     ,REVIEW_CONTENT = #{review_Content}
+     , REVIEW_DATE = sysdate
+     WHERE 
+     REVIEW_NUM = #{review_Num} 	
+  
+  </update>
+  
+  <!-- 삭제하기  -->
+  <delete id="reviewDelete" parameterType="com.travel.domain.ReviewVO">
+  
+  DELETE
+  FROM REVIEW_BOARD
+  WHERE REVIEW_NUM = #{review_Num}  
+  
+  </delete>
+  
   
 </mapper>

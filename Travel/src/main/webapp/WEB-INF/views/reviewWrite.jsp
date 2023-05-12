@@ -190,7 +190,7 @@ fileDOM2.addEventListener('change', () => {
 
 				<div class="card-header">리뷰를 작성해 주세요!</div>
 			
-			<form action="reviewSave.do" method="post">
+			<form action="saveReview.do" method="post" enctype="multipart/form-data">
 				<div class="card-body">
 					<div class="flex-container">
 						<div class="wrapper">
@@ -198,7 +198,7 @@ fileDOM2.addEventListener('change', () => {
 							<img
 								src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg"
 								class="image-box" /> <label for="file" class="upload-btn">
-								<input id="file" type="file" accept="image/*" /> <span>Upload
+								<input id="file" name="file" type="file" /> <span>Upload
 									Image</span>
 							</label>
 						</div>
@@ -206,17 +206,14 @@ fileDOM2.addEventListener('change', () => {
 					</div>
 
 					<h5 class="card-title">
-						<span name="review_Writer" id="review_Writer" class="float-left">
-						admin<%-- #{sessionScope.id} --%>님 즐거운 여행 되셨나요? 후기를 남겨주세요!</span> 
+						<input type ="text" name="review_Writer" id="review_Writer" class="float-left" value="${sessionScope.id}" readonly> </input> 
+						<span>님 즐거운 여행 되셨나요? 후기를 남겨주세요!</span>
 					</h5>
 				</div>
-				<input type="text" name="review_title" id="review_title" class="reviewtitle" placeholder="  제목을 입력하여 주세요 "  /><br/>
-							
-							<input type="text" name="review_Content" id="review_Content" class="reviewcontent" placeholder = " 내용을 작성하여 주세요"  />
-
-
-							<div class="card-footer text-muted">
-								<a href="reviewPage.do" class="btn btn-primary">리뷰 작성</a>
+				<input type="text" name="review_Title" id="review_Title" class="reviewtitle" placeholder="  제목을 입력하여 주세요 "  /><br/> 
+				<input type="text" name="review_Content" id="review_Content" class="reviewcontent" placeholder = " 내용을 작성하여 주세요"  />
+				<div class="card-footer text-muted">
+								<input type="submit" value="리뷰 작성"  class="btn btn-primary"> 
 							</div>
 							</form>
 						</div>

@@ -67,6 +67,7 @@ section.notice {
   width: 100%;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  color: black;
 }
 
 .board-table a {

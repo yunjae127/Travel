@@ -163,42 +163,30 @@ $(function(){
  	</header>
  	  <body>
     <div class="wrap">
-      <div class="product-img"></div>
+      <img src="./resources/upload/${resProduct.image_New_Name}"/>
       <div class="product-desc">
         <h2>
           상품정보
-          
         </h2>
         <p>상품설명</p>
+         <p class="lead">
+                        ${resProduct.product_Content}
+                        </p>
       </div>
       <div class="item-order">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="">상품명</span>
           </div>
-          <input
-            type="text"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-            placeholder="상품을 선택해주세요"
-          />
+			<span class="">${resProduct.product_Name}</span>
         </div>
         
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label class="" for="inputGroupSelect01">수량</label>
           </div>
-          성인
-          <select id="inputGroupSelectAdult" price="150">
-            <option value="0">0</option>
-            <option selected value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-          아동
-           <select id="inputGroupSelectChild" price="100">
+          인원수를 선택해주세요
+          <select id="inputGroupSelectAdult" price="${resProduct.product_Price}">
             <option value="0">0</option>
             <option selected value="1">1</option>
             <option value="2">2</option>
@@ -210,30 +198,18 @@ $(function(){
         <input type="text" class="totalprice" name="totalprice" placeholder="인원수를 선택해주세요" readonly="readonly"/>
         <br/>
         <span>항공사</span>
-          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          <span class="">${resProduct.product_AirLine}</span>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label for='fromDate'>출발일</label>
           </div>
-          <input
-            type="text"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-            id ='fromDate'
-          />
+		<span class="">${resProduct.product_Depature}</span>
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label for ='toDate'>도착일</label>
           </div>
-          <input
-            type="text"
-            class="form-control"
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-            id='toDate'
-          />
+ 			<span class="">${resProduct.product_Array}</span>	
           
         </div>
       </div>

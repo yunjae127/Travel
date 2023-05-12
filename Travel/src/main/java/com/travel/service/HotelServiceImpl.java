@@ -37,9 +37,7 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Integer insertImage(ImageListVO ivo) {
-		
-		
+	public Integer insertImage(ImageListVO ivo) { 
 		
 		return hotelDAO.insertImage(ivo);
 	}

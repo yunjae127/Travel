@@ -708,62 +708,32 @@
                      <h2 class="m-auto">솔직한 리뷰</h2>
                   </div>
 
+
+				
                   <div class="card-deck mt-3">
+                  <c:forEach items="${reviewMainList}" var="review">
                                                <div class="card cardstyle">
                                                  
                                                         <div class="card-header">
-                                                             방콕
+                                                             ${review.review_Title}
                                                         </div>
-                                                     <img class="card-img-top" id="style" src="./resources/img/review_bang.jpg" alt="Project 1">
+                                                     <img class="card-img-top" id="style" src="./resources/upload/${review.image_New_Name}" alt="Project 1">
                                                   
                                                  
                                                  <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">2023.05.04</span><a href=""><span class="float-right">조회수</span></a></h5>
+                                                       <h5 class="card-title"><span class="float-left"></span><a href="reviewGetPage.do?review_Num=${review.review_Num}"><span class="float-right">${review.review_Count}</span></a></h5>
                                                      </div>
-                                                     <h5 class="card-text">햇볕은 쨍쨍하지만 더위를 식혀줄 땡모반을 마시며 길을 걸으니 진짜 방콕에 온 기분이 들었어요. 특히 마하나콘 전망대에서 노을부터 야경까지 지켜본 기억은 영원히 잊히지 않을 거예요.</h5>
+                                                     <h5 class="card-text">${review.review_Content}</h5>
 
                                                                                                    
                                                       <div class="card-footer text-muted">
                                                        <a href="reviewPage.do" class="btn btn-primary">리뷰 상세보기</a>
                                                         </div>
                                                </div>
-                                               <div class="card cardstyle">
-                                                 
-                                                        <div class="card-header">
-                                                            스위스
-                                                        </div>
-                                                     <img class="card-img-top" id="style" src="./resources/img/review_sw.jpg" alt="Project 1">
-                                                  
-                                                 
-                                                 <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">2023.05.05</span><a href=""><span class="float-right">조회수</span></a></h5>
-                                                     </div>
-                                                     <h5 class="card-text">스위스 산악열차를 탄 뒤 마테호른에 도착하니 꿈속에 있는 것 같다고 느껴졌어요. 그리고 알프스 산봉우리에서 먹는 신라면의 맛은 지금까지 지금까지 먹어본 라면 중 최고였어요.</h5>
-
-                                                                                                   
-                                                      <div class="card-footer text-muted">
-                                                       <a href="reviewPage.do" class="btn btn-primary">리뷰 상세보기</a>
-                                                        </div>
-                                               </div>
-                                               <div class="card cardstyle">
-                                                 
-                                                        <div class="card-header">
-                                                             이탈리아
-                                                        </div>
-                                                     <img class="card-img-top" id="style" src="./resources/img/review_vati.jpg" alt="Project 1">
-                                                  
-                                                 
-                                                 <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">2023.05.04</span><a href=""><span class="float-right">조회수</span></a></h5>
-                                                     </div>
-                                                     <h5 class="card-text">이탈리아에서 바티칸 투어를 하니 웅장함에 압도당했습니다. 특히 미술책에서만 보던 피에타 조각상을 보자마자 경이로움까지 들었습니다. 다시 또 오고 싶단 생각이 들었습니다.</h5>
-
-                                                                                                   
-                                                      <div class="card-footer text-muted">
-                                                       <a href="reviewPage.do" class="btn btn-primary">리뷰 상세보기</a>
-                                                        </div>
-                                               </div>
+                                                </c:forEach>  
+                                               
                                              </div>
+                                          
                   
                </div>
 

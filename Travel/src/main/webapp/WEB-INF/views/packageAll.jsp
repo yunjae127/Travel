@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -165,145 +167,46 @@
 		</nav>
 	</div>
 
-	<div class="container mt-5 mb-5" id='list'>
-											
-							<div class="container bac">
-													 <div class="card-deck">
-															  <div class="card cardstyle">
-															    
-															  	
-															  		<img class="card-img-top" id="style" src="./resources/img/pack_new_03.jpg" alt="Project 1">
-															  	
-															    
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">뉴욕</span><span class="float-right">4,699,000원</span></h5>
+	<div class="container mt-5 mb-5">
+                                 
+                     <div class="container bac">
+                                        <div class="card-deck">
+                                               <div class="card cardstyle">
+                                                 <c:set var="i" value="0" />
+                                     			<c:set var="j" value="3" />
+                                               
+                                                 <table border="1">
+                                                  	<c:forEach items="${productList}" var="product">
+                                                  	<c:if test="{i%j == 0}">
+                                                  	<tr>
+                                                  	</c:if>
+                                                  	<td> 
+                                                     <img class="card-img-top" id="style" style="width:300px; height:200px" src="./resources/upload/${product.image_New_Name}" alt="Project 1">
+                                                  
+                                                 
+                                                 <div class="card-body">
+                                                       <h5 class="card-title"><span class="float-left" >${product.product_Place} </span><span class="float-right" style="font-size:14px;">${product.product_Price} 원</span></h5>
 
-																</div>
+                                                </div>
 
-																<div class="card-footer text-muted">
-											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    <img class="card-img-top" src="./resources/img/pack_cali_03.jpg" alt="Project 2">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">캘리포니아</span><span class="float-right">6,899,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary" target="blank">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="./resources/img/pack_hawa_03.jpg" alt="Project 3">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">하와이</span><span class="float-right">3,799,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" target="blank" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-													</div>
+                                                <div class="card-footer text-muted">
+                                                       <a href="ProductViewDetails.do?product_Id=${product.product_Id}" target="blank" class="btn btn-primary">패키지 상세정보</a>
+                                                  </div>
+                                               
+                                              </td>
+                                                       <c:if test="${i%j == j-1}"> 
+                                                       </tr>
+                                                       </c:if> 
+                                                       <c:set var="i" value="${i+1}" /> 
+                                       </c:forEach>
+                                       </table>
+                                                    <a href="packageAll.do" class="btn btn-primary pkall">패키지 전체보기</a>
 
-
-													<div class="card-deck mt-3">
-															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="./resources/img/pack_mol_03.jpg" alt="Project 4">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">몰디브</span><span class="float-right">3,660,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    <img class="card-img-top" src="./resources/img/pack_swi_03.jpg" alt="Project 5">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">스위스</span><span class="float-right">4,399,900원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    	<img class="card-img-top img-fluid" src="./resources/img/pack_ita_03.jpg" alt="Project 6">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">이탈리아</span><span class="float-right">3,399,900원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-											  					
-															  </div>
-											  			      
-													</div>
-													<div class="card-deck mt-3">
-															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="./resources/img/pack_bang_03.jpg" alt="Project 4">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">방콕</span><span class="float-right">1,069,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    <img class="card-img-top" src="./resources/img/pack_da_03.jpg" alt="Project 5">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">다낭</span><span class="float-right">569,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    	<img class="card-img-top img-fluid" src="./resources/img/pack_hong_03.jpg" alt="Project 6">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">홍콩</span><span class="float-right">1,199,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-											  					
-															  </div>
-											  			      
-													</div>
-													<div class="card-deck mt-3">
-															  <div class="card cardstyle">
-															    	<img class="card-img-top" src="./resources/img/pack_tai_03.jpg" alt="Project 4">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">타이페이</span><span class="float-right">629,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    <img class="card-img-top" src="./resources/img/pack_sw_03.jpg" alt="Project 5">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">시드니</span><span class="float-right">1,199,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-															  </div>
-															  <div class="card cardstyle">
-															    	<img class="card-img-top img-fluid" src="./resources/img/pack_gol_03.jpg" alt="Project 6">
-															    <div class="card-body">
-																	    <h5 class="card-title"><span class="float-left">골드코스트</span><span class="float-right">1,999,000원</span></h5>
-																</div>
-																<div class="card-footer text-muted">
-											    						<a href="view.html" class="btn btn-primary">패키지 상세정보</a>
-											  					</div>
-											  					
-															  </div>
-											  			      
-													</div>
-
-													   
-							</div>
-											
-					</div>
-	
+                                          </div>
+                                          </div>
+                     </div>
+                                 
+               </div>
 	
 	
 	

@@ -13,10 +13,14 @@ public interface ProductLisDAO {
 	public void updateProduct(ProductLisVO vo); 		
 	
 	
-	public Integer deleteProduct(Integer product_Id); 		
+	public Integer deleteProduct(String product_Id); 		
 	
 	
 	public List<ProductLisVO> getProductList(); 		 
 	
-
+	public List<ProductLisVO> productMainList();
+	
+	public ProductLisVO getProduct(ProductLisVO vo);
+	
+	public List<ProductLisVO> subproduct(ProductLisVO vo);
 }

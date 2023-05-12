@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ProductLisDAO">
-
+<!-- 상품입력 -->
 <insert id="insertProduct" parameterType="com.travel.domain.ProductLisVO">
 INSERT INTO PRODUCT_LIST (
     Product_ID, Product_Name, Product_Content,
     Product_Place, Product_Price, product_Count,
     Product_Depature, Product_Array, Product_AirLine
     <if test='image_Name != null'>
-    , image_Name
+    , image_Name ,image_New_Name
     </if>
 )
 VALUES (
@@ -17,11 +17,11 @@ VALUES (
     #{product_Place}, #{product_Price}, #{product_Count},
     #{product_Depature}, #{product_Array}, #{product_AirLine}
     <if test='image_Name != null'>
-    , #{image_Name}
+    , #{image_Name} ,#{image_New_Name}
     </if>
 )
 </insert>
-
+<!-- 상품수정(만들어만둠) -->
 <update id="updateProduct" parameterType="com.travel.domain.ProductLisVO">
 UPDATE product_list set 
 Product_Name=#{product_Name},Product_Content=#{product_Content},
@@ -32,15 +32,49 @@ product_Count=#{product_Count}
 where Product_Id=#{product_Id}
 
 </update>
-
+<!-- 상품삭제 -->
 <delete id="deleteProduct" parameterType="com.travel.domain.ProductLisVO">
 Delete From Product_List Where Product_Id=#{product_Id}
 </delete>
-
+<!-- 상품리스트 불러오기 -->
 <select id="getProductList" resultType="com.travel.domain.ProductLisVO">
 SELECT * FROM PRODUCT_LIST ORDER BY Product_ID
 
 </select>
 
-	 
+	<!-- 이미지 보내기  -->
+		<insert id='insertImage' parameterType="com.travel.domain.ImageListVO">
+		INSERT INTO Image_List(  
+		image_Name
+		,image_New_Name
+		,image_Size
+		)VALUES( 
+		  #{image_Name}
+		, #{image_New_Name} 
+		, #{image_Size} 
+		) 
+	</insert>
+
+	<!-- 메인에서 상품 목록 불러오기  -->
+	<select id="productMainList"  resultType="com.travel.domain.ProductLisVO">
+	
+		SELECT *
+		FROM product_list A  
+		INNER JOIN IMAGE_LIST B ON(A.IMAGE_NAME = B.IMAGE_NAME)
+		<![CDATA[WHERE rownum <= 6]]>
+		ORDER BY product_Id DESC 	 
+	</select>
+	<!-- 상품 정보 불러오기 -->
+	<select id="getProduct" resultType="com.travel.domain.ProductLisVO">
+	SELECT * FROM product_List WHERE Product_Id=#{product_Id}
+	</select>
+	
+		<select id="subproduct"  resultType="com.travel.domain.ProductLisVO">
+	
+		SELECT *
+		FROM product_list
+		<![CDATA[WHERE rownum <= 4]]> AND Product_Id!=#{product_Id}
+		ORDER BY product_Id DESC  	 
+	</select>
+
 </mapper>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE html>
 <html>
 
@@ -68,78 +69,39 @@
                                 <a class="text-secondary font-weight-medium text-decoration-none" href="">모두보기</a>
                             </div>
                         </div>
+                         <c:forEach items="${reviewListTop}" var="top">
+                         
                         <div class="col-lg-6">
+                         
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="./resources/img/news-700x435-1.jpg" style="object-fit: cover;">
+                          
+                                <img class="img-fluid w-100" src="./resources/upload/${top.image_New_Name}" style="object-fit: cover;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <div class="mb-2">
                                         <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                             href="">오늘의 베스트 후기!</a>
-                                        <a class="text-body" href=""><small>작성 날짜 : 2023/05/09</small></a>
+                                        <a class="text-body" href=""><small>${top.review_Date}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">글 제목 : 재미있는 여행이었습니다!</a>
-                                    <p class="m-0">내용 미리보기 : 저는 미국을 갓다왓습니다</p>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="reviewGetPage.do?review_Num=${top.review_Num}">글 제목 : ${top.review_Title}</a>
+                                    <p class="m-0">내용 미리보기 : ${top.review_Content}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle mr-2" src="./resources/img/user.jpg" width="25" height="25" alt="">
-                                        <small>작성자</small>
+                                        <small>${top.review_Writer}</small>
                                     </div>
                                     <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>글번호 : 1</small>
-                                        <small class="ml-3"><i class="far fa-comment mr-2"></i>조회수 : 12</small>
+                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>글번호 : ${top.review_Num}</small>
+                                        <small class="ml-3"><i class="far fa-comment mr-2"></i>조회수 : ${top.review_Count}</small>
+                                       
                                     </div>
+                                    
                                 </div>
-                            </div>
+                                
+                            </div> 
                         </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="./resources/img/news-700x435-2.jpg" style="object-fit: cover;">
-                                <div class="bg-white border border-top-0 p-4">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                            href="">오늘의 베스트 후기!</a>
-                                        <a class="text-body" href=""><small>작성 날짜 : 2023/05/09</small></a>
-                                    </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">글 제목 : 재미있는 여행이었습니다!</a>
-                                    <p class="m-0">내용 미리보기 : 저는 미국을 갓다왓습니다</p>
-                                </div>
-                                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2" src="./resources/img/user.jpg" width="25" height="25" alt="">
-                                        <small>작성자</small>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>글번호 : 1</small>
-                                        <small class="ml-3"><i class="far fa-comment mr-2"></i>조회수 : 12</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="col-lg-6">
-                            <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" src="./resources/img/news-700x435-2.jpg" style="object-fit: cover;">
-                                <div class="bg-white border border-top-0 p-4">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                            href="">오늘의 베스트 후기!</a>
-                                        <a class="text-body" href=""><small>작성 날짜 : 2023/05/09</small></a>
-                                    </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">글 제목 : 재미있는 여행이었습니다!</a>
-                                    <p class="m-0">내용 미리보기 : 저는 미국을 갓다왓습니다</p>
-                                </div>
-                                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                                    <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2" src="./resources/img/user.jpg" width="25" height="25" alt="">
-                                        <small>작성자</small>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>글번호 : 1</small>
-                                        <small class="ml-3"><i class="far fa-comment mr-2"></i>조회수 : 12</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </c:forEach>
+                        
                         </div>
                         </div>
                         </div>
@@ -156,36 +118,21 @@
                 <thead>
                 <tr>
                     <th scope="col" class="th-num">번호</th>
+                    <th scope="col" class="th-num">조회수</th>
                     <th scope="col" class="th-title">제목</th>
                     <th scope="col" class="th-date">등록일</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>3</td>
-                    <th>
-                      <a href="#!">리뷰게시판</a>
-                      <p>테스트</p>
-                    </th>
-                    <td>2017.07.13</td>
+                 <c:forEach items="${reviewList}" var="review">
+                 
+                <tr> 
+                	<td>${review.review_Num}</td>
+                	<td>${review.review_Count}</td>
+                	<th><a href="reviewGetPage.do?review_Num=${review.review_Num}">${review.review_Title}</a></th>
+                    <td>${review.review_Date}</td>
                 </tr>
-
-                <tr>
-                    <td>2</td>
-                    <th><a href="#!">테스트</a></th>
-                    <td>2017.06.15</td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <th><a href="#!">테스트</a></th>
-                    <td>2017.06.15</td>
-                </tr>
-                  <tr>
-                    <td>1</td>
-                    <th><a href="#!">테스트</a></th>
-                    <td>2017.06.15</td>
-                </tr>
+				</c:forEach> 
                 </tbody>
             </table>
         </div>
