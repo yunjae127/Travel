@@ -206,13 +206,13 @@ fileDOM2.addEventListener('change', () => {
 					</div>
 
 					<h5 class="card-title">
-						<span class="float-left">admin</span> <span class="float-left">&nbsp;&nbsp;2023-05-09</span>
-
+						<span name="review_Writer" id="review_Writer" class="float-left">
+						admin<%-- #{sessionScope.id} --%>님 즐거운 여행 되셨나요? 후기를 남겨주세요!</span> 
 					</h5>
 				</div>
-				<input type="text" name="reviewtitle" id="reviewtitle" class="reviewtitle" placeholder="  제목을 입력하여 주세요 "  /><br/>
+				<input type="text" name="review_title" id="review_title" class="reviewtitle" placeholder="  제목을 입력하여 주세요 "  /><br/>
 							
-							<input type="text" name="reviewcontent" id="reviewcontent" class="reviewcontent" placeholder = " 내용을 작성하여 주세요"  />
+							<input type="text" name="review_Content" id="review_Content" class="reviewcontent" placeholder = " 내용을 작성하여 주세요"  />
 
 
 							<div class="card-footer text-muted">

@@ -1,5 +1,6 @@
 package com.travel.domain;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
@@ -9,13 +10,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
+
 //@Data
 public class HotelVO {
 	private String hotel_Name;		// 호텔이름
 	private String hotel_Address;	// 호텔주소 
 	private String hotel_Content;	// 호텔설명 
 	private String image_Name; // 파일이름
-	private String image_New_Name;
+	private String image_New_Name; // 새로운 파일 이름
 	private long image_Size; // 파일크기
 	private String hotel_Lat; // 위도
 	private String hotel_Lng; // 경도
@@ -116,9 +118,7 @@ public class HotelVO {
 	public void setImage_New_Name(String image_New_Name) {
 		this.image_New_Name = image_New_Name;
 	}
-
-
-
+ 
 	public String getHotel_Lat() {
 		return hotel_Lat;
 	}  
@@ -132,13 +132,7 @@ public class HotelVO {
 	public void setHotel_Lng(String hotel_Lng) {
 		this.hotel_Lng = hotel_Lng;
 	} 
-
-	@Override
-	public String toString() {
-		return "HotelVO [hotel_Name=" + hotel_Name + ", hotel_Address=" + hotel_Address + ", hotel_Content="
-				+ hotel_Content + ", image_Name=" + image_Name + ", image_New_Name=" + image_New_Name + ", file=" + file
-				+ "]";
-	}
+ 
 	
 	
 }

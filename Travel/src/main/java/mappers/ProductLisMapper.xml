@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ProductLisDAO">
+
+<insert id="insertProduct" parameterType="com.travel.domain.ProductLisVO">
+INSERT INTO PRODUCT_LIST (
+    Product_ID, Product_Name, Product_Content,
+    Product_Place, Product_Price, product_Count,
+    Product_Depature, Product_Array, Product_AirLine
+    <if test='image_Name != null'>
+    , image_Name
+    </if>
+)
+VALUES (
+    product_id_seq.nextval, #{product_Name}, #{product_Content},
+    #{product_Place}, #{product_Price}, #{product_Count},
+    #{product_Depature}, #{product_Array}, #{product_AirLine}
+    <if test='image_Name != null'>
+    , #{image_Name}
+    </if>
+)
+</insert>
+
+<update id="updateProduct" parameterType="com.travel.domain.ProductLisVO">
+UPDATE product_list set 
+Product_Name=#{product_Name},Product_Content=#{product_Content},
+Product_Place=#{product_Place},Product_Price=#{product_Price},
+Product_Depature=#{product_Depature},Product_Array=#{product_Array},
+Product_AirLine=#{product_AirLine},Image_Name=#{image_Name},
+product_Count=#{product_Count} 
+where Product_Id=#{product_Id}
+
+</update>
+
+<delete id="deleteProduct" parameterType="com.travel.domain.ProductLisVO">
+Delete From Product_List Where Product_Id=#{product_Id}
+</delete>
+
+<select id="getProductList" resultType="com.travel.domain.ProductLisVO">
+SELECT * FROM PRODUCT_LIST ORDER BY Product_ID
+
+</select>
+
+	 
+</mapper>

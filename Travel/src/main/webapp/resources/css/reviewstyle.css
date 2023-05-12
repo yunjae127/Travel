@@ -17,6 +17,13 @@
 	height: 350px;
 }
 
+.float-left{
+	
+	text-align: center;
+    margin-left: 80px;
+}
+}
+
 .file-label {
   margin-top: 130px;
   margin-left: 130px;

@@ -101,112 +101,197 @@
 			</nav>
 		</div>
 		<div id="layoutSidenav_content">
-			<main>
-				<div class="container-fluid px-4">
-					<h1 class="mt-4">상품관리</h1>
+         <main>
+            <div class="container-fluid px-4">
+               <h1 class="mt-4">상품관리</h1>
 
-					<div class="card mb-4">
-						<div class="card-header">
+               <div class="card mb-4">
+                  <div class="card-header">
 
-							<i class="fas fa-table me-1"></i> 이벤트 패키지
-						</div>
-						<div class="card-body">
-							<br />
-							<table border="1">
-								<tr>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="title" placeholder="상품명"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="550"
-												style="border: 1px solid gray;" id="info" type="text" placeholder="상품정보"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="cost" type="text" placeholder="상품가격"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="450"
-												style="border: 1px solid gray;" id="dis" type="text" placeholder="할인정보"/>
-										</center></td>
-										<td><center>
-											<input type="file" value="입력" id="file" bgcolor="white"
-												width="50" style="border: 1px solid white;">
-										</center></td>
-									<td><center>
-											<input type="submit" value="입력" id="btn605" bgcolor="white"
-												width="50" style="border: 1px solid white;" >
-										</center></td>
-								</tr>
-							</table>
-							<br />
-							<table border="1" id="listTable" name="listTable">
-								<tr>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품명</center></td>
-									<td bgcolor="white" width="550" style="border: 1px solid gray;"><center>상품정보</center></td>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품가격</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>할인정보</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>이미지</center></td>
-									<td bgcolor="white" width="50" style="border: 1px solid gray;"><center>삭제</center></td>
-								</tr>
-							</table>
-							<br />
-						</div>
-					</div>
-					<br /> <br />
-				
-					
-					
-					<div class="card mb-4">
-						<div class="card-header">
+                     <i class="fas fa-table me-1"></i> 이벤트 패키지
+                  </div>
+                  <div class="card-body">
+                     <br />
+                     <form  id="productfrm"> 
+                     <input type='hidden' name='product_Id' id='product_Id' value='${product.product_Id}'>
+                     <table border="1">
+                        <tr>
+                           <td>
+                                 <input type="text" bgcolor="white" 
+                                    style="border: 1px solid gray; width:200px" id="product_Name" name="product_Name" placeholder="상품명"/>
+                              </td>
+                           <td>
+                                 <input type="text" bgcolor="white"
+                                    style="border: 1px solid gray; width:400px;" id="product_Content" name="product_Content"  placeholder="상품정보"/>
+                              </td>
+                           <td>
+                                 <input type="text" bgcolor="white" 
+                                    style="border: 1px solid gray; width:150px;" id="product_Place" name="product_Place"  placeholder="장소"/>
+                              </td>
+                           <td>
+                                 <input type="text" bgcolor="white" width="50"
+                                    style="border: 1px solid gray; width:100px;" id="product_Price" name="product_Price" placeholder="가격"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="50"
+                                    style="border: 1px solid gray; width:50px;" id="product_Count" name="product_Count" placeholder="수량"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="100"
+                                    style="border: 1px solid gray; width:100px;" id="product_Depature" name="product_Depature" placeholder="출발일"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="100"
+                                    style="border: 1px solid gray; width:100px;" id="product_Array" name="product_Array" placeholder="도착일"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="100"
+                                    style="border: 1px solid gray; width:100px;" id="product_AirLine" name="product_AirLine" placeholder="항공사"/>
+                              </td>
+                              <td>
+                                 <input type="file" value="이미지입력" id="file" bgcolor="white"
+                                    width="50" name="file" style="border: 1px solid white;">
+                              </td>
+                           <td>
+                                 <input type="button" value="입력" id="btn605" bgcolor="white"
+                                    width="50" style="border: 1px solid white;" >
+                              </td>
+                        </tr>
+                     </table>
+                     </form>
+                     <br />
+                     <table border="1" id="listTableTitle" name="listTable">
+                        <tr>
+                              <td bgcolor="white" width="50" style="border: 1px solid gray;"><center>상품번호</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>상품명</center></td>
+                           <td bgcolor="white" width="350" style="border: 1px solid gray;"><center>상품정보</center></td>
+                           <td bgcolor="white" width="200" style="border: 1px solid gray;"><center>장소</center></td>
+                           <td bgcolor="white" width="100" style="border: 1px solid gray;"><center>가격</center></td>
+                           <td bgcolor="white" width="100" style="border: 1px solid gray;"><center>수량</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>출발일</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>도착일</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>항공사</center></td>
+                           <td bgcolor="white" width="200" style="border: 1px solid gray;"><center>이미지</center></td>
+                           <td bgcolor="white" width="55"  style="border : 1px solid gray;"><center>삭제</center></td>
+                        </tr>
+                        </table>
+                        <table border="1" id=listTable>
+                        <%-- <c:forEach items="${productLis}" var="product">
+                           <tr>
+                              <td>${product.product_Name}</td> 
+                              <td>${product.product_Content}</td> 
+                              <td>${product.product_Place}</td> 
+                              <td>${product.product_Price}</td> 
+                              <td>${product.product_Count}</td> 
+                              <td>${product.product_Depature}</td> 
+                              <td>${product.product_Array}</td> 
+                              <td>${product.product_AirLine}</td> 
+                              <td>${product.image_Name}</td> 
+                              <td><input type="button" value="삭제" id="delete" bgcolor="white"
+                                    width="50" style="border: 1px solid white;" ></td> 
+                           </tr>
+                        </c:forEach> --%>
+                     </table>
+                     
+                     <br />
+                  </div>
+               </div>
+               <br /> <br />
+            
+               
+               
+               <div class="card mb-4">
+                  <div class="card-header">
 
-							<i class="fas fa-table me-1"></i> 일반 패키지
-						</div>
-						<div class="card-body">
-							<br />
-							<table border="1">
-								<tr>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="title2" placeholder="상품명"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="550"
-												style="border: 1px solid gray;" id="info2" type="text" placeholder="상품정보"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="250"
-												style="border: 1px solid gray;" id="cost2" type="text" placeholder="상품가격"/>
-										</center></td>
-									<td><center>
-											<input type="text" bgcolor="white" width="450"
-												style="border: 1px solid gray;" id="dis2" type="text" placeholder="할인정보"/>
-										</center></td>
-										<td><center>
-											<input type="file" value="입력" id="file2" bgcolor="white"
-												width="50" style="border: 1px solid white;">
-										</center></td>
-									<td><center>
-											<input type="submit" value="입력" id="btn6052" bgcolor="white"
-												width="50" style="border: 1px solid white;" >
-										</center></td>
-								</tr>
-							</table>
-							<br />
-							<table border="1" id="listTable2" name="listTable2">
-								<tr>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품명</center></td>
-									<td bgcolor="white" width="550" style="border: 1px solid gray;"><center>상품정보</center></td>
-									<td bgcolor="white" width="250" style="border: 1px solid gray;"><center>상품가격</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>할인정보</center></td>
-									<td bgcolor="white" width="450" style="border: 1px solid gray;"><center>이미지</center></td>
-									<td bgcolor="white" width="50" style="border: 1px solid gray;"><center>삭제</center></td>
-								</tr>
-							</table>
-							<br />
-						</div>
-					</div>
+                     <i class="fas fa-table me-1"></i> 일반 패키지
+                  </div>
+                  <div class="card-body">
+                     <br />
+                     <form  id="productfrm"> 
+                     
+                     <table border="1">
+                        <tr>
+                      
+                           <td>
+                                 <input type="text" bgcolor="white" 
+                                    style="border: 1px solid gray; width:200px" id="product_Name" name="product_Name" placeholder="상품명"/>
+                              </td>
+                           <td>
+                                 <input type="text" bgcolor="white"
+                                    style="border: 1px solid gray; width:400px;" id="product_Content" name="product_Content"  placeholder="상품정보"/>
+                              </td>
+                           <td>
+                                 <input type="text" bgcolor="white" 
+                                    style="border: 1px solid gray; width:150px;" id="product_Place" name="product_Place"  placeholder="장소"/>
+                              </td>
+                           <td>
+                                 <input type="text" bgcolor="white" width="50"
+                                    style="border: 1px solid gray; width:100px;" id="product_Price" name="product_Price" placeholder="가격"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="50"
+                                    style="border: 1px solid gray; width:50px;" id="product_Count" name="product_Count" placeholder="수량"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="100"
+                                    style="border: 1px solid gray; width:100px;" id="product_Depature" name="product_Depature" placeholder="출발일"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="100"
+                                    style="border: 1px solid gray; width:100px;" id="product_Array" name="product_Array" placeholder="도착일"/>
+                              </td>
+                                 <td>
+                                 <input type="text" bgcolor="white" width="100"
+                                    style="border: 1px solid gray; width:100px;" id="product_AirLine" name="product_AirLine" placeholder="항공사"/>
+                              </td>
+                              <td>
+                                 <input type="file" value="이미지입력" id="file" bgcolor="white"
+                                    width="50" name="file" style="border: 1px solid white;">
+                              </td>
+                           <td>
+                                 <input type="button" value="입력" id="btn605" bgcolor="white"
+                                    width="50" style="border: 1px solid white;" >
+                              </td>
+                        </tr>
+                     </table>
+                     </form>
+                     <br />
+                     <table border="1" id="listTableTitle" name="listTable">
+                        <tr>
+                        <td bgcolor="white" width="50" style="border: 1px solid gray;"><center>상품번호</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>상품명</center></td>
+                           <td bgcolor="white" width="350" style="border: 1px solid gray;"><center>상품정보</center></td>
+                           <td bgcolor="white" width="200" style="border: 1px solid gray;"><center>장소</center></td>
+                           <td bgcolor="white" width="100" style="border: 1px solid gray;"><center>가격</center></td>
+                           <td bgcolor="white" width="100" style="border: 1px solid gray;"><center>수량</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>출발일</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>도착일</center></td>
+                           <td bgcolor="white" width="150" style="border: 1px solid gray;"><center>항공사</center></td>
+                           <td bgcolor="white" width="200" style="border: 1px solid gray;"><center>이미지</center></td>
+                           <td bgcolor="white" width="50"  style="border : 1px solid gray;"><center>삭제</center></td>
+                        </tr>
+                        </table>
+                        <table border="1" id=listTable> 
+                        <%-- <c:forEach items="${productLis}" var="product">
+                           <tr>
+                              <td>${product.product_Name}</td> 
+                              <td>${product.product_Content}</td> 
+                              <td>${product.product_Place}</td> 
+                              <td>${product.product_Price}</td> 
+                              <td>${product.product_Count}</td> 
+                              <td>${product.product_Depature}</td> 
+                              <td>${product.product_Array}</td> 
+                              <td>${product.product_AirLine}</td> 
+                              <td>${product.image_Name}</td> 
+                              <td><input type="button" value="삭제" id="delete" bgcolor="white"
+                                    width="50" style="border: 1px solid white;" ></td> 
+                           </tr>
+                        </c:forEach> --%>
+                     </table>
+                     
+                     <br />
+                  </div>
+
 				 
 					<br /> <br />
 					

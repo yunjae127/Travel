@@ -7,23 +7,21 @@
       Review_Num
       , Review_Title
       , Review_Writer
-      , Review_Content
-      , Review_Count
+      , Review_Content 
       , Review_Date 
       <if test="image_Name != null">
       , Image_Name
       </if>
       )VALUES(
-        #{review_Num}
+       Review_Num_seq.nextval
       , #{review_Title}
       , #{review_Writer}
-      , #{review_Content}
-      , #{review_Count}
+      , #{review_Content} 
       , sysdate 
       <if test="image_Name != null">
       , #{image_Name}
       </if>
       )
    </insert>
-
+  
 </mapper>

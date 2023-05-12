@@ -1,4 +1,3 @@
- 
 $(function(){
 
  $('#btn605').click(function(){
@@ -22,10 +21,11 @@ $(function(){
          }
  
    })//end of saveProductLis ajax
+   });
    
-   
-   
-   
+   ProductList();
+
+  
    function ProductList(){
       
       
@@ -41,13 +41,12 @@ $(function(){
       }
       })//end of makeList ajax
       
-      
       function makeList(result){
-      alert(result)
       let listTable = $('#listTable')
       listTable.empty();
       for(row of result){
       let tr = $('<tr/>');
+      let product_Id = $('<td bgcolor="white" width="50" style="border: 1px solid gray;"/>').text(row['product_Id']);
       let product_Name = $('<td bgcolor="white" width="150" style="border: 1px solid gray;"/>').text(row['product_Name']);
       let product_Content = $('<td bgcolor="white" width="350" style="border: 1px solid gray;"/>').text(row['product_Content']);
       let product_Place = $('<td bgcolor="white" width="200" style="border: 1px solid gray;"/>').text(row['product_Place']);
@@ -57,7 +56,7 @@ $(function(){
       let product_Array = $('<td bgcolor="white" width="150" style="border: 1px solid gray;"/>').text(row['product_Array']);
       let product_AirLine = $('<td  bgcolor="white" width="150" style="border: 1px solid gray;"/>').text(row['product_AirLine']);
       let image_Name = $('<td bgcolor="white" width="200" style="border: 1px solid gray;" />').text(row['image_Name']);
-      tr.append("<input type='hidden' name='product_Id' id='product_Id'/>").val(row['product_Id'])
+      tr.append(product_Id);
       tr.append(product_Name);
       tr.append(product_Content);
       tr.append(product_Place);
@@ -67,31 +66,30 @@ $(function(){
       tr.append(product_Array);
       tr.append(product_AirLine);
       tr.append(image_Name);
-   tr.append('<td bgcolor="white" width="50" style="border: 1px solid gray;"><button class="delete">삭제</button></td>');
+   tr.append('<td bgcolor="white" width="55" style="border: 1px solid gray;"><button class="delete">삭제</button></td>');
    listTable.append(tr)
       
       }//end of for of result
       
-      }//end of makeList()
+      };//end of makeList()
       
       $('#listTable').on('click','button',function(){
       let btn = $(this);
-      let rno = btn.parents('tr').children().eq(0).text();
-      //alert(rno);
+      let product_Id = btn.parents('tr').children().eq(0).text();
+      //alert(product_Id);
       if(btn.text().trim() =='삭제'){
          //삭제 버튼일 경우
-         replyDelete(rno);
+         productDelete(product_Id);
       }
-      })
+      });
       
       
-         function replyDelete(rno){
+         function productDelete(product_Id){
          $.ajax({
-               type:'delete',
-               url:'../saveProductLis/' + rno,
+               type:'get',
+               url:'./saveProductLis/'+product_Id,
                success:function(result){
-         
-               replyList();
+               ProductList();
                },//function result
                error:function(err){
                alert('error');
@@ -106,164 +104,56 @@ $(function(){
       
 });     
 
-}); 
-
+ 
 
 $(function(){
 
-	let title2        = $("#title2");
-	let info2        = $("#info2");
-	let cost2        = $("#cost2");
-	let dis2        = $("#dis2");
+   let title2        = $("#title2");
+   let info2        = $("#info2");
+   let cost2        = $("#cost2");
+   let dis2        = $("#dis2");
     let file2       = $("#file2");
 
-	$('#btn6052').click(function(){
-	   
-	   var listTable2 = $('#listTable2')
-	   
-	   
-	   let tr = $('<tr/>');
-	   let td1 = $('<td/>');
-	   let td2 = $('<td/>');
-	   let td3 = $('<td/>');
-	   let td4 = $('<td/>');
-	   let td5 = $('<td/>');
+   $('#btn6052').click(function(){
+      
+      var listTable2 = $('#listTable2')
+      
+      
+      let tr = $('<tr/>');
+      let td1 = $('<td/>');
+      let td2 = $('<td/>');
+      let td3 = $('<td/>');
+      let td4 = $('<td/>');
+      let td5 = $('<td/>');
  
-	   
-	   td1.text(title2.val());
-	   tr.append(td1);
-	   td2.text(info2.val());
-	   tr.append(td2);
-	   td3.text(cost2.val());
-	   tr.append(td3);
-	   td4.text(dis2.val());
-	   tr.append(td4); 
-	   td5.text(file2.val());
+      
+      td1.text(title2.val());
+      tr.append(td1);
+      td2.text(info2.val());
+      tr.append(td2);
+      td3.text(cost2.val());
+      tr.append(td3);
+      td4.text(dis2.val());
+      tr.append(td4); 
+      td5.text(file2.val());
        tr.append(td5);
-	   tr.append('<td><input type="button" class="delete" value="삭제"></td>');
-	   listTable2.append(tr);
-	   
-	   
-	   
-	   
-	   $('#listTable2').on('click','.delete',function(){
-	      $(this).parent().parent().remove();
-	      }); 
-	      
-	});     
-
-	});
-
-
-
-
-
-$(function(){
-
-	 let title3        = $("#title3");
-	 let info3        = $("#info3");
-	 let cost3        = $("#cost3");
-	 let dis3       = $("#dis3");
-	 let file3       = $("#file3");
-	 let count3 =$("#count3");
-
-	 $('#btn6053').click(function(){
-	
-	 var listTable3 = $('#listTable3')
-	
-	
-	 let tr = $('<tr/>');
-	 let td1 = $('<td/>');
-	 let td2 = $('<td/>');
-	 let td3 = $('<td/>');
-	 let td4 = $('<td/>');
-	 let td5 = $('<td/>'); 
-	 let td6 = $('<td/>');
-
-	
-	 td1.text(title3.val());
-	 tr.append(td1);
-	 td2.text(info3.val());
-	 tr.append(td2);
-	 td3.text(cost3.val());
-	 tr.append(td3);
-	 td4.text(dis3.val());
-	 tr.append(td4);
-	 td5.text(file3.val());
-     tr.append(td5);
-	 td6.text(count3.val());
-	 tr.append(td6); 
-	 tr.append('<td><input type="button" class="delete" value="삭제"></td>');
-	 listTable3.append(tr);
-	
-	
-	
-	
-	 $('#listTable3').on('click','.delete',function(){
-	 $(this).parent().parent().remove();
-	 }); 
-	
-	 });     
-
-	 }); 
-	 
-	 
-	 
-	 $(function(){
-
-	 let title4        = $("#title4");
-	 let info4        = $("#info4");
-	 let cost4        = $("#cost4");
-	 let dis4       = $("#dis4");
-	 let file4       = $("#file4");
-	 let count4 =$("#count4");
-
-	 $('#btn6054').click(function(){
-	
-	 var listTable4 = $('#listTable4')
-	
-	
-	 let tr = $('<tr/>');
-	 let td1 = $('<td/>');
-	 let td2 = $('<td/>');
-	 let td3 = $('<td/>');
-	 let td4 = $('<td/>');
-	 let td5 = $('<td/>'); 
-	 let td6 = $('<td/>'); 
-
-	
-	 td1.text(title4.val());
-	 tr.append(td1);
-	 td2.text(info4.val());
-	 tr.append(td2);
-	 td3.text(cost4.val());
-	 tr.append(td3);
-	 td4.text(dis4.val());
-	 tr.append(td4);
-	 td5.text(file4.val());
-     tr.append(td5);
-	 td6.text(count4.val());
-	 tr.append(td6); 
-	 tr.append('<td><input type="button" class="delete" value="삭제"></td>');
-	 listTable4.append(tr);
-	
-	
-	
-	
-	 $('#listTable4').on('click','.delete',function(){
-	 $(this).parent().parent().remove();
-	 }); 
-	
-	 });     
-
-	 });  
-	  
- 
+      tr.append('<td><input type="button" class="delete" value="삭제"></td>');
+      listTable2.append(tr);
+      
+      
+      
+      
+      $('#listTable2').on('click','.delete',function(){
+         $(this).parent().parent().remove();
+         }); 
+     });
+   
+}); 
 	 
 	 
 	 $(function(){
 	 
-	 	// 입력 버튼이 눌려졌을 때
+	 	// 호텔 정보  입력 버튼이 눌려졌을 때
 $('#btn6055').click(function(){
  	  
 	let form = $('#frm')[0]
