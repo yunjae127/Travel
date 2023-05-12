@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +19,8 @@
         
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="./resources/js/jquery-3.3.1.min.js"></script>
-	    <script type="text/javascript" src="./resources/js/bootstrap.bundle.min.js"></script>
-	    <script type="text/javascript" src="./resources/js/event.js"></script>
+       <script type="text/javascript" src="./resources/js/bootstrap.bundle.min.js"></script>
+       <script type="text/javascript" src="./resources/js/event.js"></script>
 </head>
 <body>
 <body class="sb-nav-fixed">
@@ -48,7 +50,7 @@
             </ul>
         </nav>
     <div id="layoutSidenav">
-     	<div id="layoutSidenav_nav">
+        <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
@@ -99,7 +101,7 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-	<div class="card mb-4" id='abcd'>
+   <div class="card mb-4" id='abcd'>
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 회원관리
@@ -108,29 +110,37 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>제목</th>
-                                            <th>작성자</th>
+                                            <th><center>회원 아이디</center></th>
+                                            <th><center>회원 이름</center></th>
+                                            <th><center>회원 전화번호</center></th>
+                                            <th><center>회원 생년월일</center></th>
+                                            <th><center>회원 등급</center></th>
+                                            <th><center>회원정보 삭제</center></th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>제목</th>
-                                            <th>작성자</th>
+                                            <th>회원 아이디</th>
+                                            <th>회원 이름</th>
+                                            <th>회원 전화번호</th>
+                                            <th>회원 생년월일</th>
+                                            <th>회원 등급</th>
+                                            <th>회원정보 삭제</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                        <c:forEach items="${MemberList}" var="member">
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
+                                        <td>${member.member_Id}</td>
+                                        <td>${member.member_Name}</td>
+                                        <td>${member.member_Tel}</td>
+                                        <td>${member.member_BirthDate}</td>
+                                        <td>${member.member_Grade}</td>
+                                        <td>
+                                        <input type="button" value="삭제" id="${member.member_Id}" class="deleteMember">
+                                        </td>
                                         </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                        </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

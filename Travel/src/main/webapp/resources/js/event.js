@@ -36,7 +36,14 @@ $("#cardsin1").show();
 $(".cardsin").css("display" , "none");
 });
 
+$(".deleteMember").click(function(){
+var member_Id = $(this).attr("id");
+location.href = "memberdelete.do?member_Id="+member_Id;
+});
 
+$("#logout").click(function(){
+location.href = "logout.do";
 
+});
 
 });

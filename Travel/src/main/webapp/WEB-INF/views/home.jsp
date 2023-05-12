@@ -25,7 +25,16 @@
 
    </head> 
 <body>
-            <!--navbar-->
+	<c:choose>
+		<c:when test="${loginerror == '실패'}">
+			<script type="text/javascript">
+   				alert("아이디 또는 비밀번호가 잘못입력되었습니다");
+   			</script>
+		</c:when>
+	</c:choose>
+
+
+	<!--navbar-->
    <div id="navbar">
       <nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
                  <a class="navbar-brand" href="#" target="blank"><img src="./resources/img/gotravel_logo.jpg" width="85px" height="50px"><span class="logoo"></span></a>
@@ -35,10 +44,7 @@
 
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
                    <ul class="navbar-nav ml-auto id="float">
-                   
-                   <li class="nav-item active">
-                             <a class="nav-link font" id="home" href="manager.do">관리자페이지<span class="sr-only">(current)</span></a>
-                  </li>
+                    
                    
                      <li class="nav-item active">
                              <a class="nav-link font" id="home" href="#">Home<span class="sr-only">(current)</span></a>
@@ -68,8 +74,20 @@
                   <li class="nav-item active">
                        <a class="nav-link font" href="question.do">QnA<span class="sr-only">(current)</span></a>
                   </li>
-                   <li class="nav-item active"><a class="nav-link font" href="mypage.do">마이페이지<span class="sr-only">(current)</span></a>
-                       </li>
+                   
+                       
+                <c:choose>
+               <c:when test="${sessionScope.id != null and sessionScope.id != 'admin'}">
+               <li class="nav-item active"><a class="nav-link font"
+                  href="mypage.do">마이페이지<span class="sr-only">(current)</span></a></li>
+                </c:when>
+                <c:when test="${ sessionScope.id != null and sessionScope.id == 'admin'}">
+               <li class="nav-item active"><a class="nav-link font" id="home"
+                  href="manager.do">관리자페이지<span class="sr-only">(current)</span></a>
+               </li>
+               </c:when>
+               </c:choose>  
+               
                   <div class="btn-group">
                   <button type="button"
                      class="btn btn-outline-primary dropdown-toggle mr-1"
@@ -112,17 +130,24 @@
                </div>
 
 
+					<c:choose>
+						<c:when test="${sessionScope.id == null}">
+							<div class="btn-group">
+								<button type="button"
+									class="btn btn-outline-primary dropdown-toggle"
+									data-toggle="modal" aria-haspopup="true" aria-expanded="false"
+									data-target="#login">로그인</button>
+							</div>
+						</c:when>
+						<c:when test="${sessionScope.id != null}">
+							<div class="btn-group">
+								<button type="button"
+									class="btn btn-outline-primary dropdown-toggle" id="logout">로그아웃</button>
+							</div>
+						</c:when>
+					</c:choose>
 
-
-               <div class="btn-group">
-                  <button type="button"
-                     class="btn btn-outline-primary dropdown-toggle"
-                     data-toggle="modal" aria-haspopup="true" aria-expanded="false"
-                     data-target="#login">로그인</button>
-
-               </div>
-
-               <div class="modal fade" id="login" tabindex="-1" role="dialog"
+					<div class="modal fade" id="login" tabindex="-1" role="dialog"
                   aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                      <div class="modal-content">
@@ -134,10 +159,10 @@
                            </button>
                         </div>
                         <div class="modal-body">
-                           <form>
+                           <form action="login.do">
                               <div class="form-group">
                                  <label for="exampleInputEmail1" class="text-dark">ID</label>
-                                 <input type="text" class="form-control"
+                                 <input type="text" class="form-control" name="member_Id"
                                     id="exampleInputEmail1" aria-describedby="emailHelp"
                                     placeholder="아이디 입력">
 
@@ -145,7 +170,7 @@
 
                               <div class="form-group">
                                  <label for="exampleInputPassword1" class="text-dark">PASSWORD</label>
-                                 <input type="password" class="form-control"
+                                 <input type="password" class="form-control" name="member_Password"
                                     id="exampleInputPassword1" placeholder="비밀번호 입력">
                               </div>
                               <a href="findId.do" class="href-find">아이디/비밀번호 찾기</a> 
@@ -748,40 +773,47 @@
                <div class="container-fluid backgroud3">
                   <div class="container">
                      <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                           <h2 class="text-left text-white pt-3">INFORMATION</h2>
-                        
-                           
-                           <textarea class="form-control bac mt-22" placeholder="회사 정보" readonly>회사 운영시간 : 09:00 ~ 18:00
-회사 전화번호 : 02-1234-1234
-E-Mail: gotavel@gmail.com
-SNS</textarea>
-                               
-                           <menu class="text-left">
-                              <ul id="social">
-                                 <li><a href="#"><img src="./resources/img/facebook.png" alt="facebook share"></a></li>
-                                 <li><a href="#"><img src="./resources/img/gplus.png" alt="facebook share"></a></li>
-                                 <li><a href="#"><img src="./resources/img/linkedin.png" alt="facebook share"></a></li>
-                                 <li><a href="#"><img src="./resources/img/twitter.png" alt="facebook share"></a></li>
-                                 <li><a href="#"><img src="./resources/img/youtube.png" alt="facebook share"></a></li>
+				<div class="col-md-4 col-sm-12">
+					<h2 class="text-left text-white pt-3">INFORMATION</h2>
 
-                              </ul>
-                           </menu>
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                           <h2 class="text-left text-white pt-3">OUR SERVICE</h2>
-                           <ul class="list-group list-group-flush mb-5">
-                           <textarea class="form-control bac mt-22" placeholder="회사 정보" readonly>패키지 상품 구매 시 포함사항 :
+
+					<textarea class="form-control bac mt-22" placeholder="회사 정보"
+						readonly>회사 운영시간 : 09:00 ~ 18:00
+							회사 전화번호 : 02-1234-1234
+							E-Mail: gotavel@gmail.com
+							SNS</textarea>
+
+					<menu class="text-left">
+						<ul id="social">
+							<li><a href="#"><img src="./resources/img/facebook.png"
+									alt="facebook share"></a></li>
+							<li><a href="#"><img src="./resources/img/gplus.png"
+									alt="facebook share"></a></li>
+							<li><a href="#"><img src="./resources/img/linkedin.png"
+									alt="facebook share"></a></li>
+							<li><a href="#"><img src="./resources/img/twitter.png"
+									alt="facebook share"></a></li>
+							<li><a href="#"><img src="./resources/img/youtube.png"
+									alt="facebook share"></a></li>
+
+						</ul>
+					</menu>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<h2 class="text-left text-white pt-3">OUR SERVICE</h2>
+					<ul class="list-group list-group-flush mb-5">
+						<textarea class="form-control bac mt-22" placeholder="회사 정보"
+							readonly>패키지 상품 구매 시 포함사항 :
 전일정 식사
 항공권
 유류할증료
 여행자보험
 숙소</textarea>
-                                
 
-                           </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-12">
+
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-12">
                            <div>
                               
                               <h2 class="text-left text-white pt-3">KEEP IN TOUCH</h2>

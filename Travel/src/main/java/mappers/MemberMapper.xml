@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberDAO">
+
+<insert id="insertMember" parameterType="com.travel.domain.MemberRegistVO">
+insert into Member_Regist (member_Id, member_Password, member_Name, member_Tel, member_Address, member_Email, member_BirthDate, member_Hint) values (#{member_Id}, #{member_Password}, #{member_Name}, #{member_Tel}, #{member_Address}, #{member_Email}, #{member_BirthDate}, #{member_Hint}) 
+</insert>
+
+<select id="getMemberList" resultType="com.travel.domain.MemberRegistVO">
+Select * From Member_Regist where member_Id != 'admin' ORDER BY Member_Id DESC
+</select>
+
+<delete id="deleteMember" parameterType="com.travel.domain.MemberRegistVO">
+delete from Member_Regist where member_Id=#{member_Id}
+</delete>
+
+<select id="loginMember" parameterType="com.travel.domain.MemberRegistVO" resultType="com.travel.domain.MemberRegistVO">
+select * from Member_Regist where member_Id=#{member_Id} and member_Password=#{member_Password}
+</select>
+
+<!-- 아이디 찾기 -->
+<select id="findIidd" parameterType="com.travel.domain.MemberRegistVO" resultType="com.travel.domain.MemberRegistVO">
+Select     Member_Id 
+From       Member_Regist 
+where      Member_Name=#{member_Name} 
+       AND Member_Email=#{member_Email} 
+       AND Member_Hint=#{member_Hint}
+</select>
+
+
+<!-- 비밀번호 찾기 -->
+<select id="findPw" parameterType="com.travel.domain.MemberRegistVO" resultType="com.travel.domain.MemberRegistVO">
+Select     Member_Password 
+From       Member_Regist 
+where      Member_Id=#{member_Id} 
+       AND Member_Hint=#{member_Hint}
+</select>
+
+<update id="changePw" parameterType="hashmap">
+UPDATE    Member_Regist 
+Set       Member_Password=#{pw_check}
+where     Member_Id=#{vo.member_Id} 
+      AND Member_Password=#{vo.member_Password}
+</update>
+
+</mapper>
