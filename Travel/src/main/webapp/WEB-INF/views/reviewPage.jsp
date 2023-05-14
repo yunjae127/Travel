@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+ <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 
@@ -26,6 +27,13 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="./resources/css/reviewBoardstyle.css" rel="stylesheet">
+    <script>
+	function selChange() {
+		var sel = document.getElementById('cntPerPage').value;
+		location.href="reviewPage.do?nowPage=${paging.nowPage}&cntPerPage="+sel;
+	}
+</script>
+     
     
 </head>
 
@@ -40,17 +48,17 @@
 
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="index.do" class="nav-item nav-link">홈</a>
+                    <a href="home.do" class="nav-item nav-link">홈</a>
                     <a href="reviewPage.do" class="nav-item nav-link active">리뷰게시판</a>
                     <div class="nav-item dropdown">
 					</div>
                         </div>
             </div>
-            <a href="">고객센터 </a>
+            <a href="packageAll.do">패키지상품</a>
             &nbsp;
-            <a href="">마이페이지 </a>
+            <a href="mypage.do">마이페이지</a>
             &nbsp;
-            <a href="">회원가입 </a>
+            <a href="hotellist">호텔정보</a>
         </nav>
         
     </div>
@@ -110,10 +118,25 @@
                         
 <section class="notice">
   <!-- board list area -->
-    <div id="board-list">  
+    
     	 
         <div class="container">
         <a href="reviewWrite.do"><button class="reviewbtn">리뷰작성</button></a>
+            
+            <div id="outter"> 
+            <div style="float: right;">
+		<select id="cntPerPage" name="sel" onchange="selChange()">
+			<option value="5"
+				<c:if test="${paging.cntPerPage == 5}">selected</c:if>>5줄 보기</option>
+			<option value="10"
+				<c:if test="${paging.cntPerPage == 10}">selected</c:if>>10줄 보기</option>
+			<option value="15"
+				<c:if test="${paging.cntPerPage == 15}">selected</c:if>>15줄 보기</option>
+			<option value="20"
+				<c:if test="${paging.cntPerPage == 20}">selected</c:if>>20줄 보기</option>
+		</select>
+	</div> <!-- 옵션선택 끝 -->
+            
             <table class="board-table">
                 <thead>
                 <tr>
@@ -124,6 +147,7 @@
                 </tr>
                 </thead>
                 <tbody>
+                
                  <c:forEach items="${reviewList}" var="review">
                  
                 <tr> 
@@ -133,25 +157,35 @@
                     <td>${review.review_Date}</td>
                 </tr>
 				</c:forEach> 
-                </tbody>
+						</tbody> 
+						
             </table>
+            
+							<div style="display: block; text-align: center;">
+								<c:if test="${paging.startPage != 1 }">
+									<a
+										href="reviewPage.do?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+								</c:if>
+								<c:forEach begin="${paging.startPage }" end="${paging.endPage }"
+									var="p">
+									<c:choose>
+										<c:when test="${p == paging.nowPage }">
+											<b>${p }</b>
+										</c:when>
+										<c:when test="${p != paging.nowPage }">
+											<a
+												href="reviewPage.do?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+										</c:when>
+									</c:choose>
+								</c:forEach>
+								<c:if test="${paging.endPage != paging.lastPage}">
+									<a
+										href="reviewPage.do?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+								</c:if>
+							</div>
         </div>
     </div>
-        <!-- board seach area -->
-    <div id="board-search">
-        <div class="container">
-            <div class="search-window">
-                <form action="">
-                    <div class="search-wrap">
-                        <label for="search" class="blind">공지사항 내용 검색</label>
-                        <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
-                        <button type="submit" class="btn btn-dark">검색</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-   
+  
 
 </section>
                        

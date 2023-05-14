@@ -25,6 +25,30 @@
       </if>
       )
    </insert>
+   
+   <!-- 총 게시글 갯수 출력  -->
+   <select id="countReview" parameterType="com.travel.domain.PagingVO" resultType="int"> 
+   SELECT count(*) FROM REVIEW_BOARD   
+   </select>
+   
+    
+  <!-- 리뷰 목록 생성하기 -->
+	<select id='selectReview' parameterType='com.travel.domain.PagingVO' resultType='com.travel.domain.ReviewVO'>
+		SELECT *
+			FROM (
+				SELECT ROWNUM RN, A.*
+	 			FROM(SELECT REVIEW_NUM  review_Num
+				,REVIEW_TITLE review_Title 
+				,REVIEW_COUNT review_Count  
+				, TO_CHAR(REVIEW_DATE, 'yyyy-mm-dd') review_Date  
+				 FROM 
+				 REVIEW_BOARD
+				 ORDER BY REVIEW_NUM DESC
+				 ) A )
+				WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+    
+   
   <!-- 조회수 가져오기  -->
   <update id="readCount" parameterType="com.travel.domain.ReviewVO">
   
@@ -33,6 +57,8 @@
 	WHERE REVIEW_NUM = #{review_Num}
   
   </update>
+  
+  
   
   <!-- 조회수 순 TOP3  -->
   <select id="selectTopReview"  resultType="com.travel.domain.ReviewVO" >
@@ -49,16 +75,7 @@
 		ORDER BY A.REVIEW_COUNT DESC 
   </select> 
   
-  
-  <!-- 리뷰 목록 생성하기 -->
-	<select id='selectReview' resultType='com.travel.domain.ReviewVO'>
-		SELECT REVIEW_NUM  review_Num
-		,REVIEW_TITLE review_Title 
-		,REVIEW_COUNT review_Count  
-		, TO_CHAR(REVIEW_DATE, 'yyyy-mm-dd') review_Date  
-		 FROM 
-		 REVIEW_BOARD
-	</select>
+
   
   <!-- 이미지 보내기  -->
 		<insert id='insertImage' parameterType="com.travel.domain.ReviewVO">
@@ -95,7 +112,7 @@
   <!-- 메인 페이지 리뷰 목록 가져오기  -->
   
    
-  <!-- 조회수 순 TOP3  -->
+  <!-- 메인 페이지 리뷰 조회수 순 TOP3  -->
   <select id="selectMainList"  resultType="com.travel.domain.ReviewVO" >
  		SELECT REVIEW_NUM review_Num 
  		,A.REVIEW_TITLE review_Title

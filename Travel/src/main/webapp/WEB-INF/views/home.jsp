@@ -12,7 +12,7 @@
    
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
           <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-         <link rel="icon" type="image/png" href="./resources/img/logo3.png">
+         <link rel="icon" type="image/png" href="./resources/img/gotravel_logo.jpg">
          <link rel="stylesheet" href="./resources/css/swiper.min.css">
       <link rel="stylesheet" href="./resources/css/view.css">
          <link rel="stylesheet" type="text/css" href="./resources/css/bootstrap.min.css" />
@@ -50,10 +50,6 @@
                              <a class="nav-link font" id="home" href="#">Home<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                       <a class="nav-link font" href="#fly">이벤트<span class="sr-only">(current)</span></a>
-                  </li>
-
-                  <li class="nav-item active">
                        <a class="nav-link font" href="#top">패키지<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
@@ -71,11 +67,6 @@
                        <a class="nav-link font" href="#blog">리뷰<span class="sr-only">(current)</span></a>
                   </li>
 
-                  <li class="nav-item active">
-                       <a class="nav-link font" href="question.do">QnA<span class="sr-only">(current)</span></a>
-                  </li>
-                   
-                       
                 <c:choose>
                <c:when test="${sessionScope.id != null and sessionScope.id != 'admin'}">
                <li class="nav-item active"><a class="nav-link font"
@@ -84,17 +75,15 @@
                 <c:when test="${ sessionScope.id != null and sessionScope.id == 'admin'}">
                <li class="nav-item active"><a class="nav-link font" id="home"
                   href="manager.do">관리자페이지<span class="sr-only">(current)</span></a>
-               </li>
+               </li> 
                </c:when>
-               </c:choose>  
-               
-                  <div class="btn-group">
-                  <button type="button"
-                     class="btn btn-outline-primary dropdown-toggle mr-1"
-                     data-toggle="modal" aria-haspopup="true" aria-expanded="false"
-                     data-target="#search">검색</button>
-               </div>
-
+              
+               </c:choose>   
+                <c:if test="${ sessionScope.id != null and sessionScope.id != 'admin'}">
+               <li class="nav-item active"><a class="nav-link font" id="review"
+                  href="reviewPage.do">리뷰쓰기<span class="sr-only">(current)</span></a>
+               </li>
+               </c:if> 
                <div class="modal fade" id="search" tabindex="-1" role="dialog"
                   aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
@@ -105,26 +94,7 @@
                               aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                            </button>
-                        </div>
-                        <div class="modal-body">
-                           <form>
-                              <input type="Search" name="main=search" class="form-control"
-                                 placeholder="검색어를 입력해주세요">
-                              <button type="submit" data-dismiss="modal"
-                                 class="btn btn-outline-primary mt-2 mb-2">검색</button>
-
-                           </form>
-                           <ul name="search_list" class="search_list" hidden="hidden">
-                              <li><a href=''>국내</a></li>
-                              <li><a href=''>일본</a></li>
-                              <li><a href=''>중국</a></li>
-                              <li><a href=''>호주</a></li>
-                              <li><a href=''>미국</a></li>
-                              <li><a href=''>유럽</a></li>
-                           </ul>
-
-                        </div>
-
+                        </div> 
                      </div>
                   </div>
                </div>
@@ -213,19 +183,13 @@
                      </div>
                   </div>
                </div>
-                     
-
-                  
+                      
                  
                   <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                
-                    </a>
-              
-                  </li>
-            
-             </ul>
-
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                    </a> 
+                  </li> 
+             </ul> 
          </div>
       </nav>
    </div>
@@ -247,47 +211,7 @@
 
 
    <!-- body-->
-
-<div class="backgroud1">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-4 col-sm-12 mb-5">
-             <div class="hovereffect">
-                    <img class="img-fluid" src="./resources/img/thailand.jpg" alt="">
-                 <div class="overlay">
-                       <h2>다낭</h2>
-                       <a class="info" href="eventProductViewDetails1.do">상품정보 더보기</a>
-                 </div>
-             </div>
-         </div>
-
-
-
-         <div class="col-md-4 col-sm-12 mb-5" id="fly">
-             <div class="hovereffect">
-                    <img class="img-fluid" src="./resources/img/eiffel-tower-951517_1920.jpg" alt="">
-                 <div class="overlay">
-                       <h2>시드니</h2>
-                       <a class="info" href="eventProductViewDetails2.do">상품정보 더보기</a>
-                 </div>
-             </div>
-         </div>
-
-
-         <div class="col-md-4 col-sm-12 mb-5">
-             <div class="hovereffect">
-                    <img class="img-fluid" src="./resources/img/glacier-1082163_1920.jpg" alt="">
-                 <div class="overlay">
-                       <h2>골드코스트</h2>
-                       <a class="info" href="eventProductViewDetails3.do">상품정보 더보기</a>
-                 </div>
-             </div>
-         </div>
-
-      </div>
-   </div>
-</div>
-
+  
                <!--img cover-->
 
       <div class="container-fluid full">
@@ -721,6 +645,7 @@
                                                   
                                                  
                                                  <div class="card-body">
+                                                 		 <h5 class="card-title"><span class="float-left"></span>작성자: &nbsp;${review.review_Writer}</span></h5>
                                                        <h5 class="card-title"><span class="float-left"></span><a href="reviewGetPage.do?review_Num=${review.review_Num}"><span class="float-right">${review.review_Count}</span></a></h5>
                                                      </div>
                                                      <h5 class="card-text">${review.review_Content}</h5>
@@ -749,9 +674,9 @@
 
 					<textarea class="form-control bac mt-22" placeholder="회사 정보"
 						readonly>회사 운영시간 : 09:00 ~ 18:00
-							회사 전화번호 : 02-1234-1234
-							E-Mail: gotavel@gmail.com
-							SNS</textarea>
+회사 전화번호 : 02-1234-1234
+E-Mail: gotavel@gmail.com
+SNS</textarea>
 
 					<menu class="text-left">
 						<ul id="social">

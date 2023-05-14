@@ -30,6 +30,11 @@ public class MemberDAOImpl implements MemberDAO {
 
 	}
 
+	  // 아이디 중복확인
+	   public String idSearch (String id) {
+	      return mybatis.selectOne("MemberDAO.idSearch", id);
+	   }
+	
 	public MemberRegistVO getMember(MemberRegistVO vo) {
 		
 		return null;

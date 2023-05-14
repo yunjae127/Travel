@@ -16,8 +16,11 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/viewdetail.css" rel="stylesheet" />
         <link href="./resources/css/bootstrap.min2.css" rel="stylesheet">
+        <script type="text/javascript" src="./resources/js/event.js"></script>
     </head>
     <body>
+    
+    
         <!-- Navigation-->
        
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,21 +29,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.jsp">홈으로</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">상품 구입 전에</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">로그인 하기</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">장바구니</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.jsp">홈으로</a></li> 
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            장바구니
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    <form class="d-flex"> 
                         </button>
                     </form>
                 </div>
@@ -55,56 +46,19 @@
                       <div class="card-img-top mb-5 mb-md-0"> 
                      <div class="carousel slide" id="carousel-example-generic" >
            
-            <!-- Indicators -->
-           <!--  <ol class='carousel-indicators'>
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol>
-            -->  
-             <!-- Carousel items -->
-          <!--    <div class="carousel-inner">
-                <div class="item active">
-                   <img src="./resources/img/Australia_main.jpg" alt="First slide">
-                </div>
-                <div class="item">
-                   <img src="./resources/img/Australia_serve1.jpg" alt="Second slide">               
-                </div>
-                <div class="item">
-                   <img src="./resources/img/Australia_serve2.jpg" alt="Third slide">                 
-                </div>
-                <div class="item">
-                   <img src="./resources/img/Australia_serve3.jpg" alt="forth slide">                 
-                </div>
-             </div> -->
-             
-            <!-- Controls -->
-          <!--     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                <span class="icon-prev"></span>
-              </a>
-              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                <span class="icon-next"></span>
-              </a>
-         	 </div>	 
-           </div>            
-           </div> -->
-                       
                   <div>
                    <img src="./resources/upload/${hotel.image_New_Name}" alt="First slide">
                 </div>      
                        
                     <div class="explain">
-                        <div class="small mb-1">호주로 갑시다~</div>
+                        <h3>$호텔 상세 설명$</h3>
                         <form action="home.do" method="get">
                         <input name="image_Name" type="hidden" value="${hotel.hotel_Name}"/>
-                        <h1 class="display-5 fw-bolder">${hotel.hotel_Name}</h1><br/>
-                        <p class="lead">
-						<ul>
-						<li>${hotel.hotel_Content}</li>
-						<li>${hotel.hotel_Address}</li>
-			
-						</ul> 
+                        <h2 class="display-5 fw-bolder">${hotel.hotel_Name}</h2><br/>
+                        <p class="lead">  
+						<p class="HotelFont">${hotel.hotel_Content}</p> 			
+						<p class="HotelFont">${hotel.hotel_Address}</p> 
+						  
 					</p> 
 					</form>
                     </div>
@@ -200,8 +154,10 @@
         <!-- Core theme JS-->
         <script src="./resources/js/viewdetail.js"></script> 
         <script type="text/javascript" defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQZQESe8x3MHa1yjvUNqHdBqloqcWk4gc&callback=initMap"> </script>
-       
-        
+      <div class="back">
+      <a href="packageAll.do"><input class="reviewButton" type ="button"  value="패키지 정보 보러가기"/></a> 
+      <a href="reviewPage.do"><input class="reviewButton" type ="button"  value="패키지 리뷰 보러가기"/></a> 
+      </div>  
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 캐러셀 도전 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

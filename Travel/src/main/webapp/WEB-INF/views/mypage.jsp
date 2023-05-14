@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,136 +32,174 @@
 <script type="text/javascript"
 	src="./resources/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./resources/js/slider.js"></script>
+<script type="text/javascript" src="./resources/js/event.js"></script>
 
 
 
 </head>
 <body>
 
+	<!--navbar-->
+   <div id="navbar">
+      <nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
+                 <a class="navbar-brand" href="#" target="blank"><img src="./resources/img/gotravel_logo.jpg" width="85px" height="50px"><span class="logoo"></span></a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
 
-	<div id="navbar">
-		<nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
-			<a class="navbar-brand" href="#" target="blank"><img
-				src="./resources/img/gotravel_logo.jpg" width="85px" height="50px"><span
-				class="logoo"></span></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav ml-auto id="float">
+                    
+                   
+                     <li class="nav-item active">
+                             <a class="nav-link font" id="home" href="home.do">Home<span class="sr-only">(current)</span></a>
+                  </li>
+ 
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="packageAll.do">패키지<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="#chose">관광지 <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="hotellist.do">숙소<span class="sr-only">(current)</span></a>
+                  </li> 
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="reviewPage.do">리뷰<span class="sr-only">(current)</span></a>
+                  </li>
+  
+                <c:choose>
+               <c:when test="${sessionScope.id != null and sessionScope.id != 'admin'}">
+               <li class="nav-item active"><a class="nav-link font"
+                  href="mypage.do">마이페이지<span class="sr-only">(current)</span></a></li>
+                </c:when>
+                <c:when test="${ sessionScope.id != null and sessionScope.id == 'admin'}">
+               <li class="nav-item active"><a class="nav-link font" id="home"
+                  href="manager.do">관리자페이지<span class="sr-only">(current)</span></a>
+               </li>
+               </c:when>
+               </c:choose>  
+                
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto id="float">
-					<li class="nav-item active"><a class="nav-link font" id="home"
-						href="index.jsp">Home<span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="#fly">소개<span class="sr-only">(current)</span></a></li>
+               <div class="modal fade" id="search" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
 
-					<li class="nav-item active"><a class="nav-link font"
-						href="#top">패키지<span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="#chose">관광지 <span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="#work">숙소<span class="sr-only">(current)</span></a></li>
+                           <button type="button" class="close" data-dismiss="modal"
+                              aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                        <div class="modal-body">
+                           <form>
+                              <input type="Search" name="main=search" class="form-control"
+                                 placeholder="검색어를 입력해주세요">
+                              <button type="submit" data-dismiss="modal"
+                                 class="btn btn-outline-primary mt-2 mb-2">검색</button>
 
-					<li class="nav-item active"><a class="nav-link font"
-						href="#gallery">할인<span class="sr-only">(current)</span></a></li>
+                           </form>
+                           <ul name="search_list" class="search_list" hidden="hidden">
+                              <li><a href=''>국내</a></li>
+                              <li><a href=''>일본</a></li>
+                              <li><a href=''>중국</a></li>
+                              <li><a href=''>호주</a></li>
+                              <li><a href=''>미국</a></li>
+                              <li><a href=''>유럽</a></li>
+                           </ul>
 
-					<li class="nav-item active"><a class="nav-link font"
-						href="#blog">리뷰<span class="sr-only">(current)</span></a></li>
+                        </div>
 
-					<li class="nav-item active"><a class="nav-link font"
-						href="test1.jsp">QnA<span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="mypage.jsp">마이페이지<span class="sr-only">(current)</span></a>
-					</li>
-					<div class="btn-group">
-						<button type="button"
-							class="btn btn-outline-primary dropdown-toggle mr-1"
-							data-toggle="modal" aria-haspopup="true" aria-expanded="false"
-							data-target="#search">Search</button>
-					</div>
+                     </div>
+                  </div>
+               </div>
 
 
-					<!-- search -->
-					<div class="modal fade" id="search" tabindex="-1" role="dialog"
-						aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<form>
-										<input type="Search" name="" class="form-control"
-											placeholder="Search">
-										<button type="submit" data-dismiss="modal"
-											class="btn btn-outline-primary mt-2 mb-2">Search</button>
-									</form>
-								</div>
-
+					<c:choose>
+						<c:when test="${sessionScope.id == null}">
+							<div class="btn-group">
+								<button type="button"
+									class="btn btn-outline-primary dropdown-toggle"
+									data-toggle="modal" aria-haspopup="true" aria-expanded="false"
+									data-target="#login">로그인</button>
 							</div>
-						</div>
-					</div>
-
-
-
-
-					<!-- 로그인 버튼 부분 -->
-					<div class="btn-group">
-						<button type="button"
-							class="btn btn-outline-primary dropdown-toggle"
-							data-toggle="modal" aria-haspopup="true" aria-expanded="false"
-							data-target="#login">login</button>
-
-					</div>
+						</c:when>
+						<c:when test="${sessionScope.id != null}">
+							<div class="btn-group">
+						 	<button type="button"
+									class="btn btn-outline-primary dropdown-toggle" id="logout">로그아웃</button>
+							</div>
+						</c:when>
+					</c:choose>
 
 					<div class="modal fade" id="login" tabindex="-1" role="dialog"
-						aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title text-dark" id="exampleModalLabel">login</h5>
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<form>
-										<div class="form-group">
-											<label for="exampleInputEmail1" class="text-dark">Email
-												address</label> <input type="email" class="form-control"
-												id="exampleInputEmail1" aria-describedby="emailHelp"
-												placeholder="Enter email"> <small id="emailHelp"
-												class="form-text text-muted">We'll never share your
-												email wif anyone else.</small>
-										</div>
-										<div class="form-group">
-											<label for="exampleInputPassword1" class="text-dark">Password</label>
-											<input type="password" class="form-control"
-												id="exampleInputPassword1" placeholder="Password">
-										</div>
-										<div class="form-group form-check">
-											<input type="checkbox" class="form-check-input"
-												id="exampleCheck1"> <label class="form-check-label"
-												for="exampleCheck1">Check me out</label>
-										</div>
-										<button type="submit" class="btn btn-primary">Submit</button>
-									</form>
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-title text-dark" id="exampleModalLabel">로그인</h5>
+                           <button type="button" class="close" data-dismiss="modal"
+                              aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                        <div class="modal-body">
+                           <form action="login.do">
+                              <div class="form-group">
+                                 <label for="exampleInputEmail1" class="text-dark">ID</label>
+                                 <input type="text" class="form-control" name="member_Id"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    placeholder="아이디 입력">
 
-								</div>
+                              </div>
 
-							</div>
-						</div>
-					</div>
+                              <div class="form-group">
+                                 <label for="exampleInputPassword1" class="text-dark">PASSWORD</label>
+                                 <input type="password" class="form-control" name="member_Password"
+                                    id="exampleInputPassword1" placeholder="비밀번호 입력">
+                              </div>
+                              <a href="findId.do" class="href-find">아이디/비밀번호 찾기</a> 
+                              <button type="submit" class="btn btn-primary">로그인</button>
+                              <a
+                                 href="javascript:kakaoLogin();"><img
+                                 src="./resources/img/KakaoTalk_login.png" class="kakao_login_jpg"
+                                 alt="카카오계정 로그인" style= "margin: 0px auto; display:inline;"/></a>
 
+                              <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                              <script>
+                                   window.Kakao.init('fc3c5b38f841f6d55bdfb9248b3b7c9f');
 
+                                      function kakaoLogin() {
+                                       window.Kakao.Auth.login({
+                                              scope: 'profile, account_email', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+                                                 success: function(response) {
+                                                  console.log(response) // 로그인 성공하면 받아오는 데이터
+                                                  window.Kakao.API.request({ // 사용자 정보 가져오기 
+                                                      url: '/v2/user/me',
+                                                      success: (res) => {
+                                                       const kakao_account = res.kakao_account;
+                                                       console.log(kakao_account)
+                                                            }
+                                                           });
+                                                     window.location.href='/ex/kakao_login.html' //리다이렉트 되는 코드
+                                                          },
+                                                          fail: function(error) {
+                                                                 console.log(error);
+                                                 }
+                                                });
+                                               }
+                                  </script>
+                               <a href="signUp.do">   
+                              <button type="button" class="btn btn-regist">회원가입</button></a>
+                           </form>
+
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+                     
 
 
 
@@ -196,20 +236,28 @@
 		</div>
 	</div> -->
 
-
+<div class="mypageAll" style="position: relative; top:90px; right:-100px;">
 	<table border="1">
 		<tr>
 			<th bgcolor="white" width="200"></th>
-			<td style="border: 5px solid gray;" bgcolor="white" width="140"><img
-				src="./resources/img/le_bro.jpg">사진바꿔라</td>
-			<td style="border: 5px solid gray;" bgcolor="white" width="340"
+			<c:choose>
+				<c:when test="${sessionScope.price le '1000000'}"><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
+				src="./resources/img/le_bro.jpg">${sessionScope.id}</td></c:when>
+				<c:when test="${sessionScope.price <= '2000000'}"><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
+				src="./resources/img/le_sil.jpg">${sessionScope.id}</td></c:when>
+				<c:when test="${sessionScope.price <= '3000000'}"><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
+				src="./resources/img/le_gold.jpg">${sessionScope.id}</td></c:when>
+				<c:otherwise><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
+				src="./resources/img/le_vip.jpg">${sessionScope.id}</td></c:otherwise>
+			</c:choose>	
+			<td style="border: 5px solid gray;" bgcolor="white" width="290"
 				height="50"><b><center>회원등급</center></b></td>
-			<td style="border: 5px solid gray;" bgcolor="white" width="340"
-				height="50"><b><center>등급넣어라</center></b></td>
-			<td style="border: 5px solid gray;" bgcolor="white" width="340"
+			<td style="border: 5px solid gray;" bgcolor="white" width="290"
+				height="50"><b><center>${sessionScope.grade}</center></b></td>
+			<td style="border: 5px solid gray;" bgcolor="white" width="290"
 				height="50"><b><center>이용금액</center></b></td>
-			<td style="border: 5px solid gray;" bgcolor="white" width="340"
-				height="50"><b><center>금액넣어라</center></b></td>
+			<td style="border: 5px solid gray;" bgcolor="white" width="290"
+				height="50"><b><center>${sessionScope.price}</center></b></td>
 
 
 			<!-- <table style="border: 5px solid gray;" bgcolor="white" width="200">
@@ -253,9 +301,9 @@
 	<tr>
 		<table border="1">
 			<th bgcolor="white" width="200"></th>
-			<th bgcolor="#bbdefb" width="500" style="border: 1px solid gray;"><center>예약일/예약번호</center></th>
-			<th bgcolor="#bbdefb" width="500" style="border: 1px solid gray;"><center>예약정보</center></th>
-			<th bgcolor="#bbdefb" width="500" style="border: 1px solid gray;"><center>예약확인</center></th>
+			<th bgcolor="#bbdefb" width="350" style="border: 1px solid gray;"><center>예약일/예약번호</center></th>
+			<th bgcolor="#bbdefb" width="600" style="border: 1px solid gray;"><center>예약정보</center></th>
+			<th bgcolor="#bbdefb" width="350" style="border: 1px solid gray;"><center>예약확인</center></th>
 		</table>
 	</tr>
 
@@ -263,48 +311,45 @@
 	<br />
 
 
-	<tr>
-		<table border="1">
-			<th bgcolor="white" width="200"></th>
-			<th bgcolor="white" width="500"><font size="5">문의 내역</font></th>
-		</table>
-	</tr>
+
+		<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 	<hr />
 	<tr>
 		<table border="1">
 			<th bgcolor="white" width="200"></th>
-			<th bgcolor="#bbdefb" width="750" style="border: 1px solid gray;"><center>등록일</center></th>
-			<th bgcolor="#bbdefb" width="750" style="border: 1px solid gray;"><center>문의내용</center></th>
+			<th bgcolor="white" width="500"><font size="5">리뷰 내역</font></th>
 		</table>
 	</tr>
-
-	<br />
-	<br />
-
-
+	
 	<tr>
 		<table border="1">
 			<th bgcolor="white" width="200"></th>
-			<th bgcolor="white" width="500"><font size="5">관심상품</font></th>
+			<th bgcolor="#bbdefb"  width="350" style="border: 1px solid gray;"><center>작성자</center></th>
+			<th bgcolor="#bbdefb" width="600" style="border: 1px solid gray;"><center>리뷰제목</center></th>
+			<th bgcolor="#bbdefb" width="350" style="border: 1px solid gray;"><center>등록일</center></th>
+			<br/> 
 		</table>
-	</tr>
-	<hr />
-
-	<tr>
+		
+		<c:forEach items="${selectReview}" var="review">
 		<table border="1">
 			<th bgcolor="white" width="200"></th>
-			<th bgcolor="#bbdefb" width="300" style="border: 1px solid gray;"><center>장바구니
-					아이디</center></th>
-			<th bgcolor="#bbdefb" width="300" style="border: 1px solid gray;"><center>상품
-					아이디</center></th>
-			<th bgcolor="#bbdefb" width="300" style="border: 1px solid gray;"><center>이벤트
-					이름</center></th>
-			<th bgcolor="#bbdefb" width="300" style="border: 1px solid gray;"><center>예약
-					아이디</center></th>
-			<th bgcolor="#bbdefb" width="300" style="border: 1px solid gray;"><center>호텔
-					이름</center></th>
-		</table>
+			<th width="350" style="border: 1px solid gray;"><a href="reviewGetPage.do?review_Num=${review.review_Num}"><center>${review.review_Title}</center></a></th>
+			<th width="600" style="border: 1px solid gray;"><center>${review.review_Title}</center></th>
+			<th width="350" style="border: 1px solid gray;"><center>${review.review_Date}</center></th>
+			</table>
+			</c:forEach>
+		
 	</tr>
+</div>
+
+	<br />
+	<br />
+  
 
 
 	<br />

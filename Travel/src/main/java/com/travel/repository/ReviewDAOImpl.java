@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSourceExtensionsK
 import org.springframework.stereotype.Repository;
 
 import com.travel.domain.ImageListVO;
+import com.travel.domain.PagingVO;
 import com.travel.domain.ReviewVO;
 
 @Repository("reviewDAO")
@@ -26,9 +27,9 @@ public class ReviewDAOImpl implements ReviewDAO {
 		return sqlSession.insert("reviewDAO.insertImage",ivo);
 	}
 	
-	public List<ReviewVO> selectReview(ReviewVO vo) { 
+	public List<PagingVO> selectReview(PagingVO pvo) { 
 		
-		return sqlSession.selectList("reviewDAO.selectReview",vo);
+		return sqlSession.selectList("reviewDAO.selectReview",pvo);
 	}
 
 	public ReviewVO reviewGetPage(ReviewVO vo) {
@@ -60,7 +61,12 @@ public class ReviewDAOImpl implements ReviewDAO {
 
 		sqlSession.delete("reviewDAO.reviewDelete",vo);
 	}
-	  
+	public int countReview() {
+		 
+		return  sqlSession.selectOne("reviewDAO.countReview");
+	}
+
+
 
 	
 	

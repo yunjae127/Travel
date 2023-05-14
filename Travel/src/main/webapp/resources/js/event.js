@@ -36,14 +36,51 @@ $("#cardsin1").show();
 $(".cardsin").css("display" , "none");
 });
 
-$(".deleteMember").click(function(){
-var member_Id = $(this).attr("id");
-location.href = "memberdelete.do?member_Id="+member_Id;
-});
 
 $("#logout").click(function(){
 location.href = "logout.do";
 
 });
+
+haha();
+
+function haha(){
+
+$.ajax({
+url : "customerList.do",
+type : "get",
+dataType : "json",
+success : kaka,
+error : function(result){
+alert('zz');
+}
+
+
+});
+
+}
+
+function kaka(result) {
+ var customerList = $('#datatablesSimple tbody');
+        customerList.empty();
+        for(row of result){
+              var tr = $('<tr/>');
+              var member_Id = $('<td/>').text( row['member_Id'] );
+              var member_Name = $('<td/>').text( row['member_Name'] );
+              var member_Tel = $('<td/>').text( row['member_Tel'] );
+              var member_BirthDate = $('<td/>').text( row['member_BirthDate'] );
+              var member_Grade = $('<td/>').text( row['member_Grade'] );
+              
+              tr.append(member_Id);
+              tr.append(member_Name);
+              tr.append(member_Tel);
+              tr.append(member_BirthDate);
+              tr.append(member_Grade);
+              
+              customerList.append(tr);
+              }
+}
+
+
 
 });

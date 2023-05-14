@@ -28,6 +28,11 @@ $(function(){
       lastAnchor = currentAnchor;
       lastPanel = currentPanel;
    });
-   
+ 
+ 
+$(".deleteMember").click(function(){
+var member_Id = $(this).attr("id");
+location.href = "memberdelete.do?member_Id="+member_Id;
+});  
    
 });

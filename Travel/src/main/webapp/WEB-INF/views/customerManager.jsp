@@ -20,7 +20,7 @@
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="./resources/js/jquery-3.3.1.min.js"></script>
        <script type="text/javascript" src="./resources/js/bootstrap.bundle.min.js"></script>
-       <script type="text/javascript" src="./resources/js/event.js"></script>
+       <script type="text/javascript" src="./resources/js/findId.js"></script>
 </head>
 <body>
 <body class="sb-nav-fixed">

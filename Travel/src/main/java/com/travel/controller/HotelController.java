@@ -37,8 +37,6 @@ public class HotelController {
 		int result1 = hotelService.insertHotel(vo);    
 		int result2 = hotelService.insertImage(ivo);
 		
-		 
-		
 		return "ok";
 		 
 		
@@ -57,6 +55,11 @@ public class HotelController {
 		
 		System.out.println(hotel_Name);
 		hotelService.hotelDelete(hotel_Name); 
+	}
+	
+	@GetMapping("/test")
+	public String test() {
+		return "test";
 	}
 	
 }

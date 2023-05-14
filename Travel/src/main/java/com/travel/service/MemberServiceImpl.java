@@ -32,6 +32,11 @@ public class MemberServiceImpl implements MemberService {
 		return null;
 	}
 
+	// 중복 확인
+	   public String idSearch(String id) {
+	      return memberDAO.idSearch(id);
+	   }
+	
 	public List<MemberRegistVO> getMemberList(MemberRegistVO vo) {
 		
 		return memberDAO.getMemberList(vo);

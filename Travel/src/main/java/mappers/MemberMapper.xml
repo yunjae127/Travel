@@ -44,4 +44,10 @@ where     Member_Id=#{vo.member_Id}
       AND Member_Password=#{vo.member_Password}
 </update>
 
+<select id="idSearch" parameterType="String" resultType="String">
+Select     Member_Id 
+From       Member_Regist
+where      Member_Id=#{id}
+</select>
+
 </mapper>

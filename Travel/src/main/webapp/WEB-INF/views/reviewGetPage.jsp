@@ -197,8 +197,14 @@ fileDOM2.addEventListener('change', () => {
 						<div class="wrapper"> 
 							<img
 								src="./resources/upload/${review.image_New_Name}"
-								class="image-box" /> <label for="file" class="upload-btn">
+								class="image-box" /> 
+								<c:if test="${sessionScope.id == review.review_Writer}"> 
+								<label for="file" class="upload-btn">
 								<input id="file" name="file" type="file" /> 
+								</c:if>	
+								<c:if test="${sessionScope.id != review.review_Writer}"> 
+								<input type="hidden" id="file" name="file" type="file" /> 
+								</c:if>	
 							</label>
 							 
 							</label>

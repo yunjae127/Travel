@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.travel.domain.ImageListVO;
+import com.travel.domain.PagingVO;
 import com.travel.domain.ReviewVO;
 import com.travel.repository.ReviewDAO;
 import com.travel.repository.ReviewDAOImpl;
@@ -13,7 +14,7 @@ import com.travel.repository.ReviewDAOImpl;
 @Service("reviewService")
 public class ReviewServiceImpl implements ReviewService {
 
-	
+	  
 	@Autowired
 	private ReviewDAOImpl reviewDAO;
 	
@@ -22,11 +23,11 @@ public class ReviewServiceImpl implements ReviewService {
 		
 		reviewDAO.insertReview(vo);
 	}
-
+ 
 	@Override
-	public List<ReviewVO> selectReview(ReviewVO vo) {
+	public List<PagingVO> selectReview(PagingVO pvo) {
 		 
-		return reviewDAO.selectReview(vo);
+		return reviewDAO.selectReview(pvo);
 	}
 
 	@Override
@@ -71,6 +72,12 @@ public class ReviewServiceImpl implements ReviewService {
 		
 		 reviewDAO.reviewDelete(vo);
 		
+	}
+
+	@Override
+	public int countReview() {
+		 
+		return reviewDAO.countReview();
 	}
 
 

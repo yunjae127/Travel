@@ -3,14 +3,15 @@ package com.travel.service;
 import java.util.List;
 
 import com.travel.domain.ImageListVO;
+import com.travel.domain.PagingVO;
 import com.travel.domain.ReviewVO;
 
 public interface ReviewService {
 
-	void insertReview(ReviewVO vo);
-
-	List<ReviewVO> selectReview(ReviewVO vo);
-
+	void insertReview(ReviewVO vo); 
+	/*
+	 * List<ReviewVO> selectReview(ReviewVO vo);
+	 */
 	ReviewVO reviewGetPage(ReviewVO vo);
 
 	Integer insertImage(ImageListVO ivo);
@@ -24,5 +25,11 @@ public interface ReviewService {
 	void reviewModify(ReviewVO vo);
 
 	void reviewDelete(ReviewVO vo);
+	
+	public int countReview();
 
+	List<PagingVO> selectReview(PagingVO pvo);
+
+	 
+	 
 }

@@ -29,6 +29,8 @@ public interface MemberDAO {
 		// 비밀번호 찾기
 		public MemberRegistVO findPw(MemberRegistVO vo);
 
-	
+		   // 아이디 중복확인
+		   public String idSearch(String id);
+		
 	public int changePw(MemberRegistVO vo, String pw_check);
 }

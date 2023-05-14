@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.travel.domain.HotelVO;
@@ -41,6 +42,14 @@ public class ProductViewDetailsController {
  
 	}   
 	
+	@RequestMapping("/customerList.do")
+    @ResponseBody
+    public List<MemberRegistVO> customerList(MemberRegistVO vo){
+       List<MemberRegistVO> list = memberService.getMemberList(vo);
+       return list;
+    }
+	
+	
 	 @RequestMapping("/memberinsert.do")
 	   public String insertMember(MemberRegistVO vo) {
 	      memberService.insertMember(vo);
@@ -64,7 +73,11 @@ public class ProductViewDetailsController {
 	         m.addAttribute("loginerror", "실패");
 	         return "home";
 	      }else {
-	      session.setAttribute("id", result.getMember_Id());}
+	      session.setAttribute("id", result.getMember_Id());
+	      session.setAttribute("grade", result.getMember_Grade());
+	      session.setAttribute("price", result.getMember_Price());
+  	      
+	      }
 	      //session.setAttribute("password", result.getMember_Password());
 	      
 	      return "redirect:/home.do";
@@ -107,7 +120,18 @@ public class ProductViewDetailsController {
 	         
 	      }
 	   
-	   
+	      @RequestMapping("/idSearch.do")
+	      @ResponseBody
+	      public String idSearch(String id) {
+	         String idcheck = memberService.idSearch(id);
+	         //System.out.println(idcheck);
+	         if(idcheck != null) {
+	            return "no";
+	         } else {
+	            return "yes";
+	         }
+	      }    
+	      
 	   
 	   @RequestMapping("/changePw.do")
 	   public String changePw(MemberRegistVO vo, String pw_check, Model m) {
@@ -179,9 +203,7 @@ public class ProductViewDetailsController {
    @RequestMapping("/questionWrite.do")
    public void question() {
    }
-   @RequestMapping("/mypage.do")
-   public void mypage() {
-   }
+  
    @RequestMapping("/packageAll.do")
    public void packageAll() {
    } 

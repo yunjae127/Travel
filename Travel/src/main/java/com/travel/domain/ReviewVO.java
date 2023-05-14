@@ -128,7 +128,7 @@ public class ReviewVO {
 	
 	@Override
 	public String toString() {
-		return "ReviewVO [review_Num=" + review_Num + ", review_title=" + review_Title + ", review_Writer="
+		return "ReviewVO [review_Num=" + review_Num + ", review_Title=" + review_Title + ", review_Writer="
 				+ review_Writer + ", review_Content=" + review_Content + ", review_Count=" + review_Count
 				+ ", review_Date=" + review_Date + ", image_Name=" + image_Name + ", image_New_Name=" + image_New_Name
 				+ ", image_Size=" + image_Size + ", file=" + file + "]";

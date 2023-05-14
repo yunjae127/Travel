@@ -33,4 +33,7 @@ public interface MemberService {
 		
 		int changePw(MemberRegistVO vo, String pw_check);
 
+		//아이디 중복확인
+	      String idSearch(String id);
+		
 }

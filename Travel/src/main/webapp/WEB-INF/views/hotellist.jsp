@@ -33,132 +33,170 @@
 <script type="text/javascript"
 	src="./resources/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./resources/js/slider.js"></script>
+<script type="text/javascript" src="./resources/js/event.js"></script>
 
 </head>
 
 
 <body>
-	<div id="navbar">
-		<nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
-			<a class="navbar-brand" href="#" target="blank"><img
-				src="./resources/img/gotravel_logo.jpg" width="85px" height="50px"><span
-				class="logoo"></span></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto id="float">
-					<li class="nav-item active"><a class="nav-link font" id="home"
-						href="index.jsp">Home<span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="#fly">소개<span class="sr-only">(current)</span></a></li>
-
-					<li class="nav-item active"><a class="nav-link font"
-						href="#top">패키지<span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="#chose">관광지 <span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="#work">숙소<span class="sr-only">(current)</span></a></li>
-
-					<li class="nav-item active"><a class="nav-link font"
-						href="#gallery">할인<span class="sr-only">(current)</span></a></li>
-
-					<li class="nav-item active"><a class="nav-link font"
-						href="#blog">리뷰<span class="sr-only">(current)</span></a></li>
-
-					<li class="nav-item active"><a class="nav-link font"
-						href="test1.jsp">QnA<span class="sr-only">(current)</span></a></li>
-					<li class="nav-item active"><a class="nav-link font"
-						href="mypage.jsp">마이페이지<span class="sr-only">(current)</span></a>
-					</li>
-					<div class="btn-group">
-						<button type="button"
-							class="btn btn-outline-primary dropdown-toggle mr-1"
-							data-toggle="modal" aria-haspopup="true" aria-expanded="false"
-							data-target="#search">Search</button>
-					</div>
+	<body>
+	<c:choose>
+		<c:when test="${loginerror == '실패'}">
+			<script type="text/javascript">
+   				alert("아이디 또는 비밀번호가 잘못입력되었습니다");
+   			</script>
+		</c:when>
+	</c:choose>
 
 
-					<!-- search -->
-					<div class="modal fade" id="search" tabindex="-1" role="dialog"
-						aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
+	<!--navbar-->
+   <div id="navbar">
+      <nav class="navbar bg-dark navbar-dark font navbar-expand-lg">
+                 <a class="navbar-brand" href="#" target="blank"><img src="./resources/img/gotravel_logo.jpg" width="85px" height="50px"><span class="logoo"></span></a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
 
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<form>
-										<input type="Search" name="" class="form-control"
-											placeholder="Search">
-										<button type="submit" data-dismiss="modal"
-											class="btn btn-outline-primary mt-2 mb-2">Search</button>
-									</form>
-								</div>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav ml-auto id="float">
+                    
+                   
+                     <li class="nav-item active">
+                             <a class="nav-link font" id="home" href="#">Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="#fly">이벤트<span class="sr-only">(current)</span></a>
+                  </li>
 
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="#top">패키지<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="#chose">관광지 <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="#work">숙소<span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="#gallery">할인<span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <li class="nav-item active">
+                       <a class="nav-link font" href="#blog">리뷰<span class="sr-only">(current)</span></a>
+                  </li>
+                <c:choose>
+               <c:when test="${sessionScope.id != null and sessionScope.id != 'admin'}">
+               <li class="nav-item active"><a class="nav-link font"
+                  href="mypage.do">마이페이지<span class="sr-only">(current)</span></a></li>
+                </c:when>
+                <c:when test="${ sessionScope.id != null and sessionScope.id == 'admin'}">
+               <li class="nav-item active"><a class="nav-link font" id="home"
+                  href="manager.do">관리자페이지<span class="sr-only">(current)</span></a>
+               </li>
+               </c:when>
+               </c:choose>   
+               
+               <div class="modal fade" id="search" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
+
+                           <button type="button" class="close" data-dismiss="modal"
+                              aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+
+
+					<c:choose>
+						<c:when test="${sessionScope.id == null}">
+							<div class="btn-group">
+								<button type="button"
+									class="btn btn-outline-primary dropdown-toggle"
+									data-toggle="modal" aria-haspopup="true" aria-expanded="false"
+									data-target="#login">로그인</button>
 							</div>
-						</div>
-					</div>
-
-
-
-
-					<!-- 로그인 버튼 부분 -->
-					<div class="btn-group">
-						<button type="button"
-							class="btn btn-outline-primary dropdown-toggle"
-							data-toggle="modal" aria-haspopup="true" aria-expanded="false"
-							data-target="#login">login</button>
-
-					</div>
+						</c:when>
+						<c:when test="${sessionScope.id != null}">
+							<div class="btn-group">
+								<button type="button"
+									class="btn btn-outline-primary dropdown-toggle" id="logout">로그아웃</button>
+							</div>
+						</c:when>
+					</c:choose>
 
 					<div class="modal fade" id="login" tabindex="-1" role="dialog"
-						aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title text-dark" id="exampleModalLabel">login</h5>
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<form>
-										<div class="form-group">
-											<label for="exampleInputEmail1" class="text-dark">Email
-												address</label> <input type="email" class="form-control"
-												id="exampleInputEmail1" aria-describedby="emailHelp"
-												placeholder="Enter email"> <small id="emailHelp"
-												class="form-text text-muted">We'll never share your
-												email wif anyone else.</small>
-										</div>
-										<div class="form-group">
-											<label for="exampleInputPassword1" class="text-dark">Password</label>
-											<input type="password" class="form-control"
-												id="exampleInputPassword1" placeholder="Password">
-										</div>
-										<div class="form-group form-check">
-											<input type="checkbox" class="form-check-input"
-												id="exampleCheck1"> <label class="form-check-label"
-												for="exampleCheck1">Check me out</label>
-										</div>
-										<button type="submit" class="btn btn-primary">Submit</button>
-									</form>
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-title text-dark" id="exampleModalLabel">로그인</h5>
+                           <button type="button" class="close" data-dismiss="modal"
+                              aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                        <div class="modal-body">
+                           <form action="login.do">
+                              <div class="form-group">
+                                 <label for="exampleInputEmail1" class="text-dark">ID</label>
+                                 <input type="text" class="form-control" name="member_Id"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    placeholder="아이디 입력">
 
-								</div>
+                              </div>
 
-							</div>
-						</div>
-					</div>
+                              <div class="form-group">
+                                 <label for="exampleInputPassword1" class="text-dark">PASSWORD</label>
+                                 <input type="password" class="form-control" name="member_Password"
+                                    id="exampleInputPassword1" placeholder="비밀번호 입력">
+                              </div>
+                              <a href="findId.do" class="href-find">아이디/비밀번호 찾기</a> 
+                              <button type="submit" class="btn btn-primary">로그인</button>
+                              <a
+                                 href="javascript:kakaoLogin();"><img
+                                 src="./resources/img/KakaoTalk_login.png" class="kakao_login_jpg"
+                                 alt="카카오계정 로그인" style= "margin: 0px auto; display:inline;"/></a>
+
+                              <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                              <script>
+                                   window.Kakao.init('fc3c5b38f841f6d55bdfb9248b3b7c9f');
+
+                                      function kakaoLogin() {
+                                       window.Kakao.Auth.login({
+                                              scope: 'profile, account_email', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+                                                 success: function(response) {
+                                                  console.log(response) // 로그인 성공하면 받아오는 데이터
+                                                  window.Kakao.API.request({ // 사용자 정보 가져오기 
+                                                      url: '/v2/user/me',
+                                                      success: (res) => {
+                                                       const kakao_account = res.kakao_account;
+                                                       console.log(kakao_account)
+                                                            }
+                                                           });
+                                                     window.location.href='/ex/kakao_login.html' //리다이렉트 되는 코드
+                                                          },
+                                                          fail: function(error) {
+                                                                 console.log(error);
+                                                 }
+                                                });
+                                               }
+                                  </script>
+                               <a href="signUp.do">   
+                              <button type="button" class="btn btn-regist">회원가입</button></a>
+                           </form>
+
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+                     
 
 
 
