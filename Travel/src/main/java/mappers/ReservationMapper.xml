@@ -4,5 +4,55 @@
 <mapper namespace="ReservationDAO">
 <!-- 상품입력 -->
 
+<insert id="reservationInsert" parameterType="com.travel.domain.BookingVO">
+INSERT INTO 
+Booking(Booking_Id,Booking_Tel,Booking_Name,Booking_Email,Booking_Date,Booking_BirthDate,Booking_Price,Member_Id
+<if test="booking_Content!=null">
+,Booking_Content
+</if>
+<if test="companion_Num!=null">
+,Companion_Num
+</if>)
+values(Booking_Id_Seq.nextval,#{booking_Tel},#{booking_Name},#{booking_Email},sysdate,#{booking_BirthDate},#{booking_Price},#{member_Id}
+<if test="booking_Content!= null">
+,#{booking_Content}
+</if>
+<if test="companion_Num!= null">
+,#{companion_Num}
+</if>)
+</insert>
+
+<!-- <insert id="insertCompanion" parameterType="com.travel.domain.CompanionVO">
+INSERT INTO 
+Companion
+(Companion_Num,Companion_Name,Companion_Efname,Companion_Elname,Companion_Gender,Companion_Birthdate)
+values
+(COMPANION_NUM_SEQ.nextval,#{companion_Name},#{companion_Efname},#{companion_Elname},#{companion_Gender},#{companion_Birthdate})
+
+</insert>
+
+<select id="companionList" resultType="com.travel.domain.CompanionVO">
+SELECT * FROM Companion 
+</select>
+
+<delete id="deleteCompanion" parameterType="com.travel.domain.CompanionVO">
+DELETE FROM Companion WHERE companion_Birthdate=#{companion_Birthdate}
+</delete> -->
+
+<update id="updateTotalUsage" parameterType="com.travel.domain.BookingVO">
+UPDATE MEMBER_REGIST m
+SET TOTAL_USAGE = TOTAL_USAGE + (
+    SELECT BOOKING_PRICE
+    FROM (
+        SELECT BOOKING_PRICE
+        FROM BOOKING
+        WHERE MEMBER_ID = #{member_Id}
+        ORDER BY BOOKING_ID DESC
+    )
+    <![CDATA[WHERE rownum <= 1]]>
+)
+WHERE m.MEMBER_ID = #{member_Id}
+</update>
+
 
 </mapper>

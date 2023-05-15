@@ -50,6 +50,7 @@ public class ReviewDAOImpl implements ReviewDAO {
 		 
 		return sqlSession.selectList("reviewDAO.selectMainList");
 	}
+	
 	public void reviewModify(ReviewVO vo) {
 	  
 		sqlSession.update("reviewDAO.reviewModify",vo);

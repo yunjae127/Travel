@@ -1,6 +1,5 @@
 package com.travel.domain;
 
-import java.sql.Date;
 
 
 public class BookingVO {
@@ -11,7 +10,32 @@ public class BookingVO {
 	private String booking_Date;
 	private String booking_BirthDate;
 	private Integer companion_Num;
-	private String event_Name;
+	private String booking_Content;
+	private Integer booking_Price;
+	private String member_Id;
+	
+	
+	
+	
+	public String getMember_Id() {
+		return member_Id;
+	}
+	public void setMember_Id(String member_Id) {
+		this.member_Id = member_Id;
+	}
+	public Integer getBooking_Price() {
+		return booking_Price;
+	}
+	public void setBooking_Price(Integer booking_Price) {
+		this.booking_Price = booking_Price;
+	}
+
+	public String getBooking_Content() {
+		return booking_Content;
+	}
+	public void setBooking_Content(String booking_Content) {
+		this.booking_Content = booking_Content;
+	}
 	public String getBooking_Id() {
 		return booking_Id;
 	}
@@ -54,19 +78,15 @@ public class BookingVO {
 	public void setCompanion_Num(Integer companion_Num) {
 		this.companion_Num = companion_Num;
 	}
-	public String getEvent_Name() {
-		return event_Name;
-	}
-	public void setEvent_Name(String event_Name) {
-		this.event_Name = event_Name;
-	}
 	@Override
 	public String toString() {
 		return "BookingVO [booking_Id=" + booking_Id + ", booking_Tel=" + booking_Tel + ", booking_Name=" + booking_Name
 				+ ", booking_Email=" + booking_Email + ", booking_Date=" + booking_Date + ", booking_BirthDate="
-				+ booking_BirthDate + ", companion_Num=" + companion_Num + ", event_Name=" + event_Name + "]";
+				+ booking_BirthDate + ", companion_Num=" + companion_Num + ", booking_Content=" + booking_Content
+				+ ", booking_Price=" + booking_Price + ", member_Id=" + member_Id + "]";
 	}
-	
+
+
 	
 	
 }

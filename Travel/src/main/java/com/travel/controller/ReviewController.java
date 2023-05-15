@@ -68,7 +68,7 @@ public class ReviewController {
 		
 		model.addAttribute("paging", pvo);
 		model.addAttribute("reviewList", list);
-		model.addAttribute("reviewListTop", listTop); 
+		model.addAttribute("reviewListTop", listTop);  
 		
 	} 
 	

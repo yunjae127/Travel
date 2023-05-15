@@ -25,23 +25,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.jsp">홈으로</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">상품 구입 전에</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">로그인 하기</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">장바구니</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.do">홈으로</a></li> 
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            장바구니
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
+                   
                 </div>
             </div>
         </nav>
@@ -61,13 +47,9 @@
                         ${product.product_Content}
                         </p>
                                   <br/>
-                                  <div class="d-flex">
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                장바구니에 담기!
-                            </button>
+                                  <div class="d-flex"> 
                             <a href="Reservation.do?product_Id=${product.product_Id}"><button class='btn btn-outline-dark reservation' type="button">예약하기</button></a>
-                            <a href="newYorkHotel.do"><button class='btn btn-outline-dark reservation' type="button">호텔보기</button></a>
+                            <a href="hotellist.do"><button class='btn btn-outline-dark reservation' type="button">호텔보기</button></a>
                         </div>
                     </div>
                      </div>

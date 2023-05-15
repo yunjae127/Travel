@@ -9,13 +9,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.travel.domain.HotelVO;
 import com.travel.domain.MemberRegistVO;
+import com.travel.domain.ProductLisVO;
 import com.travel.domain.ReviewVO;
 import com.travel.service.HotelService;
 import com.travel.service.MemberService;
+import com.travel.service.ProductLisService;
 import com.travel.service.ReviewService;
 
 @Controller
@@ -29,6 +30,9 @@ public class ProductViewDetailsController {
 	
 	@Autowired
 	private ReviewService reviewService;
+	
+	@Autowired
+	private ProductLisService productLisService;
 
 	@RequestMapping("/home.do")
 	public void Home(Model model, HttpSession session) {  
@@ -36,10 +40,15 @@ public class ProductViewDetailsController {
 		
 	List<HotelVO> list = hotelService.hotelMainList();
 	List<ReviewVO> listReview = reviewService.reviewMainList();
+	List<ProductLisVO> pList = productLisService.productMainList();
+	  
+	
 	
 	model.addAttribute("hotelMainList", list); 
 	model.addAttribute("reviewMainList", listReview);
- 
+	model.addAttribute("productMainList",pList);
+	
+	
 	}   
 	
 	@RequestMapping("/customerList.do")
@@ -75,7 +84,7 @@ public class ProductViewDetailsController {
 	      }else {
 	      session.setAttribute("id", result.getMember_Id());
 	      session.setAttribute("grade", result.getMember_Grade());
-	      session.setAttribute("price", result.getMember_Price());
+	      session.setAttribute("price", result.getTotal_Usage());
   	      
 	      }
 	      //session.setAttribute("password", result.getMember_Password());
@@ -148,7 +157,30 @@ public class ProductViewDetailsController {
 	      m.addAttribute("MemberList", list);
 	   }
  
-	
+	   @RequestMapping("/ProductViewDetails.do")
+	   public void ViewPage1(ProductLisVO vo, Model model) {
+	      ProductLisVO result = productLisService.getProduct(vo);
+	      model.addAttribute("product",result);
+	      
+	      List <ProductLisVO> list = productLisService.subproduct(vo);
+	      model.addAttribute("subProduct",list);
+	      
+	   }
+	   
+	   @RequestMapping("/packageAll.do")
+	   public void packageAll( Model model) {
+	      List<ProductLisVO> list = productLisService.getProductList();
+	      model.addAttribute("productList",list);
+	      
+	   } 
+	    
+	   @RequestMapping("/Reservation.do")
+	   public void Reservation(ProductLisVO vo,Model model) {
+	      ProductLisVO result = productLisService.getProduct(vo);
+	      model.addAttribute("resProduct",result);
+	      
+	   }   
+	   
 	
 	@RequestMapping("/manager.do")
 	public void manager() {
@@ -163,55 +195,11 @@ public class ProductViewDetailsController {
 	public void findId() {
 
 	}
-	@RequestMapping("/eventProductViewDetails1.do")
-	public void eventViewPage1() {
-
-	}
-	@RequestMapping("/eventProductViewDetails2.do")
-	public void eventViewPage2() {
-
-	}	 
-	@RequestMapping("/eventProductViewDetails3.do")
-	public void eventViewPage3() {
-
-	}
-	
-   @RequestMapping("/ProductViewDetails1.do")
-   public void ViewPage1() {
-
-   }
-   @RequestMapping("/ProductViewDetails2.do")
-   public void ViewPage2() {
-
-   }
-   @RequestMapping("/ProductViewDetails3.do")
-   public void ViewPage3() {
-
-   }
-   @RequestMapping("/ProductViewDetails4.do")
-   public void ViewPage4() {
-
-   }
-   @RequestMapping("/ProductViewDetails5.do")
-   public void ViewPage5() {
-
-   }
-   @RequestMapping("/ProductViewDetails6.do")
-   public void ViewPage6() {
-   }
-   
+     
    @RequestMapping("/questionWrite.do")
    public void question() {
    }
-  
-   @RequestMapping("/packageAll.do")
-   public void packageAll() {
-   } 
-    
-   @RequestMapping("/Reservation.do")
-   public void Reservation() {
-   } 
-  
+
    @RequestMapping("/salesStatus.do")
    public void salesStatus() {
 	   

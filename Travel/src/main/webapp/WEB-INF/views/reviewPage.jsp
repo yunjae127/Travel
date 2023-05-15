@@ -58,7 +58,7 @@
             &nbsp;
             <a href="mypage.do">마이페이지</a>
             &nbsp;
-            <a href="hotellist">호텔정보</a>
+            <a href="hotellist.do">호텔정보</a>
         </nav>
         
     </div>
@@ -73,8 +73,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="section-title">
-                                <h4 class="m-0 text-uppercase font-weight-bold">이 달의 베스트 여행 후기</h4>
-                                <a class="text-secondary font-weight-medium text-decoration-none" href="">모두보기</a>
+                                <h4 class="m-0 text-uppercase font-weight-bold">이 달의 베스트 여행 후기</h4> 
                             </div>
                         </div>
                          <c:forEach items="${reviewListTop}" var="top">
@@ -135,7 +134,8 @@
 			<option value="20"
 				<c:if test="${paging.cntPerPage == 20}">selected</c:if>>20줄 보기</option>
 		</select>
-	</div> <!-- 옵션선택 끝 -->
+		</div> 
+	<!-- 옵션선택 끝 -->
             
             <table class="board-table">
                 <thead>

@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.travel.domain.BookingVO;
 import com.travel.domain.ReviewVO;
 
 @Repository("mypageDAO")
@@ -18,6 +19,11 @@ public class MypageDAOImpl implements MypageDAO{
 		
  		return sqlSesion.selectList("mypageDAO.selectReview", id);
  		
+	}
+
+	public List<BookingVO> selectBook(String id) {
+		 
+		return sqlSesion.selectList("mypageDAO.selectBook", id);
 	}
 	
 	

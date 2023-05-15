@@ -27,6 +27,7 @@
       <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="manager.do">관리자 페이지</a>
+			<a class="navbar-brand ps-3" href="home.do">홈으로 돌아가기</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -91,11 +92,7 @@
                             <a class="nav-link" href="packmana.do">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 상품관리
-                            </a>
-                            <a class="nav-link" href="packmana.do">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                고객문의
-                            </a>
+                            </a> 
                         </div>
                     </div>
                 </nav>

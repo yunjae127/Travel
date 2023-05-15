@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.travel.domain.BookingVO;
 import com.travel.domain.ReviewVO;
 import com.travel.service.MypageService;
 
@@ -18,6 +19,7 @@ public class MypageController {
 	@Autowired
 	private MypageService mypageService;
 	
+		
 	@RequestMapping("/mypage.do")
 	public void mypage(Model m, HttpSession session) {
 	  
@@ -25,12 +27,14 @@ public class MypageController {
 		
 		String id = (String)session.getAttribute("id"); 
 		List<ReviewVO> selectReview = mypageService.selectReview(id); 
+		List<BookingVO> selectBook = mypageService.selectBook(id);
+		
 		
 		System.out.println("------------------------>>");
 		System.out.println(selectReview);
 		
 		m.addAttribute("selectReview",  selectReview);
-		
+		m.addAttribute("selectBook", selectBook);
 	}
 	
 	

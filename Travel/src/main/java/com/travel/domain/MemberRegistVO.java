@@ -8,18 +8,23 @@ public class MemberRegistVO {
 	private String member_Password;
 	private String member_Name;
 	private String member_Tel;
-	private String member_Address;
-	private String member_Price;
+	private String member_Address; 
 	private String member_Email;
 	private String member_BirthDate;
 	private String member_Grade;
-	public String getMember_Price() {
-		return member_Price;
-	}
-	public void setMember_Price(String member_Price) {
-		this.member_Price = member_Price;
-	}
+	private Integer total_Usage;
+
 	private String member_Hint;
+	
+	
+	
+	
+	public Integer getTotal_Usage() {
+		return total_Usage;
+	}
+	public void setTotal_Usage(Integer total_Usage) {
+		this.total_Usage = total_Usage;
+	}
 	public String getMember_Id() {
 		return member_Id;
 	}

@@ -17,7 +17,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link href="https://fonts.googleapis.com/css?family=Cookie"
 	rel="stylesheet">
-<link rel="icon" type="image/png" href="./resources/img/logo3.png">
+<link rel="icon" type="image/png" href="./resources/img/gotravel_logo.jpg">
 <link rel="stylesheet" href="./resources/css/swiper.min.css">
 
 <link rel="stylesheet" type="text/css"
@@ -63,27 +63,15 @@
                    
                      <li class="nav-item active">
                              <a class="nav-link font" id="home" href="#">Home<span class="sr-only">(current)</span></a>
-                  </li>
+                  </li> 
                   <li class="nav-item active">
-                       <a class="nav-link font" href="#fly">이벤트<span class="sr-only">(current)</span></a>
-                  </li>
-
+                       <a class="nav-link font" href="packageAll.do">패키지<span class="sr-only">(current)</span></a>
+                  </li> 
                   <li class="nav-item active">
-                       <a class="nav-link font" href="#top">패키지<span class="sr-only">(current)</span></a>
-                  </li>
+                       <a class="nav-link font" href="hotellist.do">숙소<span class="sr-only">(current)</span></a>
+                  </li> 
                   <li class="nav-item active">
-                       <a class="nav-link font" href="#chose">관광지 <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                       <a class="nav-link font" href="#work">숙소<span class="sr-only">(current)</span></a>
-                  </li>
-
-                  <li class="nav-item active">
-                       <a class="nav-link font" href="#gallery">할인<span class="sr-only">(current)</span></a>
-                  </li>
-
-                  <li class="nav-item active">
-                       <a class="nav-link font" href="#blog">리뷰<span class="sr-only">(current)</span></a>
+                       <a class="nav-link font" href="reviewPage.do">리뷰<span class="sr-only">(current)</span></a>
                   </li>
                 <c:choose>
                <c:when test="${sessionScope.id != null and sessionScope.id != 'admin'}">

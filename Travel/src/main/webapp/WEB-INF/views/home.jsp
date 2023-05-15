@@ -234,81 +234,44 @@
       </div>
 
                <!--destination-->
-   
-
-               <div class="container mt-5 mb-5">
+      <div class="container mt-5 mb-5">
                                  
                      <div class="container bac">
                                         <div class="card-deck">
                                                <div class="card cardstyle">
+                                                 <c:set var="i" value="0" />
+                                              <c:set var="j" value="3" />
+                                               
+                                                 <table border="1">
+                                                     <c:forEach items="${productMainList}" var="productMain">
+                                                     <c:if test="{i%j == 0}">
+                                                     <tr>
+                                                     </c:if>
+                                                     <td> 
+                                                     <img class="card-img-top" id="style" style="width:300px; height:200px" src="./resources/upload/${productMain.image_New_Name}" alt="Project 1">
+                                                  
                                                  
-                                                  
-                                                     <img class="card-img-top" id="style" src="./resources/img/pack_hawa_03.jpg" alt="Project 1">
-                                                  
-                                                 
                                                  <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">뉴욕</span><span class="float-right">3,799,000원</span></h5>
+                                                       <h5 class="card-title"><span class="float-left" >${productMain.product_Place} </span><span class="float-right" style="font-size:14px;">가격: ${productMain.product_Price}</span></h5>
 
                                                 </div>
 
                                                 <div class="card-footer text-muted">
-                                                       <a href="ProductViewDetails1.do" target="blank" class="btn btn-primary">패키지 상세정보</a>
+                                                       <a href="ProductViewDetails.do?product_Id=${productMain.product_Id}" target="blank" class="btn btn-primary">패키지 상세정보</a>
                                                   </div>
-                                               </div>
-                                               <div class="card cardstyle">
-                                                 <img class="card-img-top" src="./resources/img/pack_sw_03.jpg" alt="Project 2">
-                                                 <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">캘리포니아</span><span class="float-right">1,199,000원</span></h5>
-                                                </div>
-                                                <div class="card-footer text-muted">
-                                                       <a href="ProductViewDetails2.do" class="btn btn-primary" target="blank">패키지 상세정보</a>
-                                                  </div>
-                                               </div>
-                                               <div class="card cardstyle">
-                                                    <img class="card-img-top" src="./resources/img/pack_ita_03.jpg" alt="Project 3">
-                                                 <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">하와이</span><span class="float-right">3,399,900원</span></h5>
-                                                </div>
-                                                <div class="card-footer text-muted">
-                                                       <a href="ProductViewDetails3.do" target="blank" class="btn btn-primary">패키지 상세정보</a>
-                                                  </div>
-                                               </div>
-                                       </div>
+                                               
+                                              </td>
+                                                       <c:if test="${i%j == j-1}"> 
+                                                       </tr>
+                                                       </c:if> 
+                                                       <c:set var="i" value="${i+1}" /> 
+                                       </c:forEach>
+                                       </table>
+                                                    <a href="packageAll.do" class=" btn btn-primary1">패키지 전체보기</a> 
+                                                    
 
-                           
-                                       <div class="card-deck mt-3">
-                                               <div class="card cardstyle">
-                                                    <img class="card-img-top" src="./resources/img/pack_tai_03.jpg" alt="Project 4">
-                                                 <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">몰디브</span><span class="float-right">629,000원</span></h5>
-                                                </div>
-                                                <div class="card-footer text-muted">
-                                                       <a href="ProductViewDetails4.do" class="btn btn-primary">패키지 상세정보</a>
-                                                  </div>
-                                               </div>
-                                               <div class="card cardstyle">
-                                                 <img class="card-img-top" src="./resources/img/pack_bang_03.jpg" alt="Project 5">
-                                                 <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">스위스</span><span class="float-right">1,069,000원</span></h5>
-                                                </div>
-                                                <div class="card-footer text-muted">
-                                                       <a href="ProductViewDetails5.do" class="btn btn-primary">패키지 상세정보</a>
-                                                  </div>
-                                               </div>
-                                               <div class="card cardstyle">
-                                                    <img class="card-img-top img-fluid" src="./resources/img/pack_new_03.jpg" alt="Project 6">
-                                                 <div class="card-body">
-                                                       <h5 class="card-title"><span class="float-left">피렌체</span><span class="float-right">4,699,000원</span></h5>
-                                                </div>
-                                                <div class="card-footer text-muted">
-                                                       <a href="ProductViewDetails6.do" class="btn btn-primary">패키지 상세정보</a>
-                                                  </div>
-                                               </div>
-                                                  
-                                       </div>
-                                                    <a href="packageAll.do" class="btn btn-primary pkall">패키지 전체보기</a>
-
-                                          
+                                          </div>
+                                          </div>
                      </div>
                                  
                </div>
@@ -646,7 +609,7 @@
                                                  
                                                  <div class="card-body">
                                                  		 <h5 class="card-title"><span class="float-left"></span>작성자: &nbsp;${review.review_Writer}</span></h5>
-                                                       <h5 class="card-title"><span class="float-left"></span><a href="reviewGetPage.do?review_Num=${review.review_Num}"><span class="float-right">${review.review_Count}</span></a></h5>
+                                                       <h5 class="card-title"><span class="float-left"></span><a href="reviewGetPage.do?review_Num=${review.review_Num}"><span class="float-right">조회수: ${review.review_Count}</span></a></h5>
                                                      </div>
                                                      <h5 class="card-text">${review.review_Content}</h5>
 

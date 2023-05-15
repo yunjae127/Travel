@@ -11,29 +11,51 @@
 <meta name="author" content="" />
 <title>packmana</title>
 <link
-	href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
-	rel="stylesheet" />
+   href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+   rel="stylesheet" />
 <link href="./resources/css/styles2.css" rel="stylesheet" />
 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
-	crossorigin="anonymous"></script>
+   crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  >
+    <link rel="stylesheet" type="text/css"
+  href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script type="text/javascript"   src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/i18n/jquery-ui-i18n.min.js"></script>
 <script src="./resources/js/packmana.js"></script>
 <script type="text/javascript">
+$(function(){
+var d = new Date().toLocaleDateString();
+$.datepicker.setDefaults($.datepicker.regional['ko']);
 
+$('#product_Depature').datepicker({
+   dateFormat : 'yy-mm-dd',
+   onClose : function(selectedDate){
+      $('#product_Depature').datepicker('option','minDate',selectedDate)
+   }
+});
+$('#product_Array').datepicker({
+   dateFormat : 'yy-mm-dd',
+   onClose : function(selectedDate){
+      $('#product_Depature').datepicker('option','maxDate',selectedDate)
+   }
+});
+}) 
 
-
-
-
-
-
-</script>
-
+</script> 
 </head>
 <body class="sb-nav-fixed">
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 		<!-- Navbar Brand-->
-		<a class="navbar-brand ps-3" href="home.do">관리자 페이지</a>
+		<a class="navbar-brand ps-3" href="manager.do">관리자 페이지</a>
+		<a class="navbar-brand ps-3" href="home.do">홈으로 돌아가기</a>
 	</nav>
 	<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
@@ -91,11 +113,7 @@
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-table"></i>
 							</div> 상품관리
-						</a> <a class="nav-link" href="customeransw.do">
-							<div class="sb-nav-link-icon">
-								<i class="fas fa-table"></i>
-							</div> 고객문의
-						</a>
+						</a>  
 					</div>
 				</div>
 			</nav>

@@ -11,4 +11,14 @@
   WHERE REVIEW_WRITER = #{id}
 </select>
 
+
+<select id="selectBook" parameterType="String" resultType="com.travel.domain.BookingVO">
+  
+SELECT * 
+FROM BOOKING
+ WHERE MEMBER_ID = #{id}
+</select>
+
+
+
 </mapper>

@@ -92,57 +92,116 @@ $(function(){
 		}
 	});
 	let adult = $("#inputGroupSelectAdult");
-	let child = $("#inputGroupSelectChild");
-	let calc =  $("#inputGroupSelectAdult option:selected").val()*adult.attr('price') + $("#inputGroupSelectChild option:selected").val()*child.attr('price')
-	adult.on("change", function(){$('.totalprice').val($("#inputGroupSelectAdult option:selected").val()*adult.attr('price') + $("#inputGroupSelectChild option:selected").val()*child.attr('price'));})
-	child.on("change", function(){$('.totalprice').val($("#inputGroupSelectAdult option:selected").val()*adult.attr('price') + $("#inputGroupSelectChild option:selected").val()*child.attr('price'));})
+	adult.on("change", function(){$('.totalprice').val($("#inputGroupSelectAdult option:selected").val()*adult.attr('price')),$('#companion_Num').val($("#inputGroupSelectAdult option:selected").val())})
 
-	$('#form-reserve').submit(
-			function(){
-				alert('주문성공');
-			});
-	let kName 		 = $("#kName");
-	let eFName 		 = $("#eFName");
-	let eLName 		 = $("#eLName");
-	let birthDate 	 = $("#birthDate");
-	let gender		 = $("#gender");
-	let tel		 	 = $("#tel");
 	
-	$('#registbtn').click(function(){
+
+
+	/* $('#registbtn').click(function(){
 		
-		var userList = $('#userList')
+		let comParam={
+		companion_Name 			 : $("#companion_Name").val(),
+		companion_Efname 		 : $("#companion_Efname").val(),
+		companion_Elname 		 : $("#companion_Elname").val(),
+		companion_Gender	 	 : $("#companion_Gender").val(),
+		companion_Birthdate		 : $("#companion_Birthdate").val()
+		}
 		
-		let tr = $('<tr/>');
-		let td1 = $('<td/>');
-		let td2 = $('<td/>');
-		let td3 = $('<td/>');
-		let td4 = $('<td/>');
-		let td5 = $('<td/>');
-		let td6 = $('<td/>');
+		$.ajax({
+			type:'post',
+			data:comParam,
+			url:'./companionInsert/new',
+			success:function(result){
+				companionList();
+			},
+			error:function(err){
+				alert('error');
+				console.log(err)
+			}
+			
+		})//end of companionInsert ajax
 		
-		td1.text(kName.val());
-		tr.append(td1);
-		td2.text(eFName.val());
-		tr.append(td2);
-		td3.text(eLName.val());
-		tr.append(td3);
-		td4.text(birthDate.val());
-		tr.append(td4);
-		td5.text(gender.val());
-		tr.append(td5);
-		td6.text(tel.val());
-		tr.append(td6);
-		tr.append('<td><button class="delete">삭제<button></td>');
-		userList.append(tr);
+		function companionList(){
+			$.ajax({
+				type:'get',
+				data : {companion_Birthdate : $('#companion_Birthdate').val()},
+				url:'./companionList',
+				success:makeList(result),
+				error:function(err){
+					alert('error');
+					console.log(err);
+				}
+			})//end of companionList ajax
+			
+			function makeList(result){
+				var userList = $('#userList')
+				
+				
+				for(row of result){
+					let tr = $('<tr/>');
+					let companion_Num= $('<td/>').text(row['companion_Num'])
+					let companion_Name= $('<td/>').text(row['companion_Name'])
+					let companion_Efname= $('<td/>').text(row['companion_Efname'])
+					let companion_Elname= $('<td/>').text(row['companion_Elname'])
+					let companion_Gender= $('<td/>').text(row['companion_Gender'])
+					let companion_Birthdate= $('<td/>').text(row['companion_Birthdate'])
+					tr.append(companion_Num)
+					tr.append(companion_Name);
+					tr.append(companion_Efname);
+					tr.append(companion_Elname);
+					tr.append(companion_Gender);
+					tr.append(companion_Birthdate);
+					tr.append('<td><button class="delete">삭제</button></td>');
+					userList.append(tr);
+					
+				}//end of for row of result
+				 $('#userList').on('click','button',function(){
+				      let btn = $(this);
+				      let product_Id = btn.parents('tr').children().eq(0).text();
+				      //alert(product_Id);
+				      if(btn.text().trim() =='삭제'){
+				         //삭제 버튼일 경우
+				         productDelete(product_Id);
+				      }
+				      });
+				
+
+			}//end of makeList
+		}//end of companionList
+		
+			
+		}) */
 		
 		
-		
-		
-		$('#userList').on('click','.delete',function(){
-			$(this).parent().parent().remove();
-			}) 
+		$('#formSubmit').click(function(){
+			
+			let param = {
+					booking_Name : $('#booking_Name').val(),
+					booking_Tel : $('#booking_Tel').val(),
+					booking_Email : $('#booking_Email').val(),
+					booking_BirthDate : $('#booking_BirthDate').val(),
+					companion_Num : $('#companion_Num').val(),
+					booking_Content : $('#booking_Content').val(),
+					booking_Price : $('#booking_Price').val(),
+					member_Id : $('#member_Id').val()
+			}
+			$.ajax({
+				type:'post',
+				data : param,
+				url: "./reservationInsert.do",
+				success:function(result){
+					alert("예약에 성공하셨습니다!")
+				},
+			error:function(err){
+				alert('error')
+				console.log(err);
+			}
+			})
 			
 		})
+		
+		
+		
 	})
 
 
@@ -181,21 +240,8 @@ $(function(){
 			<span class="">${resProduct.product_Name}</span>
         </div>
         
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="" for="inputGroupSelect01">수량</label>
-          </div>
-          인원수를 선택해주세요
-          <select id="inputGroupSelectAdult" price="${resProduct.product_Price}">
-            <option value="0">0</option>
-            <option selected value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-        가격 :
-        <input type="text" class="totalprice" name="totalprice" placeholder="인원수를 선택해주세요" readonly="readonly"/>
+
+        
         <br/>
         <span>항공사</span>
           <span class="">${resProduct.product_AirLine}</span>
@@ -213,72 +259,105 @@ $(function(){
           
         </div>
       </div>
-    </div>
+      </div>
+    
+    			<div class= "containerform">
  				<div class="form">
                 <div class="row-form">
-                    <form class="form-horizontal" method='post' id=form-reserve action="">
+                    <form class="form-horizontal" id="form-reserve" name="form-reserve" action="reservationInsert.do">
                         <div class="header">예약자 정보</div>
 							<div class="form-content">				
                             <h4 class="heading"></h4>
                             <div class="form-group">
+                            <input type="text"  name="member_Id" id="member_Id" value="${sessionScope.id}" readonly>
                                 <div class="col-sm-6">
-                                    <label>사용자 이름</label>
-                                    <input class="form-control" id="exampleInputName2" placeholder="한글로 최대 5글자" pattern="[ㄱ-힣]{2,5}" type="text">
+                                	<label>사용자 이름</label>
+                                    <input class="form-control" name="booking_Name" id="booking_Name" placeholder="한글로 최대 5글자" pattern="[ㄱ-힣]{2,5}" type="text">
                                 </div>
                                 <div class="col-sm-6">
-                                
                                     <label>이메일</label>
-                                    <input class="form-control" id="exampleInputName2" placeholder="이메일 타입 형식" type="email">
+                                    <input class="form-control" name="booking_Email" id="booking_Email" placeholder="이메일 타입 형식" type="email">
                                 </div>
-                            </div>
-                            <div class="form-group">
                                 <div class="col-sm-12">
                                     <label>전화번호</label>
-                                    <input class="form-control" id="exampleInputName2" placeholder="-포함 최대 14자리"  pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" type="text">
+                                    <input class="form-control" name="booking_Tel" id="booking_Tel" placeholder="-포함 최대 14자리"  pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" type="text">
                                 </div>
-                            </div>
-                            <div class="form-group">
                                 <div class="col-sm-6">
                                     <label>생년월일</label>
-                                    <input class="form-control" id="exampleInputName2" placeholder="숫자 8글자(ex:20000412)" pattern="[0-9]{8}" type="text">
+                                    <input class="form-control" name="booking_BirthDate" id="booking_BirthDate" placeholder="숫자 8글자(ex:20000412)" pattern="[0-9]{8}" type="text">
                                 </div>
-                      
-                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label>동행자 숫자</label>
+                                    <input class="form-control" name="companion_Num" id="companion_Num" value="0" readonly type="text">
+                                </div>
+                        
+          
+         					   <div class="col-sm-6" >
+         						 인원수를 선택해주세요
+        							  <select id="inputGroupSelectAdult" price="${resProduct.product_Price}" >
+            							<option selected value="0">0</option>
+           								 <option value="1">1</option>
+           							 <option value="2">2</option>
+           							 <option value="3">3</option>
+           							 <option value="4">4</option>
+            						<option value="5">5</option>
+            						<option value="6">6</option>
+            						<option value="7">7</option>
+            						<option value="8">8</option>
+           							 <option value="9">9</option>
+           							 <option value="10">10</option>
+         							 </select>
+         							  <br/>
+                                    <label>가격</label>
+                                    <input name="booking_Price" class="totalprice" id="booking_Price"  readonly value="0" type="text">
+                                </div>
                                 <div class="col-sm-12">
                                     <label>요청사항</label>
-                                    <textarea class="form-control" placeholder="요청사항"></textarea>
+                                    <textarea class="form-control" name="booking_Content" id="booking_Content" placeholder="요청사항"  ></textarea>
                                 </div>
+                                <div class="clearfix"> 
+                                <button type="button" id="formSubmit" class="btn btn-default">예약하기</button> 
                             </div>
-                            <div class="clearfix">
-                                <button type="submit" class="btn btn-default">예약하기</button>
                             </div>
+                            </div>
+                            </form>
                         </div>
                         </div>
-                    </form>
                 </div>
-            </div>
+                
+    
+   
 
 	<br/>
 	</body>
 	
+<!-- 	<div class="footerForm">
 	<div class="footerReserv">
+	<hr/>
+	<form class="form-horizontal" method='post' action="">
 	<div class="tablehead">
-	<h2>여행자 정보</h2>
-	</div>
-	<hr/>	
+	<h2>동행자 입력</h2>
+	</div>	
 	<table id="userList" border="1px">
 	<thead>
 	<tr>
-	 <td>한글이름</td> <td>영문 성</td> <td>영문이름</td> <td>생년월일</td> <td>성별</td> <td>연락처</td> <td>입력하기</td>
+	 <td style="width:200px">번호</td><td>한글이름</td> <td>영문 성</td> <td>영문이름</td> <td>생년월일</td> <td>성별</td> <td>입력하기</td>
 	</tr>
 	<tr>
-	<td><input type="text" id="kName" name="kName"/></td> <td><input type="text" id="eFName" name="eFName"/></td> <td><input type="text" id="eLName" name="eLName"/></td>
-	<td><input type="text" id="birthDate" name="birthDate"/></td><td><input type="text" id="gender" name="gender"/></td><td><input type="text" id="tel" name="tel"/></td> <td><button type="button" id="registbtn">등록하기</button></td>
+	<td>번호</td>
+	<td><input type="text" id="companion_Name" name="companion_Name" placeholder="한글로 최대 5글자" pattern="[ㄱ-힣]{2,5}"/></td>
+	<td><input type="text" id="companion_Efname" name="companion_Efname" pattern="[a-zA-Z]"/></td> 
+	<td><input type="text" id="companion_Elname" name="companion_Elname" pattern="[a-zA-Z]"/></td>
+	<td><input type="text" id="companion_Birthdate" name="companion_Birthdate" placeholder="숫자 8글자(ex:20000412)" pattern="[0-9]{8}"/></td>
+	<td><input type="text" id="companion_Gender" name="companion_Gender"/></td> 
+	<td><button type="button" style="width:200px"id="registbtn">등록하기</button></td>
 	</tr>
 	</thead>
 	<tbody>
 	</tbody>
 	</table>
+	</form>
     </div>
+    </div> -->
   
 </html>

@@ -15,7 +15,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link href="https://fonts.googleapis.com/css?family=Cookie"
 	rel="stylesheet">
-<link rel="icon" type="image/png" href="./resources/img/logo3.png">
+<link rel="icon" type="image/png" href="./resources/img/gotravel_logo.jpg">
 <link rel="stylesheet" href="./resources/css/swiper.min.css">
 
 <link rel="stylesheet" type="text/css"
@@ -57,10 +57,7 @@
  
                   <li class="nav-item active">
                        <a class="nav-link font" href="packageAll.do">패키지<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                       <a class="nav-link font" href="#chose">관광지 <span class="sr-only">(current)</span></a>
-                  </li>
+                  </li> 
                   <li class="nav-item active">
                        <a class="nav-link font" href="hotellist.do">숙소<span class="sr-only">(current)</span></a>
                   </li> 
@@ -240,21 +237,25 @@
 	<table border="1">
 		<tr>
 			<th bgcolor="white" width="200"></th>
-			<c:choose>
-				<c:when test="${sessionScope.price le '1000000'}"><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
-				src="./resources/img/le_bro.jpg">${sessionScope.id}</td></c:when>
-				<c:when test="${sessionScope.price <= '2000000'}"><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
-				src="./resources/img/le_sil.jpg">${sessionScope.id}</td></c:when>
-				<c:when test="${sessionScope.price <= '3000000'}"><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
-				src="./resources/img/le_gold.jpg">${sessionScope.id}</td></c:when>
-				<c:otherwise><td style="border: 5px solid gray;" bgcolor="white" width="140"><img
-				src="./resources/img/le_vip.jpg">${sessionScope.id}</td></c:otherwise>
-			</c:choose>	
-			<td style="border: 5px solid gray;" bgcolor="white" width="290"
+			
+			<td style="text-align:center; border: 5px solid gray;" bgcolor="white" width="290"
 				height="50"><b><center>회원등급</center></b></td>
-			<td style="border: 5px solid gray;" bgcolor="white" width="290"
-				height="50"><b><center>${sessionScope.grade}</center></b></td>
-			<td style="border: 5px solid gray;" bgcolor="white" width="290"
+				
+				
+			<td style="text-align:center; border: 5px solid gray;" bgcolor="white" width="290"
+				height="50"><b><center><c:choose>
+				<c:when test="${sessionScope.price le '1000000'}"><img
+				src="./resources/img/le_bro.jpg">${sessionScope.id}</c:when>
+				<c:when test="${sessionScope.price le '2000000'}"> <img
+				src="./resources/img/le_sil.jpg">${sessionScope.id}</c:when>
+				<c:when test="${sessionScope.price le '3000000'}"><img
+				src="./resources/img/le_gold.jpg">${sessionScope.id} </c:when>
+				<c:otherwise> <img
+				src="./resources/img/le_vip.jpg">${sessionScope.id}</td></c:otherwise>
+			</c:choose>	</center></b></td>
+				
+				
+			<td style="text-align:center; border: 5px solid gray;" bgcolor="white" width="290"
 				height="50"><b><center>이용금액</center></b></td>
 			<td style="border: 5px solid gray;" bgcolor="white" width="290"
 				height="50"><b><center>${sessionScope.price}</center></b></td>
@@ -301,10 +302,21 @@
 	<tr>
 		<table border="1">
 			<th bgcolor="white" width="200"></th>
-			<th bgcolor="#bbdefb" width="350" style="border: 1px solid gray;"><center>예약일/예약번호</center></th>
-			<th bgcolor="#bbdefb" width="600" style="border: 1px solid gray;"><center>예약정보</center></th>
-			<th bgcolor="#bbdefb" width="350" style="border: 1px solid gray;"><center>예약확인</center></th>
+			<th bgcolor="#bbdefb" width="350" style="border: 1px solid gray;"><center> 예약번호</center></th>
+			<th bgcolor="#bbdefb" width="600" style="border: 1px solid gray;"><center> 예약일</center></th>
+			<th bgcolor="#bbdefb" width="350" style="border: 1px solid gray;"><center> 가격</center></th>
 		</table>
+		
+	<c:forEach items="${selectBook}" var="Book">
+		<table border="1">
+			<th bgcolor="white" width="200"></th>
+			<th width="350" style="border: 1px solid gray;"><center>${Book.booking_Id}</center></th>
+			<th width="600" style="border: 1px solid gray;"><center>${Book.booking_Date}</center></th>
+			<th width="350" style="border: 1px solid gray;"><center>${Book.booking_Price}</center></th>
+			</table>
+			</c:forEach>
+	
+	
 	</tr>
 
 	<br />
